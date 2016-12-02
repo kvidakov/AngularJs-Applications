@@ -1,0 +1,76 @@
+<div class="row mdl-card__supporting-text mdl-color-text--grey-600">
+    <p>Log in with your Facebook account below.</p>
+
+    <!-- Button that handles sign-in/sign-out -->
+    <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Log in with Facebook</button>
+
+    <!-- Container where we'll display the user details -->
+    <div class="quickstart-user-details-container">
+        <span id="quickstart-sign-in-status"></span>
+        <div id="quickstart-account-details"></div>
+        <p ng-hide="true" id="quickstart-oauthtoken"></p>
+    </div>
+</div>
+<div class="post-preview">
+    <h2 class="post-title">
+        Add new job to the list:
+    </h2>
+
+    <form ng-submit="addJob()">
+        <input type="text" ng-model="jobInputed" placeholder="Add jobs on the list"><br>
+        <input type="submit" class="btn btn-default" value="Add job" style="margin-top: 0.5em;">
+    </form>
+    <hr>
+
+    <div class="form-inline">
+        <input type="submit" class="btn btn-default" value="Job/s done" ng-click="JobsDone()" style="margin-top: 0.5em;">
+        <input type="button" id="ShowHideButton" class="btn btn-default" value="Show finished jobs" ng-click="showJobsDone = !showJobsDone" style="margin-top: 0.5em;">
+    </div>
+    <h3 class="post-title" id="h3title">
+        Unfinished jobs:
+    </h3>
+    <hr>
+
+    <ol ng-repeat="x in jobsList" ng-hide="showJobsDone">
+        <li>
+            <form>
+                <span ng-bind="$index + 1"></span>
+                <span ng-bind="x.jobTodo"></span>
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default">
+                        <input type="checkbox" autocomplete="off" checked ng-model="x.jobDone">
+                        <span class="glyphicons glyphicons-ok"></span>
+                    </label>
+                </div>
+            </form>
+        </li>
+    </ol>
+    <ol ng-show="showJobsDone" ng-repeat="y in jobsDoneList">
+        <li>
+            <form>
+                <span ng-bind="$index + 1"></span>
+                <span ng-bind="y.jobTodo"></span>
+            </form>
+        </li>
+    </ol>
+</div>
+
+// ---------- login i add jobs sa indexa -----------------
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC88yC2dodvgKIMRzTXPF7UNjpSTprcLaU",
+            authDomain: "todoapp-cbbf0.firebaseapp.com",
+            databaseURL: "https://todoapp-cbbf0.firebaseio.com",
+            storageBucket: "todoapp-cbbf0.appspot.com",
+            messagingSenderId: "1066055722567"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="js/Controllers/loginCtrl.js"></script>
+
+// -------- Za firebase -----------------
