@@ -1,3 +1,49 @@
+<?php
+
+// configure
+$from = 'Demo contact form <demo@domain.com>';
+$sendTo = 'Demo contact form <demo@domain.com>';
+$subject = 'New message from contact form';
+$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); // array variable name => Text to appear in email
+$okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
+$errorMessage = 'There was an error while submitting the form. Please try again later';
+
+// let's do the sending
+
+try
+{
+$emailText = "You have new message from contact form\n=============================\n";
+
+foreach ($_POST as $key => $value) {
+
+if (isset($fields[$key])) {
+$emailText .= "$fields[$key]: $value\n";
+}
+}
+
+mail($sendTo, $subject, $emailText, "From: " . $from);
+
+$responseArray = array('type' => 'success', 'message' => $okMessage);
+}
+catch (\Exception $e)
+{
+$responseArray = array('type' => 'danger', 'message' => $errorMessage);
+}
+
+if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+$encoded = json_encode($responseArray);
+
+header('Content-Type: application/json');
+
+echo $encoded;
+}
+else {
+echo $responseArray['message'];
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +56,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="js/Controllers/MainController.js"></script>
-    <script src="js/Controllers/loginCtrl.js"></script>
+    <script src="js/Controllers/homeCtrl.js"></script>
 
     <title>To do list</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- Theme CSS -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
@@ -28,6 +75,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="bootstrap-social-gh-pages/bootstrap-social.css">
 
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -37,6 +85,7 @@
 </head>
 
 <body ng-app="myApp">
+    <!-- Navigation -->
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -46,19 +95,11 @@
                     Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="index.html">TO DO LIST</a>
-
-                <!--<div id="quickstart-account-details"></div>-->
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <span class="quickstart-sign-in-status" id="quickstart-sign-in-status"></span>
-                    </li>
-                    <li>
-                        <a href="#/profile" id="aLinkforSingedProfile"></a>
-                    </li>
                     <li>
                         <a href="#/home">Home</a>
                     </li>
@@ -88,6 +129,7 @@
         </div>
     </header>
 
+    <!-- Main Content -->
     <div class="container" >
         <div class="row" id="contentBackground">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12 col-md-offset-2" id="borderBox">
@@ -133,32 +175,5 @@
             </div>
         </div>
     </footer>
-
-    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyC88yC2dodvgKIMRzTXPF7UNjpSTprcLaU",
-            authDomain: "todoapp-cbbf0.firebaseapp.com",
-            databaseURL: "https://todoapp-cbbf0.firebaseio.com",
-            storageBucket: "todoapp-cbbf0.appspot.com",
-            messagingSenderId: "1066055722567"
-        };
-        firebase.initializeApp(config);
-    </script>
-
-
-    <script src="https://connect.facebook.net/en_US/sdk.js"></script>
-    <script>
-        FB.init({
-            /**********************************************************************
-             * TODO(Developer): Change the value below with your Facebook app ID. *
-             **********************************************************************/
-            appId      : '1825175384365743',
-            status     : true,
-            xfbml      : true,
-            version    : 'v2.6'
-        });
-    </script>
 </body>
 </html>

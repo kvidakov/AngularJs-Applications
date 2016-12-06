@@ -12,11 +12,7 @@ app.config(function ($routeProvider)
            templateUrl: "Templates/contact.php",
            controller: "contactCtrl"
        })
-       .when("/login",{
-           templateUrl: "Templates/login.html",
-           controller: "loginCtrl"
-       })
        .otherwise({
-           redirectTo: "/login"
+           redirectTo: "/home"
    })
 });

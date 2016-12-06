@@ -5,7 +5,7 @@
 #borderBox{
     padding: 1em 0;
 }
-#quickstart-sign-in-status{
+.classForLinks{
     color: #fff;
     padding: 20px;
     text-transform: uppercase;
@@ -20,4 +20,11 @@
     box-sizing: border-box;
     cursor: auto;
     text-align: -webkit-match-parent;
+}
+
+.dropdown{
+    max-height: 60px;
+}
+#toggleNavigation li a{
+    color: #000;
 }
