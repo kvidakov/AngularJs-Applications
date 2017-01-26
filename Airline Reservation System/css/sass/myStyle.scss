@@ -1,6 +1,11 @@
 @import "mixins";
 @import "colors";
 
+body
+{
+    font-family: "Gotham A","Gotham B",Helvetica,Arial,sans-serif;
+}
+
 #divForContentInaHeader
 {
     position: absolute;
@@ -79,7 +84,7 @@
 {
     font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1px;
     background-color: $bl;
     color: #fff;
@@ -373,5 +378,95 @@ footer, footer a
     .copiright
     {
         font-size: 1.2vh;
+    }
+}
+
+#Aboutus
+{
+    padding: 0 30px;
+    > div
+    {
+        @media (max-width: 536px)
+        {
+            padding: 0;
+            h2
+            {
+                font-size: 2.8vh;
+            }
+        }
+    }
+}
+
+.container-with-pictures-and-texts
+{
+    .picture-and-text-div
+    {
+        margin: .7em 0;
+        display: inline-block;
+        @media (max-width: 536px)
+        {
+            padding: 0;
+        }
+        .picture-div
+        {
+            @include picture-frame;
+            padding: 0;
+            img
+            {
+
+            }
+        }
+        .text-div
+        {
+            @media (max-width: 536px)
+            {
+                padding: 0;
+            }
+            p
+            {
+                padding: 1em 0;
+                margin: auto 0;
+                @media (max-width: 1152px)
+                {
+                    padding: 0;
+                }
+                @media (max-width: 991px)
+                {
+                    font-size: 2.5vh;
+                }
+                @media (max-width: 536px)
+                {
+                    font-size: 1.2vh;
+                }
+            }
+        }
+    }
+}
+
+#partners
+{
+    margin: 1em 0;
+    display: inline-block;
+    div
+    {
+
+        @include picture-frame;
+        img
+        {
+            float: left;
+        }
+    }
+    > .row
+    {
+        padding: 0 30px;
+        color: darkgrey;
+        @media (max-width: 536px)
+        {
+            padding: 0;
+            h4
+            {
+                font-size: 2.2vh;
+            }
+        }
     }
 }

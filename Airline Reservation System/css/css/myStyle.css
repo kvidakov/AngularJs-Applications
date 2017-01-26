@@ -1,3 +1,6 @@
+body {
+  font-family: "Gotham A","Gotham B",Helvetica,Arial,sans-serif; }
+
 #divForContentInaHeader {
   position: absolute;
   margin-left: auto;
@@ -57,7 +60,7 @@
 .btn-default {
   font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1px;
   background-color: #198CFB;
   color: #fff;
@@ -273,5 +276,59 @@ footer, footer a {
     color: #E1C13A; }
   footer .copiright, footer a .copiright {
     font-size: 1.2vh; }
+
+#Aboutus {
+  padding: 0 30px; }
+  @media (max-width: 536px) {
+    #Aboutus > div {
+      padding: 0; }
+      #Aboutus > div h2 {
+        font-size: 2.8vh; } }
+
+.container-with-pictures-and-texts .picture-and-text-div {
+  margin: .7em 0;
+  display: inline-block; }
+  @media (max-width: 536px) {
+    .container-with-pictures-and-texts .picture-and-text-div {
+      padding: 0; } }
+  .container-with-pictures-and-texts .picture-and-text-div .picture-div {
+    padding: 0; }
+    .container-with-pictures-and-texts .picture-and-text-div .picture-div img {
+      width: 100%;
+      height: 100%;
+      position: relative; }
+  @media (max-width: 536px) {
+    .container-with-pictures-and-texts .picture-and-text-div .text-div {
+      padding: 0; } }
+  .container-with-pictures-and-texts .picture-and-text-div .text-div p {
+    padding: 1em 0;
+    margin: auto 0; }
+    @media (max-width: 1152px) {
+      .container-with-pictures-and-texts .picture-and-text-div .text-div p {
+        padding: 0; } }
+    @media (max-width: 991px) {
+      .container-with-pictures-and-texts .picture-and-text-div .text-div p {
+        font-size: 2.5vh; } }
+    @media (max-width: 536px) {
+      .container-with-pictures-and-texts .picture-and-text-div .text-div p {
+        font-size: 1.2vh; } }
+
+#partners {
+  margin: 1em 0;
+  display: inline-block; }
+  #partners div img {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+  #partners div img {
+    float: left; }
+  #partners > .row {
+    padding: 0 30px;
+    color: darkgrey; }
+    @media (max-width: 536px) {
+      #partners > .row {
+        padding: 0; }
+        #partners > .row h4 {
+          font-size: 2.2vh; } }
 
 /*# sourceMappingURL=myStyle.css.map */

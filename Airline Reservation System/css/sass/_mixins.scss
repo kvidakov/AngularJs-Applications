@@ -29,3 +29,12 @@
     height: 2rem;
     font-size: 0.5rem;
 }
+
+@mixin picture-frame{
+    img
+    {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+}
