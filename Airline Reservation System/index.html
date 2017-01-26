@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/clean-blog.min.css">
     <link rel="stylesheet" href="css/modern-business.css">
-    <link rel="stylesheet" href="css/myStyle.css">
+    <link rel="stylesheet" href="css/css/myStyle.css">
 
     <!-- FONT AWESOME AND SOME CUSTOM FONTS -->
     <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -21,12 +21,17 @@
     <link rel="stylesheet" href="fonts/glyphicons-halflings-regular.ttf">
     <link rel="stylesheet" href="fonts/glyphicons-halflings-regular.woff">
     <link rel="stylesheet" href="fonts/glyphicons-halflings-regular.woff2">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
 
     <script type="text/javascript" src="app/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="app/bower_components/moment/min/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+
     <link rel="stylesheet" href="app/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -46,7 +51,8 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">AIRLINE RESERVATION SYSTEM</a>
+                <a class="navbar-brand not-mobile-class" href="index.html">AIRLINE RESERVATION SYSTEM</a>
+                <a class="navbar-brand mobile-class" href="index.html">ARS</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,9 +63,6 @@
                     </li>
                     <li>
                         <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="post.html">Sample Post</a>
                     </li>
                     <li>
                         <a href="contact.html">Contact</a>
@@ -77,34 +80,33 @@
         <div class="carousel-inner">
             <div class="item active">
                 <div class="fill" style="background-image:url('Slike/flight-takeoff-hd-20.jpeg');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 1</h2>
-                </div>
             </div>
             <div class="item">
                 <div class="fill" style="background-image:url('Slike/Passenger-Aircraft-on-Sunset-HD-Widescreeen-Wallpaper.jpg');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 2</h2>
-                </div>
             </div>
             <div class="item">
                 <div class="fill" style="background-image:url('Slike/airplane-plane.png');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 3</h2>
-                </div>
             </div>
         </div>
 
         <!-- DIV for input form in front of a header-->
         <div class="col-lg-6 col-lg-offset-1 col-md-8 col-md-offset-1 col-xs-6 col-xs-offset-1" id="divForContentInaHeader">
             <div class="site-heading">
-                <div class="row">
-                    <h1 id="SearchFlights">Search flights</h1>
-                    <button type="button" class="btn-default" value="Return">Return</button>
-                    <button type="button" class="btn-default" value="One way">One way</button>
-                </div>
-                <div class="col-lg-12 col-md-12 col-xs-12" id="divForDestinationsInput">
+                <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput">
                     <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                        <h1 id="SearchFlightsHeader">Search flights</h1>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput">
+                    <div class="form-group col-lg-6 col-md-12 col-xs-12">
+                        <select class="selectpicker">
+                            <option>Return</option>
+                            <option>One way</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput">
+                    <div class="form-group col-lg-6 col-md-6 col-xs-12 not-mobile-class">
                         <input type="text" class="col-lg-12 col-md-12 col-xs-12" placeholder="From"><br>
                         <div class='input-group date col-lg-12 col-md-12 col-xs-12 datetimepicker1'>
                             <input type="text" class="form-control" placeholder=" Departure date" />
@@ -113,7 +115,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                    <div class="form-group col-lg-6 col-md-6 col-xs-12 not-mobile-class">
                         <input type="text" class="col-lg-12 col-md-12 col-xs-12" placeholder="To"><br>
                         <div class='input-group date col-lg-12 col-md-12 col-xs-12 datetimepicker1'>
                             <input type="text" class="form-control" placeholder=" Return date" />
@@ -122,22 +124,136 @@
                             </span>
                         </div>
                     </div>
+                    <!-- THIS IS FOR BIGGER SCREENS / BELOW IS FOR A SMALLER (MOBILE) SIZE SCREENS -->
+                    <div class="container mobile-class">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput">
+                                <button class="btn-default col-xs-12" id="mobile-clas-button-for-dest-form" data-toggle="collapse" data-target="#collapsible-content">Input destinations
+                                    <br> and dates</button>
+                                <div class="collapse" id="collapsible-content">
+                                    <div class="col-lg-12 col-md-12 col-xs-12 well mobile-class" style="position: absolute;">
+                                        <div class="form-group col-lg-6 col-md-6 col-xs-12" style="padding: 0;">
+                                            <input type="text" class="col-lg-12 col-md-12 col-xs-12" placeholder="From"><br>
+                                            <div class='input-group date col-lg-12 col-md-12 col-xs-12 datetimepicker1'>
+                                                <input type="text" class="form-control" placeholder=" Departure date" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-6 col-md-6 col-xs-12" style="padding: 0;">
+                                            <input type="text" class="col-lg-12 col-md-12 col-xs-12" placeholder="To"><br>
+                                            <div class='input-group date col-lg-12 col-md-12 col-xs-12 datetimepicker1'>
+                                                <input type="text" class="form-control" placeholder=" Return date" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- HERE ENDS DESTINATION INPUT FOR SMALLER SCREENS / BELLOW ARE PASSENGER DETAILS FOR BIGGER SCREENS -->
                 </div>
+                <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput" style="display: inline-block;">
+                    <div class="col-lg-12 col-md-12 col-xs-12 not-mobile-class">
+                        <div style="float: left;">
+                            <form>
+                                Adult <input type="number" min="1" max="9" value="1">
+                                Children <input type="number" min="0" max="8" value="0">
+                                Infants <input type="number" min="0" max="8" value="0">
+                            </form>
+                        </div>
+                        <div class="" style="float: left;">
+                            <select class="selectpicker" style="margin-top: 1px; margin-left: 3px; border-radius: 4px;">
+                                <option>Economy</option>
+                                <option>Premium economy</option>
+                                <option>Business class</option>
+                                <option>First class</option>
+                            </select>
+                        </div>
+                        <div class="checkbox" style="display: inline-block; margin: 0;">
+                            <label style="font-size: 1em; padding-left: 5px;">Only direct
+                                <input type="checkbox" value="" checked>
+                                <span class="cr" style=" margin-top: 0.1em;"><i class="cr-icon fa fa-check"></i></span>
+                            </label>
+                        </div>
+                        <button type="button" class="btn-default not-mobile-class" value="searchFlights">Search flights</button>
+                    </div>
+                    <!-- HERE STARTS PASSENGER DETAILS FOR SMALL (MOBILE) SCREENS -->
+                    <div class="container mobile-class">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput">
+                                <button class="btn-default col-xs-12" id="mobile-clas-button-for-dest-form2" data-toggle="collapse" data-target="#collapsible-content2">Input destinations
+                                    <br> and dates</button>
+                                <div class="collapse" id="collapsible-content2">
+                                    <div class="col-lg-12 col-md-12 col-xs-12 well mobile-class" style="position: absolute;">
+                                        <div style="float: left;">
+                                            <form>
+                                                Adult <input type="number" min="1" max="9" value="1">
+                                                Children <input type="number" min="0" max="8" value="0">
+                                                Infants <input type="number" min="0" max="8" value="0">
+                                            </form>
+                                        </div>
+                                        <div style="float: left;">
+                                            <select class="selectpicker" title="select_tipe_of_seat">
+                                                <option>Economy</option>
+                                                <option>Premium economy</option>
+                                                <option>Business class</option>
+                                                <option>First class</option>
+                                            </select>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>Only direct
+                                                <input type="checkbox" value="" checked>
+                                                <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput" style="display: inline-block;">
+                    <div class="container mobile-class" style="margin-bottom: 7%;">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput">
+                                <button type="button" class="btn-default col-xs-12" id="search-flights-button" value="searchFlights">Search flights</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- HERE ENDS PASSENGER DETAILS FOR SMALL (MOBILE) SCREENS -->
             </div>
         </div> <!-- END DIV for input form in front of a header -->
-
-        <!-- little circles for indicating an image in carousel -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol> <!-- end circles -->
     </header>
 
+    <!-- Page Content -->
+    <div class="container">
+        <div ng-view>
+
+        </div> <!-- div ng-view -->
+        <hr>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                <a href="">General terms and conditions</a>  | <a href="">Cookies policy</a>  | <a href="">Privacy policy</a>
+            </div>
+            <div class="col-lg-12 col-md-12 col-xs-12 copiright">
+                <p>Copyright &copy; KARLO VIDAKOVIĆ 2017 | All rights reserved. </p>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="app/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 
@@ -152,5 +268,12 @@
             format: 'DD-MM-YYYY'
         });
     </script>
+
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+
 </body>
 </html>
