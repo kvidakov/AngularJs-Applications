@@ -26,11 +26,8 @@
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-
     <script type="text/javascript" src="app/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="app/bower_components/moment/min/moment.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-
 
     <link rel="stylesheet" href="app/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
 
@@ -40,8 +37,10 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+  <base href="/">
 </head>
-<body>
+
+<body ng-app="myApp">
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid navbar-inverse">
@@ -59,10 +58,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a ui-sref="home">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a ui-sref="about">About</a>
                     </li>
                     <li>
                         <a href="contact.html">Contact</a>
@@ -230,9 +229,9 @@
     </header>
 
     <!-- Page Content -->
-    <div ng-view>
+    <ui-view>
 
-    </div><!-- div ng-view -->
+    </ui-view><!-- app tag -->
 
     <!-- Footer -->
     <footer>
@@ -253,7 +252,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="app/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="app/Controllers/MainController.js"></script>
+    <script src="app/Controllers/SearchFlightsCtrl.js"></script>
+    <script src="app/Controllers/AboutUsCtrl.js"></script>
     <!-- Script to Activate the Carousel -->
     <script>
         $('.carousel').carousel({
@@ -271,6 +274,8 @@
             $('[data-toggle="popover"]').popover();
         });
     </script>
+
+
 
 </body>
 </html>
