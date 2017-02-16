@@ -2,13 +2,15 @@
 
 var express = require('express');
 
+var router = require('./api/api');
+
 var app = express();
+
+require('./database');
+require('./seed');
 app.use('/', express.static('public'));
 
-app.get('/flights', function(req, res)
-{
-  res.send('These are flights!');
-});
+app.use('/api', router);
 
 app.listen(3000, function()
 {

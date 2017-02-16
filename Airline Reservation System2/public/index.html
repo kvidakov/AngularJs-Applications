@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Airline Reservation System">
+  <meta name="author" content="Karlo Vidakovic">
+
+  <title>Airline Reservation System</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/clean-blog.min.css">
+  <link rel="stylesheet" href="css/modern-business.css">
+  <link rel="stylesheet" href="css/css/myStyle.css">
+
+  <!-- FONT AWESOME AND SOME CUSTOM FONTS -->
+  <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="fonts/glyphicons-halflings-regular.eot">
+  <link rel="stylesheet" href="fonts/glyphicons-halflings-regular.svg">
+  <link rel="stylesheet" href="fonts/glyphicons-halflings-regular.ttf">
+  <link rel="stylesheet" href="fonts/glyphicons-halflings-regular.woff">
+  <link rel="stylesheet" href="fonts/glyphicons-halflings-regular.woff2">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script type="text/javascript" src="app/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="app/bower_components/moment/min/moment.min.js"></script>
+
+  <link rel="stylesheet" href="app/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <base href="/">
+</head>
+
+<body ng-app="myApp">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid navbar-inverse">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        Menu <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand not-mobile-class" href="index.html">AIRLINE RESERVATION SYSTEM</a>
+      <a class="navbar-brand mobile-class" href="index.html">ARS</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a ui-sref="home">Home</a>
+        </li>
+        <li>
+          <a ui-sref="about">About</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="carousel slide" id="myCarousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="fill" style="background-image:url('Slike/flight-takeoff-hd-20.jpeg');"></div>
+    </div>
+    <div class="item">
+      <div class="fill" style="background-image:url('Slike/Passenger-Aircraft-on-Sunset-HD-Widescreeen-Wallpaper.jpg');"></div>
+    </div>
+    <div class="item">
+      <div class="fill" style="background-image:url('Slike/airplane-plane.png');"></div>
+    </div>
+  </div>
+
+  <!-- DIV for input form in front of a header-->
+  <div class="col-lg-6 col-lg-offset-1 col-md-8 col-md-offset-1 col-xs-6 col-xs-offset-1" id="divForContentInaHeader">
+    <div class="site-heading">
+      <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput">
+        <div class="form-group col-lg-6 col-md-6 col-xs-12">
+          <h1 id="SearchFlightsHeader">Search flights</h1>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput">
+        <div class="form-group col-lg-6 col-md-12 col-xs-12">
+          <select class="selectpicker">
+            <option>Return</option>
+            <option>One way</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput">
+        <div class="form-group col-lg-6 col-md-6 col-xs-12 not-mobile-class">
+          <input type="text" class="col-lg-12 col-md-12 col-xs-12" placeholder="From"><br>
+          <div class='input-group date col-lg-12 col-md-12 col-xs-12 datetimepicker1'>
+            <input type="text" class="form-control" placeholder=" Departure date" />
+            <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+          </div>
+        </div>
+        <div class="form-group col-lg-6 col-md-6 col-xs-12 not-mobile-class">
+          <input type="text" class="col-lg-12 col-md-12 col-xs-12" placeholder="To"><br>
+          <div class='input-group date col-lg-12 col-md-12 col-xs-12 datetimepicker1'>
+            <input type="text" class="form-control" placeholder=" Return date" />
+            <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+          </div>
+        </div>
+        <!-- THIS IS FOR BIGGER SCREENS / BELOW IS FOR A SMALLER (MOBILE) SIZE SCREENS -->
+        <div class="container mobile-class">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput">
+              <button class="btn-default col-xs-12" id="mobile-clas-button-for-dest-form" data-toggle="collapse" data-target="#collapsible-content">Input destinations
+                <br> and dates</button>
+              <div class="collapse" id="collapsible-content">
+                <div class="col-lg-12 col-md-12 col-xs-12 well mobile-class" style="position: absolute;">
+                  <div class="form-group col-lg-6 col-md-6 col-xs-12" style="padding: 0;">
+                    <input type="text" class="col-lg-12 col-md-12 col-xs-12" placeholder="From"><br>
+                    <div class='input-group date col-lg-12 col-md-12 col-xs-12 datetimepicker1'>
+                      <input type="text" class="form-control" placeholder=" Departure date" />
+                      <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                    </div>
+                  </div>
+                  <div class="form-group col-lg-6 col-md-6 col-xs-12" style="padding: 0;">
+                    <input type="text" class="col-lg-12 col-md-12 col-xs-12" placeholder="To"><br>
+                    <div class='input-group date col-lg-12 col-md-12 col-xs-12 datetimepicker1'>
+                      <input type="text" class="form-control" placeholder=" Return date" />
+                      <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- HERE ENDS DESTINATION INPUT FOR SMALLER SCREENS / BELLOW ARE PASSENGER DETAILS FOR BIGGER SCREENS -->
+      </div>
+      <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput" style="display: inline-block;">
+        <div class="col-lg-12 col-md-12 col-xs-12 not-mobile-class">
+          <div style="float: left;">
+            <form>
+              Adult <input type="number" min="1" max="9" value="1">
+              Children <input type="number" min="0" max="8" value="0">
+              Infants <input type="number" min="0" max="8" value="0">
+            </form>
+          </div>
+          <div class="" style="float: left;">
+            <select class="selectpicker" style="margin-top: 1px; margin-left: 3px; border-radius: 4px;">
+              <option>Economy</option>
+              <option>Premium economy</option>
+              <option>Business class</option>
+              <option>First class</option>
+            </select>
+          </div>
+          <div class="checkbox" style="display: inline-block; margin: 0;">
+            <label style="font-size: 1em; padding-left: 5px;">Only direct
+              <input type="checkbox" value="" checked>
+              <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+            </label>
+          </div>
+          <button type="button" class="btn-default not-mobile-class" value="searchFlights">Search flights</button>
+        </div>
+        <!-- HERE STARTS PASSENGER DETAILS FOR SMALL (MOBILE) SCREENS -->
+        <div class="container mobile-class">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput">
+              <button class="btn-default col-xs-12" id="mobile-clas-button-for-dest-form2" data-toggle="collapse" data-target="#collapsible-content2">Input destinations
+                <br> and dates</button>
+              <div class="collapse" id="collapsible-content2">
+                <div class="col-lg-12 col-md-12 col-xs-12 well mobile-class" style="position: absolute;">
+                  <div style="float: left;">
+                    <form>
+                      Adult <input type="number" min="1" max="9" value="1">
+                      Children <input type="number" min="0" max="8" value="0">
+                      Infants <input type="number" min="0" max="8" value="0">
+                    </form>
+                  </div>
+                  <div style="float: left;">
+                    <select class="selectpicker" title="select_tipe_of_seat">
+                      <option>Economy</option>
+                      <option>Premium economy</option>
+                      <option>Business class</option>
+                      <option>First class</option>
+                    </select>
+                  </div>
+                  <div class="checkbox">
+                    <label>Only direct
+                      <input type="checkbox" value="" checked>
+                      <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput" style="display: inline-block;">
+        <div class="container mobile-class" style="margin-bottom: 7%;">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12 divForDestinationsInput">
+              <button type="button" class="btn-default col-xs-12" id="search-flights-button" value="searchFlights">Search flights</button>
+            </div>
+          </div>
+        </div>
+      </div><!-- HERE ENDS PASSENGER DETAILS FOR SMALL (MOBILE) SCREENS -->
+    </div>
+  </div> <!-- END DIV for input form in front of a header -->
+</header>
+
+<!-- Page Content -->
+<ui-view>
+
+</ui-view><!-- app tag -->
+
+<!-- Footer -->
+<footer>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-xs-12">
+      <a href="">General terms and conditions</a>  | <a href="">Cookies policy</a>  | <a href="">Privacy policy</a>
+    </div>
+    <div class="col-lg-12 col-md-12 col-xs-12 copiright">
+      <p>Copyright &copy; KARLO VIDAKOVIĆ 2017 | All rights reserved. </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/jquery.js"></script>
+
+<script src="/vendor/angular.js"></script>
+<script src="/app/app.js"></script>
+<script src="../app/scripts/controllers/main.js"></script>
+<script src="../app/scripts/services/data.js"></script>
+<script src="../app/scripts/directives/index.js"></script>
+<script src="../app/scripts/directives/flight.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script href="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../app/scripts/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../app/scripts/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="app/Controllers/MainController.js"></script>
+<script src="app/Controllers/SearchFlightsCtrl.js"></script>
+<script src="app/Controllers/AboutUsCtrl.js"></script>
+<!-- Script to Activate the Carousel -->
+<script>
+  $('.carousel').carousel({
+    interval: 5000 //changes the speed
+  })
+</script>
+<script type="text/javascript">
+  $('.datetimepicker1').datetimepicker({
+    format: 'DD-MM-YYYY'
+  });
+</script>
+
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+  });
+</script>
+
+
+</body>
+</html>

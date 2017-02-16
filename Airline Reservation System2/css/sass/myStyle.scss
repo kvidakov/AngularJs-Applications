@@ -1,0 +1,472 @@
+@import "mixins";
+@import "colors";
+
+body
+{
+    font-family: "Gotham A","Gotham B",Helvetica,Arial,sans-serif;
+}
+
+#divForContentInaHeader
+{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background-color: rgba(255,255,255, 0.75);
+    top: 7vmax;
+    @include border-radius(2px);
+}
+
+.not-mobile-class
+{
+    @media (max-width: 536px)
+    {
+        display: none;
+        z-index: -1;
+    }
+}
+
+.mobile-class
+{
+    @media (min-width: 537px)
+    {
+        display: none;
+        float: left;
+    }
+    @media (max-width: 536px)
+    {
+        z-index: 1000;
+    }
+    #mobile-clas-button-for-dest-form, #mobile-clas-button-for-dest-form2, #search-flights-button
+    {
+        @include button_class_for_mobile_size;
+        margin-bottom: 3%;
+    }
+    div > .selectpicker
+    {
+        margin-top: 2px;
+        border-radius: 4px;
+        font-size: 1.3vh;
+    }
+    .checkbox
+    {
+        display: inline-block;
+        margin: 0;
+        padding-top: 6%;
+        label
+        {
+            font-size: .9em;
+            padding: 0;
+        }
+    }
+}
+
+#collapsible-content, #collapsible-content2 {
+    @media (max-width: 536px)
+    {
+        float: left;
+        clear: left;
+        height: 0;
+        overflow: hidden;
+        -webkit-transition: height .01s ease;
+        -o-transition: height .01s ease;
+        transition: height .01s ease;
+    }
+}
+
+#myCarousel
+{
+    border-bottom: 1rem solid #198CFB;
+}
+
+.btn-default
+{
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: $bl;
+    color: #fff;
+    @include border-radius(4px);
+    border: none;
+    height: 2.8vh;
+    font-size: 2vh;
+
+    &:focus, &:hover, &:active
+    {
+        background-color: #0078ff;
+    }
+}
+
+.site-heading
+{
+    >.row
+    {
+        padding: 0 2em;
+        margin-bottom: 5px;
+    }
+    > div > div > .selectpicker
+    {
+        @include border-radius(4px);
+        float: left;
+        padding: 0 0.5em;
+    }
+}
+
+.divForDestinationsInput
+{
+    padding: 0 0.5em;
+    font-size: 2vh;
+}
+
+#SearchFlightsHeader
+{
+    font-size: 2.8vh;
+    margin-bottom: 0;
+    color: #198CFB;
+}
+
+.form-group
+{
+    margin-bottom: 0.3em;
+}
+
+input
+{
+    height: 3vh;
+    border: 1px solid lightgray;
+    @include border-radius(4px);
+    font-size: 1.6vh;
+}
+
+.datetimepicker1, .form-control
+{
+    height: 3.3vh;
+    font-size: 1.5vh;
+}
+
+.input-group-addon, .glyphicon .glyphicon-calendar
+{
+    font-size: 0.7vh;
+}
+
+.checkbox label:after
+{
+    .radio label:after
+    {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.checkbox .cr, .radio .cr
+{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    @include border-radius(.25em);
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+.radio .cr
+{
+    @include border-radius(50%);
+}
+
+.checkbox .cr .cr-icon, .radio .cr .cr-icon
+{
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.radio .cr .cr-icon
+{
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"], .radio label input[type="radio"]
+{
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon, .radio label input[type="radio"] + .cr > .cr-icon
+{
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon, .radio label input[type="radio"]:checked + .cr > .cr-icon
+{
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr, .radio label input[type="radio"]:disabled + .cr
+{
+    opacity: .5;
+}
+
+#divforrowofcontentheader
+{
+    div
+    {
+        p
+        {
+            margin: 1px;
+            font-size: 2vh;
+        }
+        @media (max-width: 536px)
+        {
+            p
+            {
+                font-size: 1.35vh;
+            }
+        }
+    }
+}
+
+.header-atributes
+{
+    display: inline-block;
+    padding: 3px;
+}
+
+.details-text
+{
+    font-size: 1.5vh;
+}
+
+.aviologo
+{
+    width: 2vh;
+}
+
+.gly-rotate-90
+{
+    @include rotation90(90deg);
+    float: left;
+    font-size: 1.7em;
+    margin: -0.5em auto 0px;
+    @media (max-width: 536px)
+    {
+        font-size: 2.8vh;
+    }
+}
+
+.gly-rotate-270
+{
+    @include rotation270(270deg);
+    float: left;
+    font-size: 1.7em;
+    margin: -0.5em auto 0px;
+    @media (max-width: 536px)
+    {
+        font-size: 2.8vh;
+    }
+}
+
+.flights
+{
+    margin-top: 1em;
+    border: 1px solid lightgray;
+    @include border-radius(4px);
+    padding: 0 0;
+    @media (max-width: 536px)
+    {
+        h2
+        {
+            font-size: 2.8vh;
+        }
+        h4
+        {
+            font-size: 2.2vh;
+        }
+        h5
+        {
+            font-size: 1.6vh;
+        }
+    }
+}
+
+.dep-ret-details
+{
+    display: inline-block;
+    border-top: 1px solid lightgray;
+    padding: 0 0.2em;
+    >.glyphi-aeroplane-div
+    {
+        border-right: 1px solid lightgrey;
+        float: left;
+        text-align: center;
+        padding: 0 0 0 2.5%;
+        @media (max-width: 536px)
+        {
+            padding-left: .8%;
+        }
+
+    }
+    .airport-and-time, .details-text
+    {
+        @media (max-width: 536px)
+        {
+            padding: 0 0.2em;
+            h4, h5
+            {
+                margin: 0.2em 0;
+            }
+            p, img
+            {
+                font-size: 1.2vh;
+            }
+        }
+    }
+}
+
+.price-background
+{
+    background-color: $bl;
+    color: #ffffff;
+    display: inline-block;
+}
+
+.halign
+{
+    margin: 0.7em 0 0.7em 0.7em;
+    vertical-align: middle;
+}
+
+.popover
+{
+    color: #000;;
+}
+
+.select-flight
+{
+    background-color: #fff;
+    color: #00b24a;
+    font-weight: bold;
+}
+
+.dir_fl_color
+{
+    color: #E1C13A;
+    font-weight: bold;
+}
+
+footer, footer a
+{
+    text-align: center;
+    background-color: $bl;
+    margin-bottom: 0;
+    color: #fff;
+    @media (max-width: 536px)
+    {
+        font-size: 1.8vh;
+    }
+    a:hover{
+        color: #E1C13A;
+    }
+    .copiright
+    {
+        font-size: 1.2vh;
+    }
+}
+
+#Aboutus
+{
+    padding: 0 30px;
+    > div
+    {
+        @media (max-width: 536px)
+        {
+            padding: 0;
+            h2
+            {
+                font-size: 2.8vh;
+            }
+        }
+    }
+}
+
+.container-with-pictures-and-texts
+{
+    .picture-and-text-div
+    {
+        margin: .7em 0;
+        display: inline-block;
+        @media (max-width: 536px)
+        {
+            padding: 0;
+        }
+        .picture-div
+        {
+            @include picture-frame;
+            padding: 0;
+            img
+            {
+
+            }
+        }
+        .text-div
+        {
+            @media (max-width: 536px)
+            {
+                padding: 0;
+            }
+            p
+            {
+                padding: 1em 0;
+                margin: auto 0;
+                @media (max-width: 1152px)
+                {
+                    padding: 0;
+                }
+                @media (max-width: 991px)
+                {
+                    font-size: 2.5vh;
+                }
+                @media (max-width: 536px)
+                {
+                    font-size: 1.2vh;
+                }
+            }
+        }
+    }
+}
+
+#partners
+{
+    margin: 1em 0;
+    display: inline-block;
+    div
+    {
+
+        @include picture-frame;
+        img
+        {
+            float: left;
+        }
+    }
+    > .row
+    {
+        padding: 0 30px;
+        color: darkgrey;
+        @media (max-width: 536px)
+        {
+            padding: 0;
+            h4
+            {
+                font-size: 2.2vh;
+            }
+        }
+    }
+}
