@@ -1,0 +1,43 @@
+#menu_text {
+        background-color: transparent;
+        position: absolute;
+        color: #fff;
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+        top: 44px;
+        left: 54px;
+        float: left;
+    }
+
+
+
+    -webkit-transition: -webkit-transform 1.2s linear;
+                    -moz-transition: -moz-transform 1.2s linear;
+                    -o-transition: -o-transform 1.2s linear;
+                    -ms-transition: -ms-transform 1.2s linear;
+                    transition: transform 1.2s linear;
+                    overflow:hidden;
+                    z-index: 1000;
+                    &:hover{
+                        transform: rotate(360deg);
+                        transition: all 0.3s ease-in-out 0s;
+                    }
+
+
+
+    var expMore = $("#exp_more_img");
+    	function ExploreMore()
+    	{
+    		$(expMore).animate({bottom: "9%" }, 500);
+    		setTimeout(function ()
+    		{
+    			$(expMore).animate({bottom: "10%" }, 500);
+    		},600);
+    		if (expMore.click()) {
+    			return;
+    		}
+    		ExploreMore();
+    	}
+
+    	window.setTimeout(function() { ExploreMore() }, 500)
