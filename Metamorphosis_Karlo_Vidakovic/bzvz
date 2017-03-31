@@ -41,3 +41,317 @@
     	}
 
     	window.setTimeout(function() { ExploreMore() }, 500)
+
+
+    	tm.staggerFrom(".white_background", 0.5, {opacity: 0, y:120, delay: 0.7}, 0.1);
+
+
+
+
+
+
+	$(".explore_more").click(function ()
+	{
+		$(".white_background").animate({
+			"z-index": 100,
+			visibility: visible,
+			height: '100%'
+		}, 6000);
+		var FadeTransition = Barba.BaseTransition.extend({
+			start: function() {
+				/**
+				 * This function is automatically called as soon the Transition starts
+				 * this.newContainerLoading is a Promise for the loading of the new container
+				 * (Barba.js also comes with an handy Promise polyfill!)
+				 */
+
+				// As soon the loading is finished and the old page is faded out, let's fade the new page
+				Promise
+				.all([this.newContainerLoading, this.fadeOut()])
+				.then(this.fadeIn.bind(this));
+			},
+
+			fadeOut: function() {
+				/**
+				 * this.oldContainer is the HTMLElement of the old Container
+				 */
+
+				return $(this.oldContainer).animate({ opacity: 0 },10000).promise();
+			},
+
+			fadeIn: function() {
+				/**
+				 * this.newContainer is the HTMLElement of the new Container
+				 * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
+				 * Please note, newContainer is available just after newContainerLoading is resolved!
+				 */
+
+				var _this = this;
+				var $el = $(this.newContainer);
+
+				$(this.oldContainer).hide();
+
+				$el.css({
+					visibility : 'visible',
+					opacity : 0
+				});
+
+				$el.animate({ opacity: 1 }, 12000, function() {
+					/**
+					 * Do not forget to call .done() as soon your transition is finished!
+					 * .done() will automatically remove from the DOM the old Container
+					 */
+
+					_this.done();
+				});
+			}
+		});
+
+		/**
+		 * Next step, you have to tell Barba to use the new Transition
+		 */
+
+		Barba.Pjax.getTransition = function() {
+			/**
+			 * Here you can use your own logic!
+			 * For example you can use different Transition based on the current page or link...
+			 */
+
+			return FadeTransition;
+		};
+		Barba.Pjax.start();
+	});
+});
+
+$(document).ready(function(){
+
+	var FadeTransition = Barba.BaseTransition.extend({
+		start: function() {
+			/**
+			 * This function is automatically called as soon the Transition starts
+			 * this.newContainerLoading is a Promise for the loading of the new container
+			 * (Barba.js also comes with an handy Promise polyfill!)
+			 */
+
+			// As soon the loading is finished and the old page is faded out, let's fade the new page
+			Promise
+			.all([this.newContainerLoading, this.fadeOut()])
+			.then(this.fadeIn.bind(this));
+		},
+
+		fadeOut: function() {
+			/**
+			 * this.oldContainer is the HTMLElement of the old Container
+			 */
+
+			return $(this.oldContainer).animate({ opacity: 0 },10000).promise();
+		},
+
+		fadeIn: function() {
+			/**
+			 * this.newContainer is the HTMLElement of the new Container
+			 * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
+			 * Please note, newContainer is available just after newContainerLoading is resolved!
+			 */
+
+			var _this = this;
+			var $el = $(this.newContainer);
+
+			$(this.oldContainer).hide();
+
+			$el.css({
+				visibility : 'visible',
+				opacity : 0
+			});
+
+			$el.animate({ opacity: 1 }, 12000, function() {
+				/**
+				 * Do not forget to call .done() as soon your transition is finished!
+				 * .done() will automatically remove from the DOM the old Container
+				 */
+
+				_this.done();
+			});
+		}
+	});
+
+	/**
+	 * Next step, you have to tell Barba to use the new Transition
+	 */
+
+	Barba.Pjax.getTransition = function() {
+		/**
+		 * Here you can use your own logic!
+		 * For example you can use different Transition based on the current page or link...
+		 */
+
+		return FadeTransition;
+	};
+	Barba.Pjax.start();
+});
+
+
+$(".pattern_background").animate({ height: "0px", opacity: 0 },5000);
+			$(".fly_in_when_loaded").animate({ opacity: 0 },5000);
+
+
+
+
+************************* ovaj dobro vuce bijelu crtu hehehe ************************
+
+var FadeTransition = Barba.BaseTransition.extend({
+		start: function() {
+			/**
+			 * This function is automatically called as soon the Transition starts
+			 * this.newContainerLoading is a Promise for the loading of the new container
+			 * (Barba.js also comes with an handy Promise polyfill!)
+			 */
+
+			// As soon the loading is finished and the old page is faded out, let's fade the new page
+			Promise
+			.all([this.newContainerLoading, this.fadeOut()])
+			.then(this.fadeIn.bind(this));
+		},
+
+		fadeOut: function() {
+			/**
+			 * this.oldContainer is the HTMLElement of the old Container
+			 */
+			$(".white_background").css({
+				"visibility": "visible",
+				"z-index": "100",
+				"opacity": "1"
+			});
+			$(".pattern_background").animate({ height: "0px",opacity: 0 },5000);
+			$(".white_background").animate({ height: "100%" },5500);
+
+			return $(this.oldContainer).animate({opacity: .8},5000).promise();
+		},
+
+		fadeIn: function() {
+			/**
+			 * this.newContainer is the HTMLElement of the new Container
+			 * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
+			 * Please note, newContainer is available just after newContainerLoading is resolved!
+			 */
+
+			var _this = this;
+			var $el = $(this.newContainer);
+
+			$(this.oldContainer).hide();
+
+			$el.css({
+				visibility : 'visible',
+				opacity : 1
+			});
+			$(".white_background").animate({ height: "100%" },1000);
+			$el.animate({ opacity: 1 }, function() {
+				/**
+				 * Do not forget to call .done() as soon your transition is finished!
+				 * .done() will automatically remove from the DOM the old Container
+				 */
+
+				_this.done();
+			});
+		}
+	});
+
+	/**
+	 * Next step, you have to tell Barba to use the new Transition
+	 */
+
+	Barba.Pjax.getTransition = function() {
+		/**
+		 * Here you can use your own logic!
+		 * For example you can use different Transition based on the current page or link...
+		 */
+
+		return FadeTransition;
+	};
+	Barba.Pjax.start();
+
+********************** ovdje zavrsava ovaj sto dobro vuce *****************************
+
+********************** html za homepage **********************************************
+
+<section class="col-xs-12 col-md-12 col-lg-12 pattern_background">
+                <nav class="col-xs-4 col-md-2 col-lg-1 fly_in_when_loaded menu_container">
+                    <div class="col-xs-12 col-md-12 col-lg-12 menu_left" >
+                        <div id="menu_wrapper" class="col-xs-3 col-md-2 col-lg-2">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                        <div id="menu_text" class="fly_in_when_loaded">Menu</div>
+                    </div>
+                </nav>
+                <img src="img/chapters_img.png" alt="chapters icon" id="menu_chapters_icon" class="fly_in_when_loaded">
+                <div id="menu_background" class="col-xs-12 col-md-12 col-lg-12">
+                    <ol>
+                        <li class="fly_in_when_menu_opened"><span>About book</span></li>
+                        <li class="fly_in_when_menu_opened"><span>Authors</span></li>
+                        <li class="fly_in_when_menu_opened"><span>Extensions</span></li>
+                        <li class="fly_in_when_menu_opened"><span>Contact us</span></li>
+                    </ol>
+                    <div id="menu_connect" class="col-md-12 col-md-12 col-lg-12 fly_in_when_menu_opened">
+                        <p>CONNECT WITH US</p>
+                        <img src="img/1490803844_twitter.png" alt="twitter logo" style="margin-left: 0;" class="col-xs-4 col-md-2 col-lg-2">
+                        <img src="img/1490803876_facebook.png" alt="facebook logo" class="col-xs-4 col-md-2 col-lg-2">
+                        <img src="img/1490803835_google_plus.png" alt="google+ logo" class="col-xs-4 col-md-2 col-lg-2">
+                    </div>
+                    <p id="menu_other_hand" class="col-xs-12 col-md-12 col-lg-12 fly_in_when_menu_opened">
+                        On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized.
+                    </p>
+                </div>
+                <div id="heading" class="col-xs-12 col-md-12 col-lg-12 fly_in_when_loaded">
+                    <img src="img/divider.png" alt="divider picture">
+                    <h1>Metamorphosis.</h1>
+                    <p><span>One morning, when Gregor Samsa</span> woke from troubled dreams, he found</p>
+                    <p>himself transformed in his bed into a horrible vermin</p>
+                </div>
+                <p id="copyright_text_homepage" class="col-xs-12 col-md-12 fly_in_when_loaded">
+                    Degordian © Copyright 2014<br>
+                    All rights are reserved
+                </p>
+                <div class="black_overlay">
+                </div>
+                <div class="col-xs-12 col-md-12 col-lg-12 chapters_background">
+                    <img src="img/x.png" alt="picture of x" id="chapter_x">
+                    <div class="col-xs-12 col-md-12 col-lg-6" id="chapter_jump_to">
+                        <h3>Jump to chapters...</h3>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-6 chapters_wrapper">
+                        <div class="col-xs-12 col-md-12 col-lg-12 chapter">
+                            <p class="chapter_number">01</p>
+                            <p>Gregor Samsa woke from troubled dreams</p>
+                            <hr>
+                        </div>
+                        <div class="col-xs-12 col-md-12 col-lg-12 chapter">
+                            <p class="chapter_number">02</p>
+                            <p>At twilight Gregor wakes up</p>
+                            <hr>
+                        </div>
+                        <div class="col-xs-12 col-md-12 col-lg-12 chapter">
+                            <p class="chapter_number">03</p>
+                            <p>Gregor's injury cripples him</p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-md-2 col-lg-1 fly_in_when_loaded explore_more">
+                    <a href="contact.html" class="ajaxify" id="exp_more_p">Explore more<br>
+                        <img src="img/Rectangle%205%20copy.png" alt="explore more picture" id="exp_more_img"></a>
+                </div>
+                <div class="col-xs-8 col-md-6 col-lg-2 fly_in_when_loaded share">
+                    <div class="col-xs-6 col-md-4 col-lg-2 share_icons">
+                        <img src="img/t.svg" alt="twiter share icon">
+                        <img src="img/f.svg" alt="facebook share icon">
+                        <img src="img/g.svg" alt="google+ share icon">
+                    </div>
+                    <img src="img/share.svg" alt="share icon" class="share_button">
+                </div>
+
+            </section>
+            <div class="white_background">
+
+            </div>

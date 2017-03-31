@@ -10,7 +10,7 @@ body{
         .pattern_background{
             position: fixed;
             width: 100%;
-            min-height: 100%;
+            height: 100%;
             margin: 0;
             top:0;
             left: 0;
@@ -256,17 +256,107 @@ body{
             }
         }
         .white_background{
-            position: relative;
+            position: absolute;
+            visibility: hidden;
             width: 100%;
-            min-height: 100%;
             margin: 0;
-            top:0;
+            bottom: 0;
             left: 0;
             background: rgb(255,255,255) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+            z-index: 100;
+            .white_background_beginning{
+                position: relative;
+                opacity: 0;
+                height: 0;
+                width: 100%;
+                background: #000;
+                &:after{
+                    width: 100%;
+                    height: 15%;
+                    background-color: #000;
+                }
+            }
+        }
+
+        /* HERE STARTS CSS FOR CONTACT.HTML PAGE */
+
+        .contact_white_background{
+            display: inline-block;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            top:0;
+            left: 0;
+            background: #fff no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            .text_wrapper{
+                display: block;
+                float: left;
+                margin: 10% 0 0 5%;
+                .chapter_heading{
+                    font-family: "Georgia", serif;
+                    margin-bottom: 5%;
+                    .text_02{
+                        font-family: "Clarendon LT Std", serif;
+                        font-size: 22px;
+                        margin-right: 20px;
+                    }
+                    hr{
+                        display: block;
+                        height: 1px;
+                        border: 0;
+                        border-top: 2px solid #252525;
+                        margin: 1em 0;
+                        padding: 0;
+                        width: 30%;
+                    }
+                }
+                .chapter_text_heading{
+                    font-family: "Georgia", serif;
+                    margin-bottom: 10%;
+                    .text_one_morning {
+                        font-family: "Georgia", serif;
+                        font-style: italic;
+                        font-size: 53px;
+                    }
+                    .text_one_morning_longer{
+                        line-height: 30px;
+                    }
+                }
+                .chapter_button_wrapper{
+                    .chapter_button_about_author{
+                        padding: 2% 5%;
+                        background-color: #fff;
+                        border: 1px solid #000;
+                        .chapter_button_arrow_right{
+                            margin: auto 0 3px 10px;
+                        }
+                        &:hover{
+                            background-color: #111111;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .tree_img_wrapper{
+                vertical-align: bottom;
+                position: relative;
+                top: 100%;
+                transform: translateY(-100%);
+                img{
+                    width: 100%;
+                    height: 100%;
+                    padding: 0;
+                }
+            }
         }
     }
     .disable_other_links {

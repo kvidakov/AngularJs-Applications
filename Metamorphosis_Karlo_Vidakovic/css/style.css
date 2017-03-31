@@ -3,219 +3,291 @@ body {
   margin: 0;
   height: 100%; }
   @media screen and (min-device-width: 1200px), (max-device-width: 1600px), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-device-width: 1200px), (max-device-width: 1600px), (-webkit-min-device-pixel-ratio: 1) {
-    body .pattern_background {
-      position: fixed;
-      width: 100%;
-      min-height: 100%;
-      margin: 0;
-      top: 0;
-      left: 0;
-      background: url("../img/pattern.jpeg") no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover; }
-      body .pattern_background .menu_container {
-        position: absolute;
-        display: inline-block;
-        height: 50px;
-        top: 44px;
-        left: 44px;
-        right: 18px;
-        z-index: 10; }
-        body .pattern_background .menu_container .menu_left {
-          padding-left: 0;
-          cursor: default;
-          font-family: Georgia, serif; }
-          body .pattern_background .menu_container .menu_left #menu_wrapper {
-            display: inline-block;
-            float: left;
-            padding-left: 0; }
-            body .pattern_background .menu_container .menu_left #menu_wrapper .bar1, body .pattern_background .menu_container .menu_left #menu_wrapper .bar2, body .pattern_background .menu_container .menu_left #menu_wrapper .bar3 {
-              display: block;
-              width: 28px;
-              height: 4px;
-              background-color: #fff;
-              margin: 6px 0;
-              transition: 0.4s;
-              border-radius: 5px; }
-          body .pattern_background .menu_container .menu_left #menu_text {
-            position: relative;
-            display: block;
-            float: left;
-            color: #fff;
-            margin: 10px 20px; }
-      body .pattern_background #menu_chapters_icon {
-        display: block;
-        z-index: 7;
-        cursor: default;
-        top: 6%;
-        right: 7%;
-        position: absolute; }
-      body .pattern_background .change .bar1 {
-        -webkit-transform: rotate(45deg) translate(8px, 8px);
-        transform: rotate(45deg) translate(8px, 8px); }
-      body .pattern_background .change .bar2 {
-        opacity: 0; }
-      body .pattern_background .change .bar3 {
-        -webkit-transform: rotate(-45deg) translate(6px, -6px);
-        transform: rotate(-45deg) translate(6px, -6px); }
-      body .pattern_background #menu_background {
-        color: #fff;
-        font-family: Georgia, serif;
-        font-size: 1em;
-        width: 320px;
+    body {
+      /* HERE STARTS CSS FOR CONTACT.HTML PAGE */ }
+      body .pattern_background {
+        position: fixed;
+        width: 100%;
         height: 100%;
+        margin: 0;
         top: 0;
         left: 0;
-        position: absolute;
-        background-color: #000;
-        z-index: 9;
-        display: none; }
-        body .pattern_background #menu_background ol {
-          margin-top: 50%;
-          list-style-type: decimal-leading-zero;
-          padding-left: 19%; }
-          body .pattern_background #menu_background ol li {
-            margin: 15% auto 15% 10px; }
-            body .pattern_background #menu_background ol li span {
-              font-weight: 700; }
-          body .pattern_background #menu_background ol li::before {
-            content: "";
-            width: 20px;
-            display: inline-block; }
-        body .pattern_background #menu_background #menu_connect {
-          margin-top: 80%;
-          padding-left: 18%; }
-          body .pattern_background #menu_background #menu_connect img {
-            padding: 0;
-            margin-right: 3px; }
-        body .pattern_background #menu_background #menu_other_hand {
-          color: #818181;
-          font-size: 15px;
-          margin-top: 20%;
-          padding-left: 15%;
-          padding-right: 15%;
-          line-height: 21px;
-          font-stretch: expanded; }
-      body .pattern_background #heading {
-        color: #fff;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        /* bring your own prefixes */
-        transform: translate(-50%, -50%);
-        text-align: center;
-        z-index: 5; }
-        body .pattern_background #heading h1 {
-          font-family: "superclarendon", serif;
-          font-weight: 700;
-          font-size: 127px;
-          margin-bottom: 2%; }
-        body .pattern_background #heading p {
+        background: url("../img/pattern.jpeg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
+        body .pattern_background .menu_container {
+          position: absolute;
+          display: inline-block;
+          height: 50px;
+          top: 44px;
+          left: 44px;
+          right: 18px;
+          z-index: 10; }
+          body .pattern_background .menu_container .menu_left {
+            padding-left: 0;
+            cursor: default;
+            font-family: Georgia, serif; }
+            body .pattern_background .menu_container .menu_left #menu_wrapper {
+              display: inline-block;
+              float: left;
+              padding-left: 0; }
+              body .pattern_background .menu_container .menu_left #menu_wrapper .bar1, body .pattern_background .menu_container .menu_left #menu_wrapper .bar2, body .pattern_background .menu_container .menu_left #menu_wrapper .bar3 {
+                display: block;
+                width: 28px;
+                height: 4px;
+                background-color: #fff;
+                margin: 6px 0;
+                transition: 0.4s;
+                border-radius: 5px; }
+            body .pattern_background .menu_container .menu_left #menu_text {
+              position: relative;
+              display: block;
+              float: left;
+              color: #fff;
+              margin: 10px 20px; }
+        body .pattern_background #menu_chapters_icon {
+          display: block;
+          z-index: 7;
+          cursor: default;
+          top: 6%;
+          right: 7%;
+          position: absolute; }
+        body .pattern_background .change .bar1 {
+          -webkit-transform: rotate(45deg) translate(8px, 8px);
+          transform: rotate(45deg) translate(8px, 8px); }
+        body .pattern_background .change .bar2 {
+          opacity: 0; }
+        body .pattern_background .change .bar3 {
+          -webkit-transform: rotate(-45deg) translate(6px, -6px);
+          transform: rotate(-45deg) translate(6px, -6px); }
+        body .pattern_background #menu_background {
+          color: #fff;
           font-family: Georgia, serif;
-          font-size: 19px; }
-          body .pattern_background #heading p > span {
-            font-weight: 700;
-            font-style: italic; }
-      body .pattern_background #copyright_text_homepage {
-        position: absolute;
-        color: #bfbfbf;
-        transform: rotate(-90deg);
-        transform-origin: 454px 400px 0;
-        left: 0;
-        text-align: left;
-        float: left;
-        padding-left: 0; }
-    body .black_overlay {
-      position: absolute;
-      width: 100%;
-      min-height: 100%;
-      z-index: 8;
-      background: rgba(28, 28, 28, 0.5); }
-    body .chapters_background {
-      background-color: #000;
-      position: absolute;
-      margin: 6% 15%;
-      width: 70%;
-      height: 76%;
-      z-index: 8;
-      color: #fff;
-      font-family: Georgia, serif;
-      display: none;
-      float: right; }
-      body .chapters_background #chapter_x {
-        float: right;
-        padding: 25px 15px 0 0;
-        cursor: default; }
-      body .chapters_background #chapter_jump_to {
-        font-style: italic;
-        -ms-text-align-last: right;
-        text-align: center;
-        margin: 6% 25%; }
-      body .chapters_background .chapters_wrapper {
-        margin: 0 25%; }
-        body .chapters_background .chapters_wrapper .chapter {
+          font-size: 1em;
+          width: 320px;
+          height: 100%;
+          top: 0;
+          left: 0;
+          position: absolute;
+          background-color: #000;
+          z-index: 9;
+          display: none; }
+          body .pattern_background #menu_background ol {
+            margin-top: 50%;
+            list-style-type: decimal-leading-zero;
+            padding-left: 19%; }
+            body .pattern_background #menu_background ol li {
+              margin: 15% auto 15% 10px; }
+              body .pattern_background #menu_background ol li span {
+                font-weight: 700; }
+            body .pattern_background #menu_background ol li::before {
+              content: "";
+              width: 20px;
+              display: inline-block; }
+          body .pattern_background #menu_background #menu_connect {
+            margin-top: 80%;
+            padding-left: 18%; }
+            body .pattern_background #menu_background #menu_connect img {
+              padding: 0;
+              margin-right: 3px; }
+          body .pattern_background #menu_background #menu_other_hand {
+            color: #818181;
+            font-size: 15px;
+            margin-top: 20%;
+            padding-left: 15%;
+            padding-right: 15%;
+            line-height: 21px;
+            font-stretch: expanded; }
+        body .pattern_background #heading {
+          color: #fff;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          /* bring your own prefixes */
+          transform: translate(-50%, -50%);
           text-align: center;
-          padding-top: 20px; }
-          body .chapters_background .chapters_wrapper .chapter:hover {
-            background-color: #121212; }
-          body .chapters_background .chapters_wrapper .chapter .chapter_number {
-            font-family: "Clarendon Book", serif;
+          z-index: 5; }
+          body .pattern_background #heading h1 {
+            font-family: "superclarendon", serif;
+            font-weight: 700;
+            font-size: 127px;
+            margin-bottom: 2%; }
+          body .pattern_background #heading p {
+            font-family: Georgia, serif;
             font-size: 19px; }
-          body .chapters_background .chapters_wrapper .chapter hr {
-            width: 15px; }
-    body .explore_more {
-      color: #fff;
-      text-align: center;
-      position: absolute;
-      float: none;
-      bottom: 10%;
-      margin: 0 45%;
-      font-family: Georgia, serif;
-      font-style: italic;
-      z-index: 2;
-      height: 30px; }
-      body .explore_more #exp_more_p {
-        color: #fff;
-        text-decoration: none;
-        cursor: default;
-        margin: 10px 1px; }
-    body .share {
-      float: none;
-      position: absolute;
-      bottom: 9%;
-      right: 7%; }
-      body .share .share_button {
+            body .pattern_background #heading p > span {
+              font-weight: 700;
+              font-style: italic; }
+        body .pattern_background #copyright_text_homepage {
+          position: absolute;
+          color: #bfbfbf;
+          transform: rotate(-90deg);
+          transform-origin: 454px 400px 0;
+          left: 0;
+          text-align: left;
+          float: left;
+          padding-left: 0; }
+      body .black_overlay {
         position: absolute;
-        float: right;
+        width: 100%;
+        min-height: 100%;
+        z-index: 8;
+        background: rgba(28, 28, 28, 0.5); }
+      body .chapters_background {
+        background-color: #000;
+        position: absolute;
+        margin: 6% 15%;
+        width: 70%;
+        height: 76%;
+        z-index: 8;
+        color: #fff;
+        font-family: Georgia, serif;
+        display: none;
+        float: right; }
+        body .chapters_background #chapter_x {
+          float: right;
+          padding: 25px 15px 0 0;
+          cursor: default; }
+        body .chapters_background #chapter_jump_to {
+          font-style: italic;
+          -ms-text-align-last: right;
+          text-align: center;
+          margin: 6% 25%; }
+        body .chapters_background .chapters_wrapper {
+          margin: 0 25%; }
+          body .chapters_background .chapters_wrapper .chapter {
+            text-align: center;
+            padding-top: 20px; }
+            body .chapters_background .chapters_wrapper .chapter:hover {
+              background-color: #121212; }
+            body .chapters_background .chapters_wrapper .chapter .chapter_number {
+              font-family: "Clarendon Book", serif;
+              font-size: 19px; }
+            body .chapters_background .chapters_wrapper .chapter hr {
+              width: 15px; }
+      body .explore_more {
+        color: #fff;
+        text-align: center;
+        position: absolute;
+        float: none;
         bottom: 10%;
-        right: 4%;
-        z-index: 5;
-        -webkit-transition: -webkit-transform .8s ease-in-out;
-        transition: all 0.3s ease-in-out 0s;
-        /*&:active{
-            transform: rotate(180deg);
-            transition: all 0.3s ease-in-out 0s;
-        }*/ }
-      body .share .share_icons {
-        float: right;
-        width: 40%;
-        background-color: transparent; }
-        body .share .share_icons img {
-          margin: 0 4px; }
-    body .white_background {
-      position: relative;
-      width: 100%;
-      min-height: 100%;
-      margin: 0;
-      top: 0;
-      left: 0;
-      background: white no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover; } }
+        margin: 0 45%;
+        font-family: Georgia, serif;
+        font-style: italic;
+        z-index: 2;
+        height: 30px; }
+        body .explore_more #exp_more_p {
+          color: #fff;
+          text-decoration: none;
+          cursor: default;
+          margin: 10px 1px; }
+      body .share {
+        float: none;
+        position: absolute;
+        bottom: 9%;
+        right: 7%; }
+        body .share .share_button {
+          position: absolute;
+          float: right;
+          bottom: 10%;
+          right: 4%;
+          z-index: 5;
+          -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition: all 0.3s ease-in-out 0s;
+          /*&:active{
+              transform: rotate(180deg);
+              transition: all 0.3s ease-in-out 0s;
+          }*/ }
+        body .share .share_icons {
+          float: right;
+          width: 40%;
+          background-color: transparent; }
+          body .share .share_icons img {
+            margin: 0 4px; }
+      body .white_background {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        margin: 0;
+        bottom: 0;
+        left: 0;
+        background: white no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        z-index: 100; }
+        body .white_background .white_background_beginning {
+          position: relative;
+          opacity: 0;
+          height: 0;
+          width: 100%;
+          background: #000; }
+          body .white_background .white_background_beginning:after {
+            width: 100%;
+            height: 15%;
+            background-color: #000; }
+      body .contact_white_background {
+        display: inline-block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        top: 0;
+        left: 0;
+        background: #fff no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
+        body .contact_white_background .text_wrapper {
+          display: block;
+          float: left;
+          margin: 10% 0 0 5%; }
+          body .contact_white_background .text_wrapper .chapter_heading {
+            font-family: "Georgia", serif;
+            margin-bottom: 5%; }
+            body .contact_white_background .text_wrapper .chapter_heading .text_02 {
+              font-family: "Clarendon LT Std", serif;
+              font-size: 22px;
+              margin-right: 20px; }
+            body .contact_white_background .text_wrapper .chapter_heading hr {
+              display: block;
+              height: 1px;
+              border: 0;
+              border-top: 2px solid #252525;
+              margin: 1em 0;
+              padding: 0;
+              width: 30%; }
+          body .contact_white_background .text_wrapper .chapter_text_heading {
+            font-family: "Georgia", serif;
+            margin-bottom: 10%; }
+            body .contact_white_background .text_wrapper .chapter_text_heading .text_one_morning {
+              font-family: "Georgia", serif;
+              font-style: italic;
+              font-size: 53px; }
+            body .contact_white_background .text_wrapper .chapter_text_heading .text_one_morning_longer {
+              line-height: 30px; }
+          body .contact_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author {
+            padding: 2% 5%;
+            background-color: #fff;
+            border: 1px solid #000; }
+            body .contact_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author .chapter_button_arrow_right {
+              margin: auto 0 3px 10px; }
+            body .contact_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:hover {
+              background-color: #111111;
+              color: #fff; }
+        body .contact_white_background .tree_img_wrapper {
+          vertical-align: bottom;
+          position: relative;
+          top: 100%;
+          transform: translateY(-100%); }
+          body .contact_white_background .tree_img_wrapper img {
+            width: 100%;
+            height: 100%;
+            padding: 0; } }
   body .disable_other_links {
     pointer-events: none;
     z-index: 3 !important; }

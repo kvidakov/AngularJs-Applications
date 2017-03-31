@@ -1,11 +1,13 @@
 "use strict";
 
+var tm = TweenMax;
+var hompage_loading_values = {opacity: 0, y:120, delay: 0.7};
+var menu_flying_values = {opacity: 0, x:-120, delay: 0.4};
+
 $(document).ready(function ()
 {
 
-	var tm = TweenMax;
-	var hompage_loading_values = {opacity: 0, y:120, delay: 0.7};
-	var menu_flying_values = {opacity: 0, x:-120, delay: 0.4};
+
 	var chpt_back = $(".chapters_background");
 	tm.from(".pattern_background", 0.8, {opacity: 0, y:350});
 	tm.staggerFrom(".fly_in_when_loaded", 0.5, hompage_loading_values, 0.1);
@@ -99,38 +101,34 @@ $(document).ready(function ()
 	var expMore = $("#exp_more_img");
 	function ExploreMore()
 	{
-		console.log("Uso u exploremore funkciju");
 		function down()
 		{
-			console.log("Uso u down funkciju");
-			$(expMore).animate({"margin-top": "8px" }, 500);
-			setTimeout(function ()
+			$(expMore).animate({"margin-top": "10px" }, 500);
+			function up()
 			{
-				function up()
-				{
-					console.log("Uso u up funkciju");
-					$(expMore).animate({"margin-top": "3px" }, 500);
-					setTimeout(function ()
-					{
-						down();
-					},500);
-				}up()
-			},500);
-
+				$(expMore).animate({"margin-top": "3px" }, 500);
+				down();
+			}
+			up();
 		}
-			down();
-
+		if (!expMore) return;
+		down();
 	}
 
 	$(document).ready(function ()
 	{
-		ExploreMore()
+		if (expMore){
+			setTimeout(function ()
+			{
+				ExploreMore();
+
+			},5000);
+		}
 	});
 });
 
 $(document).ready(function(){
-	jQuery('#barba-wrapper').ajaxify();
-	Barba.Pjax.start();
+
 	var FadeTransition = Barba.BaseTransition.extend({
 		start: function() {
 			/**
@@ -149,8 +147,22 @@ $(document).ready(function(){
 			/**
 			 * this.oldContainer is the HTMLElement of the old Container
 			 */
-
-			return $(this.oldContainer).animate({ opacity: 0 }).promise();
+			$(".white_background").css({
+				"visibility": "visible",
+				"z-index": "100",
+				"opacity": "1"
+			});
+			$(".pattern_background").animate({ height: "0px",opacity: 0 },2500);
+			$(".white_background").animate({ height: "100%" },2480);
+			$(".white_background_beginning").animate({height: "140px", opacity: 1},2200);
+				setTimeout(function ()
+				{
+					console.log("Izvrsila se jebena funkcija");
+					tm.staggerFrom(".contact_fly_in", 0.6, {opacity: 0, top:80,ease:Back.easeOut, delay: 0.1}, 0.2);
+					tm.from(".tree_img_wrapper", 0.4, {opacity: 0, y:80, delay: 0.7}, 0.2);
+				},1800);
+			$(".white_background_beginning").animate({height: "0"},500);
+			return $(this.oldContainer).animate({opacity: 1},2500).promise();
 		},
 
 		fadeIn: function() {
@@ -163,21 +175,23 @@ $(document).ready(function(){
 			var _this = this;
 			var $el = $(this.newContainer);
 
-			$(this.oldContainer).hide();
+			$(this.oldContainer).toggle(3000);
 
 			$el.css({
 				visibility : 'visible',
-				opacity : 0
+				opacity : 1
 			});
-
-			$el.animate({ opacity: 1 }, 400, function() {
+			$el.animate({ opacity: 1 }, function() {
 				/**
 				 * Do not forget to call .done() as soon your transition is finished!
 				 * .done() will automatically remove from the DOM the old Container
 				 */
-
-				_this.done();
+				setTimeout(function ()
+				{
+					_this.done();
+				},5000);
 			});
+
 		}
 	});
 
@@ -193,4 +207,20 @@ $(document).ready(function(){
 
 		return FadeTransition;
 	};
+	Barba.Pjax.start();
+	Barba.Prefetch.init();
+});
+
+$(document).ready(function ()
+{
+	$(".chapter_button_about_author").hover(function ()
+	{
+		$(".chapter_button_arrow_right").attr("src", "img/arrow_right_hover.svg");
+	},function ()
+	{
+		$(".chapter_button_arrow_right").attr("src", "img/arrow_right.svg");
+	});
+	//$(".contact_fly_in").ready(loadContactElements());
+
+
 });
