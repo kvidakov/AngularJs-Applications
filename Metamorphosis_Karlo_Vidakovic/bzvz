@@ -467,3 +467,11 @@ $(".white_background").css({
 
 tm.staggerFrom(".contact_fly_in", .1, {opacity: .5, y:10,ease:Back.easeOut}, 0.1);
 				tm.from(".tree_img_wrapper", 0.6, {opacity: 0, y:80, delay: 1.3});
+
+
+
+
+
+				/////////////////////////
+
+				about_the_author_black_back

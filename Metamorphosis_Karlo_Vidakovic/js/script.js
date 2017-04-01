@@ -3,6 +3,7 @@
 var tm = TweenMax;
 var hompage_loading_values = {opacity: 0, y:120, delay: 0.7};
 var menu_flying_values = {opacity: 0, x:-120, delay: 0.4};
+var klik = false;
 
 $(document).ready(function ()
 {
@@ -17,7 +18,7 @@ $(document).ready(function ()
 	var share_icons = $(".share_icons");
 	$("#menu_background").hide();
 	$(chpt_back).hide();
-	$(".black_overlay").hide();
+	$(".black_overlay, .grey_overlay").hide();
 	share_icons.hide();
 	$(".menu_left").click(function ()	{
 		this.classList.toggle("change");
@@ -101,48 +102,141 @@ $(document).ready(function ()
 	var expMore = $("#exp_more_img");
 	function ExploreMore()
 	{
-		function down()
-		{
-			$(expMore).animate({"margin-top": "10px" }, 500);
-			function up()
-			{
-				$(expMore).animate({"margin-top": "3px" }, 500);
-				down();
-			}
-			up();
-		}
-		if ($(".explore_more").click(function ()
-			{
-				$(".white_background").css({
-					"visibility": "visible",
-					"opacity": "1"
-				});
-				$(".pattern_background").animate({ height: "0px",opacity: 0 },2500);
-				$(".white_background").animate({ height: "100%" },2480);
-				$(".white_background_beginning").animate({height: "140px", opacity: 1},2200);
-				$(".contact_white_background").animate({height: "100%"},3000);
-				setTimeout(function ()
-				{
-					setTimeout(function ()
-					{
-						$(".contact_white_background").css({
-							visibility: "visible"
-						});tm.staggerTo(".contact_fly_in", 0.1, {opacity: 1, y:10,ease:Back.easeOut}, 0.2);tm.from(".tree_img_wrapper", 1, {opacity: 0, y:80});
-					},1200);
-
-
-				},700);
-				$(".white_background_beginning").animate({height: "0"},1000);
-				setTimeout(function ()
-				{
-					$(".pattern_background").css({
-						"display": "none"
+		function loop() {
+			$(expMore).animate({'margin-top': '23px'}, {
+				duration: 1000,
+				complete: function() {
+					$(expMore).animate({"margin-top": "13"}, {
+						duration: 1000,
+						complete: loop
 					});
-				},2500)
-			}))
-		down();
+				}});
+		}
+		loop();
+		if ($(".explore_more").click(function ()
+		{
+			$(".white_background").css({
+				"visibility": "visible",
+				"opacity": "1"
+			});
+			$(".pattern_background").animate({ height: "0px",opacity: 0 },2500);
+			$(".white_background").animate({ height: "100%" },2480);
+			$(".white_background_beginning").animate({height: "140px", opacity: 1},2200);
+			$(".second_section_white_background").animate({height: "100%"},3000);
+			setTimeout(function ()
+			{
+				setTimeout(function ()
+				{
+					$(".second_section_white_background").css({
+						visibility: "visible"
+					});
+					tm.staggerTo(".second_section_fly_in", 0.1, {opacity: 1, y:10,ease:Back.easeOut}, 0.1);
+					tm.from(".tree_img_wrapper", 1, {opacity: 0, y:80});
+				},1200);
+
+
+			},700);
+			$(".white_background_beginning").animate({height: "0"},1000);
+			setTimeout(function ()
+			{
+				$(".pattern_background").css({
+					"display": "none"
+				});
+			},2500)
+		}));
+		//down();
 	}
 	ExploreMore();
+
+
+	var about_the_author_exp_bio = $(".about_the_author_exp_bio");
+	var about_the_autor_wrapper = $(".about_the_autor_wrapper");
+	var chapter_button_about_author = $(".chapter_button_about_author");
+	if ($(chapter_button_about_author)){
+	$(chapter_button_about_author).click(function ()	{
+		if ($(about_the_autor_wrapper).is(":visible") == false){
+			$(about_the_autor_wrapper).toggle('slide', {direction: "right"}, 200);
+			$(".grey_overlay").show();
+			tm.staggerFrom(".about_fly_in",0.3,{left: "100px",delay: 0.5, opacity: 0},.5);
+		}
+		else {
+			RemoveAboutTheAuthor();
+		}
+	});
+	}
+	$("#about_x").click(function(){
+		RemoveAboutTheAuthor();
+	});
+	function RemoveAboutTheAuthor()
+	{
+		$(about_the_autor_wrapper).toggle('slide', {direction: "right"}, 2300);
+		$(".grey_overlay").hide();
+	}
+
+	var next_pointer = $(".next_pointer");
+	var big_right_arrow = $("#big_right_arrow");
+	if (next_pointer ){
+		if (!$(next_pointer).click(function (){
+			$(big_right_arrow).attr("src", "img/big_left_arrow.png");
+			$(next_pointer).hover(function (){
+				$(big_right_arrow).attr("src", "img/big_left_arrow_hover.png");
+			},function ()
+			{
+				$(big_right_arrow).attr("src", "img/big_left_arrow.png");
+			});
+			tm.to(".div_for_franz_img, .div_for_bio_text",1,{left: "-1000px"});
+			tm.to(".div_for_bio_text_second",.8,{left: "-730px"}, 0.5);
+			setTimeout(function ()
+			{
+				$(".div_for_bio_text_second").css({
+					"visibility": "visible"
+				});
+			},500);
+		}));
+		else {
+			$(big_right_arrow).attr("src", "img/big_right_arrow.png");
+			$(next_pointer).hover(function ()
+			{
+				$(big_right_arrow).attr("src", "img/big_right_arrow_hover.png");
+			}, function ()
+			{
+				$(big_right_arrow).attr("src", "img/big_right_arrow.png");
+			});
+		}
+	}
+	
+	var second_section_white_background = $(".second_section_white_background");
+	$(second_section_white_background).scroll(function ()
+	{
+		$(".white_background2").css({
+			"visibility": "visible",
+			"opacity": "1"
+		});
+		$(second_section_white_background).animate({ height: "0px",opacity: 0 },2500);
+		$(".white_background2").animate({ height: "100%" },2480);
+		$(".white_background_beginning2").animate({height: "140px", opacity: 1},2200);
+		$(".section_three_white_background").animate({height: "100%"},3000);
+		setTimeout(function ()
+		{
+			setTimeout(function ()
+			{
+				$(".section_three_white_background").css({
+					visibility: "visible"
+				});
+				tm.staggerTo(".second_section_fly_in", 0.1, {opacity: 1, y:10,ease:Back.easeOut}, 0.1);
+				tm.from(".tree_img_wrapper", 1, {opacity: 0, y:80});
+			},1200);
+
+
+		},700);
+		$(".white_background_beginning2").animate({height: "0"},1000);
+		setTimeout(function ()
+		{
+			$(second_section_white_background).css({
+				"display": "none"
+			});
+		},2500)
+	});
 });
 
 //$(document).ready(function(){

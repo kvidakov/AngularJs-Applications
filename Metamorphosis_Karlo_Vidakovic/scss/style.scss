@@ -166,9 +166,6 @@ body{
             z-index:8;
             background: rgba(28,28,28, 0.5);
         }
-        #dark_background{
-
-        }
         .chapters_background{
             background-color: #000;
             position: absolute;
@@ -281,9 +278,9 @@ body{
             }
         }
 
-        /* HERE STARTS CSS FOR CONTACT.HTML PAGE */
+        /* HERE STARTS CSS FOR SECTION 2 OF HOMEPAGE */
 
-        .contact_white_background{
+        .second_section_white_background{
             display: inline-block;
             position: fixed;
             visibility: hidden;
@@ -292,30 +289,25 @@ body{
             margin: 0;
             bottom: 0;
             left: 0;
-            z-index: 15;
             background: #fff no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
             .text_wrapper{
-                z-index: 16;
                 display: block;
                 float: left;
                 margin: 10% 0 0 5%;
                 .chapter_heading{
-                    z-index: 16;
                     font-family: "Georgia", serif;
                     margin-bottom: 5%;
                     opacity: 0;
                     .text_02{
-                        z-index: 16;
                         font-family: "Clarendon LT Std", serif;
                         font-size: 22px;
                         margin-right: 20px;
                     }
                     hr{
-                        z-index: 16;
                         display: block;
                         height: 1px;
                         border: 0;
@@ -328,10 +320,8 @@ body{
                 .chapter_text_heading{
                     font-family: "Georgia", serif;
                     margin-bottom: 10%;
-                    z-index: 16;
 
                     .text_one_morning {
-                        z-index: 16;
                         font-family: "Georgia", serif;
                         font-style: italic;
                         font-size: 53px;
@@ -339,26 +329,26 @@ body{
                     }
                     .text_one_morning_longer{
                         line-height: 30px;
-                        z-index: 16;
                         opacity: 0;
                     }
                 }
                 .chapter_button_wrapper{
-                    z-index: 16;
                     opacity: 0;
                     .chapter_button_about_author{
                         padding: 2% 5%;
-                        z-index: 16;
                         background-color: #fff;
                         border: 1px solid #000;
+                        font-family: "Georgia", serif;
+                        font-weight: 700;
+                        &:focus {
+                            outline: none;
+                        }
                         .chapter_button_arrow_right{
                             margin: auto 0 3px 10px;
-                            z-index: 16;
                         }
                         &:hover{
                             background-color: #111111;
                             color: #fff;
-                            z-index: 16;
                         }
                     }
                 }
@@ -374,7 +364,137 @@ body{
                     padding: 0;
                 }
             }
+
+            .grey_overlay{
+                @extend .black_overlay;
+                left: 0;
+            }
+            .about_the_autor_wrapper{
+                background-color: #000;
+                position: absolute;
+                margin: 5% 0 7% 10%;
+                padding: 0;
+                right: 0;
+                width: 90%;
+                height: 76%;
+                z-index:10;
+                color: #fff;
+                font-family: Georgia, serif;
+                display: none;
+                float: right;
+                .row{
+                    background-color: #000;
+                    height: 100%;
+                    margin: 0;
+                    .about_the_author_exp_bio{
+                        position: relative;
+                        width: 90%;
+                        height: 100%;
+                        color: #fff;
+                        font-family: Georgia, serif;
+                        float: left;
+                        overflow: hidden;
+                        padding-left: 0;
+                        #about_x{
+                            float: left;
+                            padding: 25px 0 0 10px;
+                        }
+                        .about_the_author_exp_header{
+                            margin: 7% 0 0 7%;
+                            .about_bio_header{
+                                font-family: "Georgia", serif;
+                                font-style: italic;
+                                font-size: 36px;
+                                margin-bottom: 3px;
+                            }
+                            .by_franz{
+                                color: #b5b5b5;
+                                font-size: 13px;
+                                span{
+                                    font-style: italic;
+                                }
+                            }
+                        }
+                        .about_the_author_exp_text{
+                            margin: 5% 0 0 11%;
+                            display: inline-block;
+
+                            .div_for_franz_img{
+                                display: block;
+                                position: relative;
+                                padding: 0;
+                                width: 10%;
+                                .about_the_author_img{
+                                    height: auto;
+                                    width: 100%;
+                                    padding: 0 20% 20% 0;
+                                }
+                            }
+                            .div_for_bio_text{
+                                display: block;
+                                position: relative;
+                                padding-left: 0;
+                                margin-right: 15px;
+                                .letter_K{
+                                    font-size: 14px;
+                                    line-height: 25px;
+                                    padding-left: 1px;
+                                    margin-bottom: 0;
+                                    &:first-letter{
+                                        line-height: 52px;
+                                        font-size: 50px;
+                                        float: left;
+                                        margin-right: 5px;
+                                    }
+                                }
+                                .rest_of_the_text{
+                                    padding-left: 0;
+                                    font-size: 14px;
+                                    line-height: 25px;
+                                    float: none;
+
+                                }
+                            }
+                            .div_for_bio_text_second{
+                                @extend .div_for_bio_text;
+                                visibility: hidden;
+                            }
+                        }
+
+                    }
+                    .next_pointer{
+                        position: relative;
+                        float: right;
+                        height: 100%;
+                        text-align: center;
+                        &:hover{
+                            background-color: #101010;
+                        }
+                        img{
+                            position:absolute;
+                            top:0;
+                            bottom:0;
+                            left: 0;
+                            right: 0;
+                            margin:auto;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+
+            }
         }
+        /* HERE STARTS CSS FOR SECTION 3*/
+        .white_background2{
+            @extend .white_background;
+            .white_background_beginning2{
+                @extend .white_background_beginning;
+                .section_three_white_background{
+                    @extend .second_section_white_background;
+                }
+            }
+        }
+
     }
     .disable_other_links {
         pointer-events: none;
