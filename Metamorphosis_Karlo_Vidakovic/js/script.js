@@ -111,105 +111,123 @@ $(document).ready(function ()
 			}
 			up();
 		}
-		if (!expMore) return;
+		if ($(".explore_more").click(function ()
+			{
+				$(".white_background").css({
+					"visibility": "visible",
+					"opacity": "1"
+				});
+				$(".pattern_background").animate({ height: "0px",opacity: 0 },2500);
+				$(".white_background").animate({ height: "100%" },2480);
+				$(".white_background_beginning").animate({height: "140px", opacity: 1},2200);
+				$(".contact_white_background").animate({height: "100%"},3000);
+				setTimeout(function ()
+				{
+					setTimeout(function ()
+					{
+						$(".contact_white_background").css({
+							visibility: "visible"
+						});tm.staggerTo(".contact_fly_in", 0.1, {opacity: 1, y:10,ease:Back.easeOut}, 0.2);tm.from(".tree_img_wrapper", 1, {opacity: 0, y:80});
+					},1200);
+
+
+				},700);
+				$(".white_background_beginning").animate({height: "0"},1000);
+				setTimeout(function ()
+				{
+					$(".pattern_background").css({
+						"display": "none"
+					});
+				},2500)
+			}))
 		down();
 	}
-
-	$(document).ready(function ()
-	{
-		if (expMore){
-			setTimeout(function ()
-			{
-				ExploreMore();
-
-			},5000);
-		}
-	});
+	ExploreMore();
 });
 
-$(document).ready(function(){
-
-	var FadeTransition = Barba.BaseTransition.extend({
-		start: function() {
-			/**
-			 * This function is automatically called as soon the Transition starts
-			 * this.newContainerLoading is a Promise for the loading of the new container
-			 * (Barba.js also comes with an handy Promise polyfill!)
-			 */
-
-			// As soon the loading is finished and the old page is faded out, let's fade the new page
-			Promise
-			.all([this.newContainerLoading, this.fadeOut()])
-			.then(this.fadeIn.bind(this));
-		},
-
-		fadeOut: function() {
-			/**
-			 * this.oldContainer is the HTMLElement of the old Container
-			 */
-			$(".white_background").css({
-				"visibility": "visible",
-				"z-index": "100",
-				"opacity": "1"
-			});
-			$(".pattern_background").animate({ height: "0px",opacity: 0 },2500);
-			$(".white_background").animate({ height: "100%" },2480);
-			$(".white_background_beginning").animate({height: "140px", opacity: 1},2200);
-				setTimeout(function ()
-				{
-					console.log("Izvrsila se jebena funkcija");
-					tm.staggerFrom(".contact_fly_in", 0.6, {opacity: 0, top:80,ease:Back.easeOut, delay: 0.1}, 0.2);
-					tm.from(".tree_img_wrapper", 0.4, {opacity: 0, y:80, delay: 0.7}, 0.2);
-				},1800);
-			$(".white_background_beginning").animate({height: "0"},500);
-			return $(this.oldContainer).animate({opacity: 1},2500).promise();
-		},
-
-		fadeIn: function() {
-			/**
-			 * this.newContainer is the HTMLElement of the new Container
-			 * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
-			 * Please note, newContainer is available just after newContainerLoading is resolved!
-			 */
-
-			var _this = this;
-			var $el = $(this.newContainer);
-
-			$(this.oldContainer).toggle(3000);
-
-			$el.css({
-				visibility : 'visible',
-				opacity : 1
-			});
-			$el.animate({ opacity: 1 }, function() {
-				/**
-				 * Do not forget to call .done() as soon your transition is finished!
-				 * .done() will automatically remove from the DOM the old Container
-				 */
-				setTimeout(function ()
-				{
-					_this.done();
-				},5000);
-			});
-
-		}
-	});
-
-	/**
-	 * Next step, you have to tell Barba to use the new Transition
-	 */
-
-	Barba.Pjax.getTransition = function() {
-		/**
-		 * Here you can use your own logic!
-		 * For example you can use different Transition based on the current page or link...
-		 */
-
-		return FadeTransition;
-	};
-	Barba.Pjax.start();
-	Barba.Prefetch.init();
-});
+//$(document).ready(function(){
+//
+//	var FadeTransition = Barba.BaseTransition.extend({
+//		start: function() {
+//			/**
+//			 * This function is automatically called as soon the Transition starts
+//			 * this.newContainerLoading is a Promise for the loading of the new container
+//			 * (Barba.js also comes with an handy Promise polyfill!)
+//			 */
+//
+//			// As soon the loading is finished and the old page is faded out, let's fade the new page
+//			Promise
+//			.all([this.newContainerLoading, this.fadeOut()])
+//			.then(this.fadeIn.bind(this));
+//		},
+//
+//		fadeOut: function() {
+//			/**
+//			 * this.oldContainer is the HTMLElement of the old Container
+//			 */
+//			$(".white_background").css({
+//				"visibility": "visible",
+//				"z-index": "100",
+//				"opacity": "1"
+//			});
+//			$(".pattern_background").animate({ height: "0px",opacity: 0 },2500);
+//			$(".white_background").animate({ height: "100%" },2480);
+//			$(".white_background_beginning").animate({height: "140px", opacity: 1},2200);
+//				setTimeout(function ()
+//				{
+//					console.log("Izvrsila se jebena funkcija");
+//					tm.staggerFrom(".contact_fly_in", 0.6, {opacity: 0, top:80,ease:Back.easeOut, delay: 0.1}, 0.2);
+//					tm.from(".tree_img_wrapper", 0.4, {opacity: 0, y:80, delay: 0.7}, 0.2);
+//				},1800);
+//			$(".white_background_beginning").animate({height: "0"},500);
+//			return $(this.oldContainer).animate({opacity: 1},2500).promise();
+//		},
+//
+//		fadeIn: function() {
+//			/**
+//			 * this.newContainer is the HTMLElement of the new Container
+//			 * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
+//			 * Please note, newContainer is available just after newContainerLoading is resolved!
+//			 */
+//
+//			var _this = this;
+//			var $el = $(this.newContainer);
+//
+//			$(this.oldContainer).toggle(3000);
+//
+//			$el.css({
+//				visibility : 'visible',
+//				opacity : 1
+//			});
+//			$el.animate({ opacity: 1 }, function() {
+//				/**
+//				 * Do not forget to call .done() as soon your transition is finished!
+//				 * .done() will automatically remove from the DOM the old Container
+//				 */
+//				setTimeout(function ()
+//				{
+//					_this.done();
+//				},5000);
+//			});
+//
+//		}
+//	});
+//
+//	/**
+//	 * Next step, you have to tell Barba to use the new Transition
+//	 */
+//
+//	Barba.Pjax.getTransition = function() {
+//		/**
+//		 * Here you can use your own logic!
+//		 * For example you can use different Transition based on the current page or link...
+//		 */
+//
+//		return FadeTransition;
+//	};
+//	Barba.Pjax.start();
+//	Barba.Prefetch.init();
+//});
 
 $(document).ready(function ()
 {

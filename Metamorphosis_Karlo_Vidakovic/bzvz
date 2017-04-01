@@ -355,3 +355,115 @@ var FadeTransition = Barba.BaseTransition.extend({
             <div class="white_background">
 
             </div>
+
+******************************************** homepage NOVA VERZIJA (1.4. - 0:02)  ********************************
+
+
+           <section class="col-xs-12 col-md-12 col-lg-12 pattern_background">
+                           <nav class="col-xs-4 col-md-2 col-lg-1 fly_in_when_loaded menu_container">
+                               <div class="col-xs-12 col-md-12 col-lg-12 menu_left" >
+                                   <div id="menu_wrapper" class="col-xs-3 col-md-2 col-lg-2">
+                                       <div class="bar1"></div>
+                                       <div class="bar2"></div>
+                                       <div class="bar3"></div>
+                                   </div>
+                                   <div id="menu_text" class="fly_in_when_loaded">Menu</div>
+                               </div>
+                           </nav>
+                           <img src="img/chapters_img.png" alt="chapters icon" id="menu_chapters_icon" class="fly_in_when_loaded">
+                           <div id="menu_background" class="col-xs-12 col-md-12 col-lg-12">
+                               <ol>
+                                   <li class="fly_in_when_menu_opened"><span>About book</span></li>
+                                   <li class="fly_in_when_menu_opened"><span>Authors</span></li>
+                                   <li class="fly_in_when_menu_opened"><span>Extensions</span></li>
+                                   <li class="fly_in_when_menu_opened"><span>Contact us</span></li>
+                               </ol>
+                               <div id="menu_connect" class="col-md-12 col-md-12 col-lg-12 fly_in_when_menu_opened">
+                                   <p>CONNECT WITH US</p>
+                                   <img src="img/1490803844_twitter.png" alt="twitter logo" style="margin-left: 0;" class="col-xs-4 col-md-2 col-lg-2">
+                                   <img src="img/1490803876_facebook.png" alt="facebook logo" class="col-xs-4 col-md-2 col-lg-2">
+                                   <img src="img/1490803835_google_plus.png" alt="google+ logo" class="col-xs-4 col-md-2 col-lg-2">
+                               </div>
+                               <p id="menu_other_hand" class="col-xs-12 col-md-12 col-lg-12 fly_in_when_menu_opened">
+                                   On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized.
+                               </p>
+                           </div>
+                           <div id="heading" class="col-xs-12 col-md-12 col-lg-12 fly_in_when_loaded">
+                               <img src="img/divider.png" alt="divider picture">
+                               <h1>Metamorphosis.</h1>
+                               <p><span>One morning, when Gregor Samsa</span> woke from troubled dreams, he found</p>
+                               <p>himself transformed in his bed into a horrible vermin</p>
+                           </div>
+                           <p id="copyright_text_homepage" class="col-xs-12 col-md-12 fly_in_when_loaded">
+                               Degordian © Copyright 2014<br>
+                               All rights are reserved
+                           </p>
+                           <div class="black_overlay">
+                           </div>
+                           <div class="col-xs-12 col-md-12 col-lg-12 chapters_background">
+                               <img src="img/x.png" alt="picture of x" id="chapter_x">
+                               <div class="col-xs-12 col-md-12 col-lg-6" id="chapter_jump_to">
+                                   <h3>Jump to chapters...</h3>
+                               </div>
+                               <div class="col-xs-12 col-md-6 col-lg-6 chapters_wrapper">
+                                   <div class="col-xs-12 col-md-12 col-lg-12 chapter">
+                                       <p class="chapter_number">01</p>
+                                       <p>Gregor Samsa woke from troubled dreams</p>
+                                       <hr>
+                                   </div>
+                                   <div class="col-xs-12 col-md-12 col-lg-12 chapter">
+                                       <p class="chapter_number">02</p>
+                                       <p>At twilight Gregor wakes up</p>
+                                       <hr>
+                                   </div>
+                                   <div class="col-xs-12 col-md-12 col-lg-12 chapter">
+                                       <p class="chapter_number">03</p>
+                                       <p>Gregor's injury cripples him</p>
+                                       <hr>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-xs-4 col-md-2 col-lg-1 fly_in_when_loaded explore_more">
+                               <a href="contact.html" class="ajaxify" id="exp_more_p">Explore more<br>
+                                   <img src="img/Rectangle%205%20copy.png" alt="explore more picture" id="exp_more_img"></a>
+                           </div>
+                           <div class="col-xs-8 col-md-6 col-lg-2 fly_in_when_loaded share">
+                               <div class="col-xs-6 col-md-4 col-lg-2 share_icons">
+                                   <img src="img/t.svg" alt="twiter share icon">
+                                   <img src="img/f.svg" alt="facebook share icon">
+                                   <img src="img/g.svg" alt="google+ share icon">
+                               </div>
+                               <img src="img/share.svg" alt="share icon" class="share_button">
+                           </div>
+
+                       </section>
+                       <div class="white_background">
+                           <div class="white_background_beginning"></div>
+                       </div>
+
+
+********************************************* prijelaz
+
+$(".white_background").css({
+					"visibility": "visible",
+					"opacity": "1"
+				});
+				$(".pattern_background").animate({ height: "0px",opacity: 0 },2200);
+				$(".white_background").animate({ height: "100%" },2480);
+				$(".white_background_beginning").animate({height: "140px", opacity: 1},1900);
+				$(".contact_white_background").animate({height: "100%", opacity: 1},2200);
+				setTimeout(function ()
+				{$(".white_background_beginning").animate({height: "0"},500);
+					$(".contact_white_background").css({
+						visibility: "visible"
+					});
+					tm.staggerFrom(".contact_fly_in", 0.6, {opacity: 0, top:80,ease:Back.easeOut, delay: 0.1}, 0.2);
+					tm.from(".tree_img_wrapper", 0.4, {opacity: 0, y:80, delay: 0.7}, 0.2);
+				},1800);
+
+
+**********************************************************************************
+
+
+tm.staggerFrom(".contact_fly_in", .1, {opacity: .5, y:10,ease:Back.easeOut}, 0.1);
+				tm.from(".tree_img_wrapper", 0.6, {opacity: 0, y:80, delay: 1.3});

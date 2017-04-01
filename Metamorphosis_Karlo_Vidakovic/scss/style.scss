@@ -267,7 +267,6 @@ body{
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-            z-index: 100;
             .white_background_beginning{
                 position: relative;
                 opacity: 0;
@@ -287,29 +286,36 @@ body{
         .contact_white_background{
             display: inline-block;
             position: fixed;
+            visibility: hidden;
             width: 100%;
-            height: 100%;
+            height: 0;
             margin: 0;
-            top:0;
+            bottom: 0;
             left: 0;
+            z-index: 15;
             background: #fff no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
             .text_wrapper{
+                z-index: 16;
                 display: block;
                 float: left;
                 margin: 10% 0 0 5%;
                 .chapter_heading{
+                    z-index: 16;
                     font-family: "Georgia", serif;
                     margin-bottom: 5%;
+                    opacity: 0;
                     .text_02{
+                        z-index: 16;
                         font-family: "Clarendon LT Std", serif;
                         font-size: 22px;
                         margin-right: 20px;
                     }
                     hr{
+                        z-index: 16;
                         display: block;
                         height: 1px;
                         border: 0;
@@ -322,26 +328,37 @@ body{
                 .chapter_text_heading{
                     font-family: "Georgia", serif;
                     margin-bottom: 10%;
+                    z-index: 16;
+
                     .text_one_morning {
+                        z-index: 16;
                         font-family: "Georgia", serif;
                         font-style: italic;
                         font-size: 53px;
+                        opacity: 0;
                     }
                     .text_one_morning_longer{
                         line-height: 30px;
+                        z-index: 16;
+                        opacity: 0;
                     }
                 }
                 .chapter_button_wrapper{
+                    z-index: 16;
+                    opacity: 0;
                     .chapter_button_about_author{
                         padding: 2% 5%;
+                        z-index: 16;
                         background-color: #fff;
                         border: 1px solid #000;
                         .chapter_button_arrow_right{
                             margin: auto 0 3px 10px;
+                            z-index: 16;
                         }
                         &:hover{
                             background-color: #111111;
                             color: #fff;
+                            z-index: 16;
                         }
                     }
                 }
