@@ -491,6 +491,7 @@ body{
                 @extend .white_background_beginning;
             }
             .section_three_white_background{
+                height: 100%;
                 @extend .second_section_white_background;
                 overflow: hidden;
                 .section_three_previous_chapter_wrapper{
@@ -581,6 +582,19 @@ body{
                             }
                         }
                     }
+                    .white_transparent_overlay{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 100px;
+                        width: 100%;
+                        background: #fff; /* For browsers that do not support gradients */
+                        background: -webkit-linear-gradient(transparent, #fff); /* For Safari 5.1 to 6.0 */
+                        background: -o-linear-gradient(transparent, #fff); /* For Opera 11.1 to 12.0 */
+                        background: -moz-linear-gradient(transparent, #fff); /* For Firefox 3.6 to 15 */
+                        background: linear-gradient(transparent, #fff); /* Standard syntax */
+                    }
                 }
 
                 .section_three_next_chapter_wrapper{
@@ -606,6 +620,24 @@ body{
                             font: 400 12px "Georgia", serif, italic bold;
                         }
                     }
+                }
+            }
+        }
+        footer{
+            background-color: #fff;
+            font: 700 16px "Clarendon LT Std", serif;
+            height: 0;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: none;
+            p{
+                margin: 5% auto;
+                .footer_for{
+                    font: 400 16px"Georgia", serif;
+                    font-style: italic;
                 }
             }
         }

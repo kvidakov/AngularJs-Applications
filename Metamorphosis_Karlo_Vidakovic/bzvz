@@ -475,3 +475,56 @@ tm.staggerFrom(".contact_fly_in", .1, {opacity: .5, y:10,ease:Back.easeOut}, 0.1
 				/////////////////////////
 
 				about_the_author_black_back
+
+
+
+
+
+
+
+
+				$(".section_three_white_background").bind('DOMMouseScroll mousewheel', function(e)
+                	{
+                		if (!(e.originalEvent.wheelDelta / 120 > 0))
+                		{
+                			console.log(("TU je uso u funkciju skollllL!"));
+                			$("footer").css({
+                				display: "block"
+                			});
+                			$(".section_three_white_background").css({
+                				top: 0,
+                				left: 0
+                			});
+                			setTimeout(function ()
+                			{
+                				$("footer").animate({"height": "20%"}, 1000);
+                				$(".section_three_white_background").animate({height: "80%"}, 1000);
+                			},5000);
+                			//$(".white_background_beginning2").animate({height: "140px", opacity: 1},2200);
+                			//$(".section_three_white_background").animate({height: "100%"}, 3000);
+                			//setTimeout(function ()
+                			//{
+                			//	setTimeout(function ()
+                			//	{
+                			//		$(".section_three_white_background").css({
+                			//			visibility: "visible"
+                			//		});
+                			//		tm.from(".section_three_chapter_number_and_text_wrapper", 1, {
+                			//			opacity: 0,
+                			//			height: 0,
+                			//			ease: Back.easeOut
+                			//		}, 0.1);
+                			//		//tm.from(".tree_img_wrapper", 1, {opacity: 0, y:80});
+                			//	}, 1200);
+                			//
+                			//
+                			//}, 500);
+                			////$(".white_background_beginning2").animate({height: "0"},800);
+                			//setTimeout(function ()
+                			//{
+                			//	$(second_section_white_background).css({
+                			//		"display": "none"
+                			//	});
+                			//}, 2500)
+                		}
+                	});
