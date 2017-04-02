@@ -121,7 +121,7 @@ $(document).ready(function ()
 			});
 			$(".pattern_background").animate({ height: "0px",opacity: 0 },2500);
 			$(".white_background").animate({ height: "100%" },2480);
-			$(".white_background_beginning").animate({height: "140px", opacity: 1},2200);
+			//$(".white_background_beginning").animate({height: "140px", opacity: 1},2200);
 			$(".second_section_white_background").animate({height: "100%"},3000);
 			setTimeout(function ()
 			{
@@ -136,7 +136,7 @@ $(document).ready(function ()
 
 
 			},700);
-			$(".white_background_beginning").animate({height: "0"},1000);
+			//$(".white_background_beginning").animate({height: "0"},1000);
 			setTimeout(function ()
 			{
 				$(".pattern_background").css({
@@ -206,37 +206,49 @@ $(document).ready(function ()
 	}
 	
 	var second_section_white_background = $(".second_section_white_background");
-	$(second_section_white_background).scroll(function ()
-	{
-		$(".white_background2").css({
-			"visibility": "visible",
-			"opacity": "1"
-		});
-		$(second_section_white_background).animate({ height: "0px",opacity: 0 },2500);
-		$(".white_background2").animate({ height: "100%" },2480);
-		$(".white_background_beginning2").animate({height: "140px", opacity: 1},2200);
-		$(".section_three_white_background").animate({height: "100%"},3000);
-		setTimeout(function ()
-		{
+	console.log("prije funkcije skorl");
+
+
+	$(second_section_white_background).bind('DOMMouseScroll mousewheel', function(e){
+		$(".col-lg-12").removeClass("second_section_fly_in");
+		if(!(e.originalEvent.wheelDelta /120 > 0)) {
+			console.log(("TU je uso u funkciju skollllL!"));
+			$(second_section_white_background).css({
+				top: 0,
+				left: 0
+			});
+			$(".white_background2").css({
+				"visibility": "visible",
+				"opacity": "1"
+			});
+			$(second_section_white_background).animate({ height: "0px",opacity: .5, "background-color": "#000"},3000);
+			$(".text_wrapper").animate({"margin-top": "0px"},2500);
+			$(".white_background2").animate({ height: "100%" },2480);
+			//$(".white_background_beginning2").animate({height: "140px", opacity: 1},2200);
+			$(".section_three_white_background").animate({height: "100%"},3000);
 			setTimeout(function ()
 			{
-				$(".section_three_white_background").css({
-					visibility: "visible"
+				setTimeout(function ()
+				{
+					$(".section_three_white_background").css({
+						visibility: "visible"
+					});
+					tm.from(".section_three_chapter_number_and_text_wrapper", 1, {opacity: 0, height:0,ease:Back.easeOut}, 0.1);
+					//tm.from(".tree_img_wrapper", 1, {opacity: 0, y:80});
+				},1200);
+
+
+			},500);
+			//$(".white_background_beginning2").animate({height: "0"},800);
+			setTimeout(function ()
+			{
+				$(second_section_white_background).css({
+					"display": "none"
 				});
-				tm.staggerTo(".second_section_fly_in", 0.1, {opacity: 1, y:10,ease:Back.easeOut}, 0.1);
-				tm.from(".tree_img_wrapper", 1, {opacity: 0, y:80});
-			},1200);
-
-
-		},700);
-		$(".white_background_beginning2").animate({height: "0"},1000);
-		setTimeout(function ()
-		{
-			$(second_section_white_background).css({
-				"display": "none"
-			});
-		},2500)
+			},2500)
+		}
 	});
+
 });
 
 //$(document).ready(function(){

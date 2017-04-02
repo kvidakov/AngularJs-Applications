@@ -130,7 +130,7 @@ body {
           text-align: left;
           float: left;
           padding-left: 0; }
-      body .black_overlay, body .second_section_white_background .grey_overlay, body .white_background2 .white_background_beginning2 .section_three_white_background .grey_overlay {
+      body .black_overlay, body .second_section_white_background .grey_overlay, body .white_background2 .section_three_white_background .grey_overlay {
         position: absolute;
         width: 100%;
         min-height: 100%;
@@ -229,7 +229,7 @@ body {
             width: 100%;
             height: 15%;
             background-color: #000; }
-      body .second_section_white_background, body .white_background2 .white_background_beginning2 .section_three_white_background {
+      body .second_section_white_background, body .white_background2 .section_three_white_background {
         display: inline-block;
         position: fixed;
         visibility: hidden;
@@ -243,19 +243,19 @@ body {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover; }
-        body .second_section_white_background .text_wrapper, body .white_background2 .white_background_beginning2 .section_three_white_background .text_wrapper {
+        body .second_section_white_background .text_wrapper, body .white_background2 .section_three_white_background .text_wrapper {
           display: block;
           float: left;
           margin: 10% 0 0 5%; }
-          body .second_section_white_background .text_wrapper .chapter_heading, body .white_background2 .white_background_beginning2 .section_three_white_background .text_wrapper .chapter_heading {
+          body .second_section_white_background .text_wrapper .chapter_heading, body .white_background2 .section_three_white_background .text_wrapper .chapter_heading {
             font-family: "Georgia", serif;
             margin-bottom: 5%;
             opacity: 0; }
-            body .second_section_white_background .text_wrapper .chapter_heading .text_02, body .white_background2 .white_background_beginning2 .section_three_white_background .text_wrapper .chapter_heading .text_02 {
+            body .second_section_white_background .text_wrapper .chapter_heading .text_02, body .white_background2 .section_three_white_background .text_wrapper .chapter_heading .text_02 {
               font-family: "Clarendon LT Std", serif;
               font-size: 22px;
               margin-right: 20px; }
-            body .second_section_white_background .text_wrapper .chapter_heading hr, body .white_background2 .white_background_beginning2 .section_three_white_background .text_wrapper .chapter_heading hr {
+            body .second_section_white_background .text_wrapper .chapter_heading hr, body .white_background2 .section_three_white_background .text_wrapper .chapter_heading hr {
               display: block;
               height: 1px;
               border: 0;
@@ -263,44 +263,44 @@ body {
               margin: 1em 0;
               padding: 0;
               width: 30%; }
-          body .second_section_white_background .text_wrapper .chapter_text_heading, body .white_background2 .white_background_beginning2 .section_three_white_background .text_wrapper .chapter_text_heading {
+          body .second_section_white_background .text_wrapper .chapter_text_heading, body .white_background2 .section_three_white_background .text_wrapper .chapter_text_heading {
             font-family: "Georgia", serif;
             margin-bottom: 10%; }
-            body .second_section_white_background .text_wrapper .chapter_text_heading .text_one_morning, body .white_background2 .white_background_beginning2 .section_three_white_background .text_wrapper .chapter_text_heading .text_one_morning {
+            body .second_section_white_background .text_wrapper .chapter_text_heading .text_one_morning, body .white_background2 .section_three_white_background .text_wrapper .chapter_text_heading .text_one_morning {
               font-family: "Georgia", serif;
               font-style: italic;
               font-size: 53px;
               opacity: 0; }
-            body .second_section_white_background .text_wrapper .chapter_text_heading .text_one_morning_longer, body .white_background2 .white_background_beginning2 .section_three_white_background .text_wrapper .chapter_text_heading .text_one_morning_longer {
+            body .second_section_white_background .text_wrapper .chapter_text_heading .text_one_morning_longer, body .white_background2 .section_three_white_background .text_wrapper .chapter_text_heading .text_one_morning_longer {
               line-height: 30px;
               opacity: 0; }
-          body .second_section_white_background .text_wrapper .chapter_button_wrapper, body .white_background2 .white_background_beginning2 .section_three_white_background .text_wrapper .chapter_button_wrapper {
+          body .second_section_white_background .text_wrapper .chapter_button_wrapper, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper {
             opacity: 0; }
-            body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author, body .white_background2 .white_background_beginning2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author {
+            body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author {
               padding: 2% 5%;
               background-color: #fff;
               border: 1px solid #000;
               font-family: "Georgia", serif;
               font-weight: 700; }
-              body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:focus, body .white_background2 .white_background_beginning2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:focus {
+              body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:focus, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:focus {
                 outline: none; }
-              body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author .chapter_button_arrow_right, body .white_background2 .white_background_beginning2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author .chapter_button_arrow_right {
+              body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author .chapter_button_arrow_right, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author .chapter_button_arrow_right {
                 margin: auto 0 3px 10px; }
-              body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:hover, body .white_background2 .white_background_beginning2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:hover {
+              body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:hover, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:hover {
                 background-color: #111111;
                 color: #fff; }
-        body .second_section_white_background .tree_img_wrapper, body .white_background2 .white_background_beginning2 .section_three_white_background .tree_img_wrapper {
+        body .second_section_white_background .tree_img_wrapper, body .white_background2 .section_three_white_background .tree_img_wrapper {
           vertical-align: bottom;
           position: relative;
           top: 100%;
           transform: translateY(-100%); }
-          body .second_section_white_background .tree_img_wrapper img, body .white_background2 .white_background_beginning2 .section_three_white_background .tree_img_wrapper img {
+          body .second_section_white_background .tree_img_wrapper img, body .white_background2 .section_three_white_background .tree_img_wrapper img {
             width: 100%;
             height: 100%;
             padding: 0; }
-        body .second_section_white_background .grey_overlay, body .white_background2 .white_background_beginning2 .section_three_white_background .grey_overlay {
+        body .second_section_white_background .grey_overlay, body .white_background2 .section_three_white_background .grey_overlay {
           left: 0; }
-        body .second_section_white_background .about_the_autor_wrapper, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper {
+        body .second_section_white_background .about_the_autor_wrapper, body .white_background2 .section_three_white_background .about_the_autor_wrapper {
           background-color: #000;
           position: absolute;
           margin: 5% 0 7% 10%;
@@ -313,11 +313,11 @@ body {
           font-family: Georgia, serif;
           display: none;
           float: right; }
-          body .second_section_white_background .about_the_autor_wrapper .row, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row {
+          body .second_section_white_background .about_the_autor_wrapper .row, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row {
             background-color: #000;
             height: 100%;
             margin: 0; }
-            body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio {
+            body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio {
               position: relative;
               width: 90%;
               height: 100%;
@@ -326,70 +326,155 @@ body {
               float: left;
               overflow: hidden;
               padding-left: 0; }
-              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio #about_x, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio #about_x {
+              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio #about_x, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio #about_x {
                 float: left;
                 padding: 25px 0 0 10px; }
-              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header {
+              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header {
                 margin: 7% 0 0 7%; }
-                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .about_bio_header, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .about_bio_header {
+                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .about_bio_header, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .about_bio_header {
                   font-family: "Georgia", serif;
                   font-style: italic;
                   font-size: 36px;
                   margin-bottom: 3px; }
-                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz {
+                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz {
                   color: #b5b5b5;
                   font-size: 13px; }
-                  body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz span, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz span {
+                  body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz span, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz span {
                     font-style: italic; }
-              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text {
+              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text {
                 margin: 5% 0 0 11%;
                 display: inline-block; }
-                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img {
+                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img {
                   display: block;
                   position: relative;
                   padding: 0;
                   width: 10%; }
-                  body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img .about_the_author_img, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img .about_the_author_img {
+                  body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img .about_the_author_img, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img .about_the_author_img {
                     height: auto;
                     width: 100%;
                     padding: 0 20% 20% 0; }
-                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second {
+                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second {
                   display: block;
                   position: relative;
                   padding-left: 0;
                   margin-right: 15px; }
-                  body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K {
+                  body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K {
                     font-size: 14px;
                     line-height: 25px;
                     padding-left: 1px;
                     margin-bottom: 0; }
-                    body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K:first-letter, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K:first-letter, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K:first-letter, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K:first-letter {
+                    body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K:first-letter, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K:first-letter, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K:first-letter, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K:first-letter {
                       line-height: 52px;
                       font-size: 50px;
                       float: left;
                       margin-right: 5px; }
-                  body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .rest_of_the_text, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .rest_of_the_text, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .rest_of_the_text, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .rest_of_the_text {
+                  body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .rest_of_the_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .rest_of_the_text, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .rest_of_the_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .rest_of_the_text {
                     padding-left: 0;
                     font-size: 14px;
                     line-height: 25px;
                     float: none; }
-                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second {
+                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second {
                   visibility: hidden; }
-            body .second_section_white_background .about_the_autor_wrapper .row .next_pointer, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer {
+            body .second_section_white_background .about_the_autor_wrapper .row .next_pointer, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer {
               position: relative;
               float: right;
               height: 100%;
               text-align: center; }
-              body .second_section_white_background .about_the_autor_wrapper .row .next_pointer:hover, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer:hover {
+              body .second_section_white_background .about_the_autor_wrapper .row .next_pointer:hover, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer:hover {
                 background-color: #101010; }
-              body .second_section_white_background .about_the_autor_wrapper .row .next_pointer img, body .white_background2 .white_background_beginning2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer img {
+              body .second_section_white_background .about_the_autor_wrapper .row .next_pointer img, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer img {
                 position: absolute;
                 top: 0;
                 bottom: 0;
                 left: 0;
                 right: 0;
                 margin: auto;
-                vertical-align: middle; } }
+                vertical-align: middle; }
+      body .white_background2 .section_three_white_background {
+        overflow: hidden; }
+        body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper {
+          display: inline-block;
+          position: relative;
+          float: left;
+          top: 90%; }
+          body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .left_arrow, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .left_arrow {
+            width: 10%; }
+            body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .left_arrow img, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .left_arrow img {
+              margin-top: 4px; }
+          body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .previous_button_text, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .previous_button_text {
+            text-align: left;
+            padding-left: 0; }
+            body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .previous_button_text .previous_button_chapter_number, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .previous_button_text .previous_button_chapter_number {
+              font: 700 19px "Clarendon LT Std", serif;
+              margin-bottom: 0; }
+            body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .previous_button_text .previous_button_chapter_text_chapter, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .previous_button_text .previous_button_chapter_text_chapter {
+              font: 400 12px "Georgia", serif, italic; }
+        body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper {
+          margin-top: 5%;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          /* bring your own prefixes */
+          transform: translate(-50%, -50%); }
+          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper ::-webkit-scrollbar {
+            width: 5px;
+            background-color: transparent; }
+          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper ::-webkit-scrollbar-track {
+            background-color: transparent;
+            -webkit-box-shadow: inset 1px 1px 0 #fff;
+            border-radius: 10px; }
+          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper ::-webkit-scrollbar-thumb {
+            width: 1px;
+            border-radius: 10px;
+            background-color: #969696; }
+          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_chaper_number_heading {
+            text-align: center; }
+            body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_chaper_number_heading .big_chapter_number {
+              font: 700 33px "Clarendon LT Std", serif;
+              margin-bottom: 0;
+              border-top: 3px solid #dddddd;
+              border-left: 3px solid #dddddd;
+              border-right: 3px solid #dddddd; }
+            body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_chaper_number_heading .big_chapter_text {
+              font: 400 12px "Georgia", serif, italic;
+              border-bottom: 3px solid #dddddd;
+              border-left: 3px solid #dddddd;
+              border-right: 3px solid #dddddd;
+              padding-bottom: 10px; }
+          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper {
+            margin-top: 15px;
+            overflow: scroll;
+            overflow-x: hidden;
+            height: 600px; }
+            body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper .section_three_chapter_text h2 {
+              font: 700 53px "Clarendon LT Std", serif; }
+            body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper .section_three_chapter_text h3 {
+              color: #6a6a6a;
+              font: 400 19px "Georgia", serif;
+              font-style: italic;
+              margin-bottom: 10%;
+              line-height: 37px; }
+            body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper .section_three_chapter_text p {
+              font: 400 15px "Georgia Regular", serif;
+              line-height: 32px;
+              text-indent: 30px; }
+        body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper {
+          float: right; }
+          body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .right_arrow {
+            float: right;
+            width: 10%; }
+            body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .right_arrow img {
+              float: right;
+              margin-top: 4px; }
+          body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .next_button_text {
+            padding-right: 0;
+            float: right;
+            text-align: right; }
+            body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .next_button_text .next_button_chapter_number {
+              font: 700 19px "Clarendon LT Std", serif;
+              margin-bottom: 0; }
+            body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .next_button_text .next_button_chapter_text_chapter {
+              font: 400 12px "Georgia", serif, italic bold; } }
   body .disable_other_links {
     pointer-events: none;
     z-index: 3 !important; }

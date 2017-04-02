@@ -489,8 +489,123 @@ body{
             @extend .white_background;
             .white_background_beginning2{
                 @extend .white_background_beginning;
-                .section_three_white_background{
-                    @extend .second_section_white_background;
+            }
+            .section_three_white_background{
+                @extend .second_section_white_background;
+                overflow: hidden;
+                .section_three_previous_chapter_wrapper{
+                    display: inline-block;
+                    position: relative;
+                    float: left;
+                    top: 90%;
+                    .left_arrow{
+                        width: 10%;
+                        img{
+                            margin-top: 4px;
+                        }
+                    }
+                    .previous_button_text{
+                        text-align: left;
+                        padding-left: 0;
+                        .previous_button_chapter_number{
+                            font: 700 19px "Clarendon LT Std", serif;
+                            margin-bottom: 0;
+                        }
+                        .previous_button_chapter_text_chapter{
+                            font: 400 12px "Georgia", serif, italic;
+                        }
+                    }
+                }
+
+                .section_three_chapter_number_and_text_wrapper{
+                    margin-top: 5%;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    /* bring your own prefixes */
+                    transform: translate(-50%, -50%);
+                    ::-webkit-scrollbar {
+                        width: 5px;
+                        background-color: transparent;
+                    }
+
+                    ::-webkit-scrollbar-track {
+                        background-color: transparent;
+                        -webkit-box-shadow: inset 1px 1px 0 #fff;
+                        border-radius: 10px;
+                    }
+
+                    ::-webkit-scrollbar-thumb {
+                        width: 1px;
+                        border-radius: 10px;
+                        background-color: #969696;
+                    }
+
+                    .section_three_chaper_number_heading{
+                        text-align: center;
+                        .big_chapter_number{
+                            font: 700 33px "Clarendon LT Std", serif;
+                            margin-bottom: 0;
+                            border-top: 3px solid #dddddd;
+                            border-left: 3px solid #dddddd;
+                            border-right: 3px solid #dddddd;
+                        }
+                        .big_chapter_text{
+                            font: 400 12px "Georgia", serif, italic;
+                            border-bottom: 3px solid #dddddd;
+                            border-left: 3px solid #dddddd;
+                            border-right: 3px solid #dddddd;
+                            padding-bottom: 10px;
+                        }
+                    }
+                    .section_three_text_wrapper{
+                        margin-top: 15px;
+                        overflow: scroll;
+                        overflow-x: hidden;
+                        height: 600px;
+                        .section_three_chapter_text{
+                            h2{
+                                font: 700 53px "Clarendon LT Std", serif;
+                            }
+                            h3{
+                                color: #6a6a6a;
+                                font: 400 19px "Georgia", serif;
+                                font-style: italic;
+                                margin-bottom: 10%;
+                                line-height: 37px;
+                            }
+                            p{
+                                font: 400 15px "Georgia Regular", serif;
+                                line-height: 32px;
+                                text-indent: 30px;
+                            }
+                        }
+                    }
+                }
+
+                .section_three_next_chapter_wrapper{
+                    @extend .section_three_previous_chapter_wrapper;
+                    float: right;
+                    .right_arrow{
+                        float: right;
+                        width: 10%;
+                        img{
+                            float: right;
+                            margin-top: 4px;
+                        }
+                    }
+                    .next_button_text{
+                        padding-right: 0;
+                        float: right;
+                        text-align: right;
+                        .next_button_chapter_number{
+                            font: 700 19px "Clarendon LT Std", serif;
+                            margin-bottom: 0;
+                        }
+                        .next_button_chapter_text_chapter{
+                            font: 400 12px "Georgia", serif, italic bold;
+                        }
+                    }
                 }
             }
         }
@@ -503,5 +618,6 @@ body{
     .zIndex100{
         z-index: 100;
     }
+
 
 }

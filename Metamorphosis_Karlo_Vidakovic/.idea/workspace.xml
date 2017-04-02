@@ -18,8 +18,8 @@
       <file leaf-file-name="homepage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="151" column="41" lean-forward="false" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="41" />
+            <state relative-caret-position="723">
+              <caret line="197" column="86" lean-forward="false" selection-start-line="197" selection-start-column="86" selection-end-line="197" selection-end-column="86" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -40,8 +40,8 @@
       <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="493" column="16" lean-forward="false" selection-start-line="493" selection-start-column="16" selection-end-line="493" selection-end-column="16" />
+            <state relative-caret-position="628">
+              <caret line="560" column="47" lean-forward="false" selection-start-line="560" selection-start-column="21" selection-end-line="560" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -50,8 +50,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="208" column="38" lean-forward="false" selection-start-line="208" selection-start-column="38" selection-end-line="208" selection-end-column="38" />
+            <state relative-caret-position="461">
+              <caret line="235" column="120" lean-forward="false" selection-start-line="235" selection-start-column="120" selection-end-line="235" selection-end-column="120" />
               <folding />
             </state>
           </provider>
@@ -80,26 +80,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rota</find>
-      <find>hover</find>
-      <find>inde</find>
-      <find>dar</find>
-      <find>css</find>
-      <find>menu_left</find>
-      <find>menu_chapters_icon</find>
-      <find>wrap</find>
-      <find>abso</find>
-      <find>curso</find>
-      <find>heade</find>
-      <find>container_wrapper</find>
-      <find>fly</find>
-      <find>load</find>
-      <find>z-index</find>
-      <find>black</find>
-      <find>chapter_button_about_author</find>
-      <find>menu</find>
-      <find>tree_img_wrapper</find>
-      <find>black_overlay</find>
       <find>chapter_x</find>
       <find>about_the_author_black_back</find>
       <find>about_the_autor_wrapper</find>
@@ -110,6 +90,26 @@
       <find>contact</find>
       <find>chapter_num</find>
       <find>arro</find>
+      <find>white_background</find>
+      <find>text_wrapper</find>
+      <find>second_section_fly_in</find>
+      <find>400</find>
+      <find>500</find>
+      <find>wei</find>
+      <find>vert</find>
+      <find>section_three_next_chapter_wrapper</find>
+      <find>section_three_previous_chapter_wrapper</find>
+      <find>section_three_chaper_number_heading</find>
+      <find>section_three_chapter_text</find>
+      <find>big_chapter_number</find>
+      <find>over</find>
+      <find>overf</find>
+      <find>trans</find>
+      <find>::-webkit-scrollbar-track-piece</find>
+      <find>second_section_white_background</find>
+      <find>section_three_white_background</find>
+      <find>section_three_chapter_number_and_text_wrapper</find>
+      <find>section_three_text_wrapper</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -118,9 +118,9 @@
         <option value="$PROJECT_DIR$/js/contact.js" />
         <option value="$PROJECT_DIR$/contact.html" />
         <option value="$PROJECT_DIR$/bzvz" />
-        <option value="$PROJECT_DIR$/homepage.html" />
         <option value="$PROJECT_DIR$/scss/style.scss" />
         <option value="$PROJECT_DIR$/js/script.js" />
+        <option value="$PROJECT_DIR$/homepage.html" />
       </list>
     </option>
   </component>
@@ -180,6 +180,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Metamorphosis_Karlo_Vidakovic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Metamorphosis_Karlo_Vidakovic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -487,12 +501,12 @@
       <updated>1490732321180</updated>
       <workItem from="1490732325957" duration="296000" />
       <workItem from="1490732657220" duration="773000" />
-      <workItem from="1490733475390" duration="166253000" />
+      <workItem from="1490733475390" duration="187863000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167322000" />
+    <option name="totallyTimeSpent" value="188932000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -594,8 +608,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="342" column="102" lean-forward="false" selection-start-line="342" selection-start-column="102" selection-end-line="342" selection-end-column="102" />
+        <state relative-caret-position="288">
+          <caret line="425" column="166" lean-forward="false" selection-start-line="425" selection-start-column="140" selection-end-line="425" selection-end-column="166" />
           <folding />
         </state>
       </provider>
@@ -608,28 +622,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scss/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="560" column="47" lean-forward="false" selection-start-line="560" selection-start-column="21" selection-end-line="560" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/homepage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="151" column="41" lean-forward="false" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="41" />
+        <state relative-caret-position="723">
+          <caret line="197" column="86" lean-forward="false" selection-start-line="197" selection-start-column="86" selection-end-line="197" selection-end-column="86" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="493" column="16" lean-forward="false" selection-start-line="493" selection-start-column="16" selection-end-line="493" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="208" column="38" lean-forward="false" selection-start-line="208" selection-start-column="38" selection-end-line="208" selection-end-column="38" />
+        <state relative-caret-position="461">
+          <caret line="235" column="120" lean-forward="false" selection-start-line="235" selection-start-column="120" selection-end-line="235" selection-end-column="120" />
           <folding />
         </state>
       </provider>
