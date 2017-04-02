@@ -3,54 +3,51 @@
 var tm = TweenMax;
 var hompage_loading_values = {opacity: 0, y:120, delay: 0.7};
 var menu_flying_values = {opacity: 0, x:-120, delay: 0.4};
-var klik = false;
 
 $(document).ready(function ()
 {
-
-
 	var chpt_back = $(".chapters_background");
-	tm.from(".pattern_background", 0.8, {opacity: 0, y:350});
-	tm.staggerFrom(".fly_in_when_loaded", 0.5, hompage_loading_values, 0.1);
-
-	var menu_background = document.getElementById("menu_background");
+	var ptrn_back = $(".pattern_background");
 	var menu_text = document.getElementById("menu_text");
 	var share_icons = $(".share_icons");
-	$("#menu_background").hide();
+	var menu_background = $("#menu_background");
+	var bol = $(".black_overlay");
+	var gol = $(".grey_overlay");
+	tm.from(ptrn_back, 0.8, {opacity: 0, y:350});
+	tm.staggerFrom(".fly_in_when_loaded", 0.5, hompage_loading_values, 0.1);
+	$(menu_background).hide();
 	$(chpt_back).hide();
-	$(".black_overlay, .grey_overlay").hide();
+	$(bol).hide();
+	$(gol).hide();
 	share_icons.hide();
 	$(".menu_left").click(function ()	{
 		this.classList.toggle("change");
-		if ($('#menu_background').is(':visible'))
+		if ($(menu_background).is(':visible'))
 		{
 			menu_text.innerHTML = "Menu";
-			//$(".black_overlay").removeAttr("id");
-			$(".black_overlay").hide();
-			$('#menu_background').toggle('slide', {
+			$(bol).hide();
+			$(menu_background).toggle('slide', {
 				direction: 'left'
 			}, 600);
-			//$("#menu_chapters_icon").removeClass("disable_other_links");
 		}
 		else
 		{
 			menu_text.innerHTML = "Close";
-			//$("#menu_chapters_icon").addClass("disable_other_links");
-			//$(".black_overlay").attr("id", "dark_background");
-			$(".black_overlay").show();
+			$(bol).show();
 			tm.staggerFrom(".fly_in_when_menu_opened", 0.4, menu_flying_values, 0.2);
-			$('#menu_background').toggle('slide', {
+			$(menu_background).toggle('slide', {
 				direction: 'left'
 			}, 600);
 
 		}
 	});
+
+	var menu_cont = $(".menu_container");
 	$("#menu_chapters_icon").click(function ()	{
 		if ($(chpt_back).is(":visible") == false){
 			$(chpt_back).toggle('size', { origin: ["top", "right"] }, 400);
-			//$(".black_overlay").attr("id", "dark_background");
-			$(".black_overlay").show();
-			$(".menu_container").addClass("disable_other_links");
+			$(bol).show();
+			$(menu_cont).addClass("disable_other_links");
 		}
 		else {
 			RemoveChapers();
@@ -62,51 +59,54 @@ $(document).ready(function ()
 	function RemoveChapers()
 	{
 		$(chpt_back).toggle('size', { origin: ["top", "right"] }, 400);
-		//$(".black_overlay").removeAttr("id");
-		$(".black_overlay").hide();
-		$(".menu_container").removeClass("disable_other_links");
+		$(bol).hide();
+		$(menu_cont).removeClass("disable_other_links");
 	}
 
-	$(".share_button").click(function ()
+	var sh_btn = $(".share_button");
+	$(sh_btn).click(function ()
 	{
-		if ($(".share_icons").is(":visible") == false){
+		if ($(share_icons).is(":visible") == false){
 			shareRotate(180);
-			$('.share_icons').toggle('slide', {
+			$(share_icons).toggle('slide', {
 				direction: 'right'
 			}, 600);
 			setTimeout(function ()
 			{
-				$(".share_button").css("right","3%");
+				$(sh_btn).css("right","3%");
 			}, 400);
 		}
 		else{
 			shareRotate(0);
-			$('.share_icons').toggle('slide', {
+			$(share_icons).toggle('slide', {
 				direction: 'right'
 			}, 600);
 			setTimeout(function ()
 			{
-				$(".share_button").css("right","4%");
+				$(sh_btn).css("right","4%");
 			}, 400);
 		}
 	});
 
 	function shareRotate(degrees)
 	{
-		$(".share_button").css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
+		$(sh_btn).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
 			'-moz-transform' : 'rotate('+ degrees +'deg)',
 			'-ms-transform' : 'rotate('+ degrees +'deg)',
 			'transform' : 'rotate('+ degrees +'deg)'});
 	}
 
-	var expMore = $("#exp_more_img");
+	var expMoreImg = $("#exp_more_img");
+	var wh_back = $(".white_background");
+	var s_s_wh_back = $(".second_section_white_background");
+
 	function ExploreMore()
 	{
 		function loop() {
-			$(expMore).animate({'margin-top': '23px'}, {
+			$(expMoreImg).animate({'margin-top': '23px'}, {
 				duration: 1000,
 				complete: function() {
-					$(expMore).animate({"margin-top": "13"}, {
+					$(expMoreImg).animate({"margin-top": "13"}, {
 						duration: 1000,
 						complete: loop
 					});
@@ -115,39 +115,33 @@ $(document).ready(function ()
 		loop();
 		if ($(".explore_more").click(function ()
 		{
-			$(".white_background").css({
+			$(wh_back).css({
 				"visibility": "visible",
 				"opacity": "1"
 			});
-			$(".pattern_background").animate({ height: "0px",opacity: 0 },2500);
-			$(".white_background").animate({ height: "100%" },2480);
-			//$(".white_background_beginning").animate({height: "140px", opacity: 1},2200);
-			$(".second_section_white_background").animate({height: "100%"},3000);
+			$(ptrn_back).animate({ height: "0px",opacity: 0 },2500);
+			$(wh_back).animate({ height: "100%" },2480);
+			$(s_s_wh_back).animate({height: "100%"},3000);
 			setTimeout(function ()
 			{
 				setTimeout(function ()
 				{
-					$(".second_section_white_background").css({
+					$(s_s_wh_back).css({
 						visibility: "visible"
 					});
 					tm.staggerTo(".second_section_fly_in", 0.1, {opacity: 1, y:10,ease:Back.easeOut}, 0.1);
 					tm.from(".tree_img_wrapper", 1, {opacity: 0, y:80});
 				},1200);
-
-
 			},700);
-			//$(".white_background_beginning").animate({height: "0"},1000);
 			setTimeout(function ()
 			{
-				$(".pattern_background").css({
+				$(ptrn_back).css({
 					"display": "none"
 				});
 			},2500)
 		}));
-		//down();
 	}
 	ExploreMore();
-
 
 	var about_the_author_exp_bio = $(".about_the_author_exp_bio");
 	var about_the_autor_wrapper = $(".about_the_autor_wrapper");
@@ -156,7 +150,7 @@ $(document).ready(function ()
 	$(chapter_button_about_author).click(function ()	{
 		if ($(about_the_autor_wrapper).is(":visible") == false){
 			$(about_the_autor_wrapper).toggle('slide', {direction: "right"}, 200);
-			$(".grey_overlay").show();
+			$(gol).show();
 			tm.staggerFrom(".about_fly_in",0.3,{left: "100px",delay: 0.5, opacity: 0},.5);
 		}
 		else {
@@ -170,8 +164,16 @@ $(document).ready(function ()
 	function RemoveAboutTheAuthor()
 	{
 		$(about_the_autor_wrapper).toggle('slide', {direction: "right"}, 2300);
-		$(".grey_overlay").hide();
+		$(gol).hide();
 	}
+	$(chapter_button_about_author).hover(function ()
+	{
+		$(".chapter_button_arrow_right").attr("src", "img/arrow_right_hover.svg");
+	},function ()
+	{
+		$(".chapter_button_arrow_right").attr("src", "img/arrow_right.svg");
+	});
+
 
 	var next_pointer = $(".next_pointer");
 	var big_right_arrow = $("#big_right_arrow");
@@ -204,199 +206,73 @@ $(document).ready(function ()
 			});
 		}
 	}
-	
-	var second_section_white_background = $(".second_section_white_background");
-	console.log("prije funkcije skorl");
 
-
-	$(second_section_white_background).bind('DOMMouseScroll mousewheel', function(e)
+	var wh_back_2 = $(".white_background2");
+	var sec_three_wh_back = $(".section_three_white_background");
+	var sec_three_cap_num_txt_wrap = $(".section_three_chapter_number_and_text_wrapper");
+	$(s_s_wh_back).bind('DOMMouseScroll mousewheel', function(e)
 	{
 		$(".col-lg-12").removeClass("second_section_fly_in");
 		if (!(e.originalEvent.wheelDelta / 120 > 0))
 		{
-			console.log(("TU je uso u funkciju skollllL!"));
-			$(second_section_white_background).css({
+			$(s_s_wh_back).css({
 				top: 0,
 				left: 0
 			});
-			$(".white_background2").css({
+			$(wh_back_2).css({
 				"visibility": "visible",
 				"opacity": "1"
 			});
-			$(second_section_white_background).animate({height: "0px", opacity: .5, "background-color": "#000"}, 3000);
+			$(s_s_wh_back).animate({height: "0px", opacity: .5, "background-color": "#000"}, 3000);
 			$(".text_wrapper").animate({"margin-top": "0px"}, 2500);
-			$(".white_background2").animate({height: "100%"}, 2500);
-			//$(".white_background_beginning2").animate({height: "140px", opacity: 1},2200);
-			$(".section_three_white_background").animate({height: "100%"}, 2400);
+			$(wh_back_2).animate({height: "100%"}, 2500);
+			$(sec_three_wh_back).animate({height: "100%"}, 2400);
 			setTimeout(function ()
 			{
 				setTimeout(function ()
 				{
-					$(".section_three_white_background").css({
+					$(sec_three_wh_back).css({
 						visibility: "visible"
 					});
-					tm.from(".section_three_chapter_number_and_text_wrapper", 1, {
+					tm.from(sec_three_cap_num_txt_wrap, 1, {
 						opacity: 0,
 						height: 0,
 						ease: Back.easeOut
 					});
-					//tm.from(".tree_img_wrapper", 1, {opacity: 0, y:80});
 				}, 1500);
-
-
 			}, 800);
-			//$(".white_background_beginning2").animate({height: "0"},800);
 			setTimeout(function ()
 			{
-				$(second_section_white_background).css({
+				$(s_s_wh_back).css({
 					"display": "none"
 				});
 			}, 2600)
 		}
 	});
 
-	$(".section_three_white_background").bind('DOMMouseScroll mousewheel', function(e)
+	var fot = $("footer");
+	var sec_three_txt_wrap = $(".section_three_text_wrapper");
+	$(sec_three_wh_back).bind('DOMMouseScroll mousewheel', function(e)
 	{
 		if (!(e.originalEvent.wheelDelta / 120 > 0))
 		{
-			console.log(("TU je uso u funkciju skollllL!"));
-			$("footer").css({
+			$(fot).css({
 				display: "block"
 			});
-			$(".section_three_white_background").css({
+			$(sec_three_wh_back).css({
 				top: 0,
 				left: 0
 			});
-			if($(".section_three_text_wrapper").scrollTop() + $(".section_three_text_wrapper").height() == $(".section_three_text_wrapper").height()){
-				$("footer").animate({"height": "20%"}, 1000);
-				$(".section_three_white_background").animate({height: "80%"}, 1000);
-				$(".section_three_chapter_number_and_text_wrapper").animate({top: "40%"}, 1000);
+			if($(sec_three_txt_wrap).scrollTop() + $(sec_three_txt_wrap).height() == $(sec_three_txt_wrap).height()){
+				$(fot).animate({"height": "20%"}, 1000);
+				$(sec_three_wh_back).animate({height: "80%"}, 1000);
+				$(sec_three_cap_num_txt_wrap).animate({top: "40%"}, 1000);
 				$(".white_transparent_overlay").animate({bottom: "10%"}, 1000);
 			}
-			//$(".white_background_beginning2").animate({height: "140px", opacity: 1},2200);
-			//$(".section_three_white_background").animate({height: "100%"}, 3000);
-			//setTimeout(function ()
-			//{
-			//	setTimeout(function ()
-			//	{
-			//		$(".section_three_white_background").css({
-			//			visibility: "visible"
-			//		});
-			//		tm.from(".section_three_chapter_number_and_text_wrapper", 1, {
-			//			opacity: 0,
-			//			height: 0,
-			//			ease: Back.easeOut
-			//		}, 0.1);
-			//		//tm.from(".tree_img_wrapper", 1, {opacity: 0, y:80});
-			//	}, 1200);
-			//
-			//
-			//}, 500);
-			////$(".white_background_beginning2").animate({height: "0"},800);
-			//setTimeout(function ()
-			//{
-			//	$(second_section_white_background).css({
-			//		"display": "none"
-			//	});
-			//}, 2500)
 		}
 	});
 });
-
-//$(document).ready(function(){
-//
-//	var FadeTransition = Barba.BaseTransition.extend({
-//		start: function() {
-//			/**
-//			 * This function is automatically called as soon the Transition starts
-//			 * this.newContainerLoading is a Promise for the loading of the new container
-//			 * (Barba.js also comes with an handy Promise polyfill!)
-//			 */
-//
-//			// As soon the loading is finished and the old page is faded out, let's fade the new page
-//			Promise
-//			.all([this.newContainerLoading, this.fadeOut()])
-//			.then(this.fadeIn.bind(this));
-//		},
-//
-//		fadeOut: function() {
-//			/**
-//			 * this.oldContainer is the HTMLElement of the old Container
-//			 */
-//			$(".white_background").css({
-//				"visibility": "visible",
-//				"z-index": "100",
-//				"opacity": "1"
-//			});
-//			$(".pattern_background").animate({ height: "0px",opacity: 0 },2500);
-//			$(".white_background").animate({ height: "100%" },2480);
-//			$(".white_background_beginning").animate({height: "140px", opacity: 1},2200);
-//				setTimeout(function ()
-//				{
-//					console.log("Izvrsila se jebena funkcija");
-//					tm.staggerFrom(".contact_fly_in", 0.6, {opacity: 0, top:80,ease:Back.easeOut, delay: 0.1}, 0.2);
-//					tm.from(".tree_img_wrapper", 0.4, {opacity: 0, y:80, delay: 0.7}, 0.2);
-//				},1800);
-//			$(".white_background_beginning").animate({height: "0"},500);
-//			return $(this.oldContainer).animate({opacity: 1},2500).promise();
-//		},
-//
-//		fadeIn: function() {
-//			/**
-//			 * this.newContainer is the HTMLElement of the new Container
-//			 * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
-//			 * Please note, newContainer is available just after newContainerLoading is resolved!
-//			 */
-//
-//			var _this = this;
-//			var $el = $(this.newContainer);
-//
-//			$(this.oldContainer).toggle(3000);
-//
-//			$el.css({
-//				visibility : 'visible',
-//				opacity : 1
-//			});
-//			$el.animate({ opacity: 1 }, function() {
-//				/**
-//				 * Do not forget to call .done() as soon your transition is finished!
-//				 * .done() will automatically remove from the DOM the old Container
-//				 */
-//				setTimeout(function ()
-//				{
-//					_this.done();
-//				},5000);
-//			});
-//
-//		}
-//	});
-//
-//	/**
-//	 * Next step, you have to tell Barba to use the new Transition
-//	 */
-//
-//	Barba.Pjax.getTransition = function() {
-//		/**
-//		 * Here you can use your own logic!
-//		 * For example you can use different Transition based on the current page or link...
-//		 */
-//
-//		return FadeTransition;
-//	};
-//	Barba.Pjax.start();
-//	Barba.Prefetch.init();
-//});
-
 $(document).ready(function ()
 {
-	$(".chapter_button_about_author").hover(function ()
-	{
-		$(".chapter_button_arrow_right").attr("src", "img/arrow_right_hover.svg");
-	},function ()
-	{
-		$(".chapter_button_arrow_right").attr("src", "img/arrow_right.svg");
-	});
-	//$(".contact_fly_in").ready(loadContactElements());
-
 
 });

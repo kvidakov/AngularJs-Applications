@@ -2,647 +2,1043 @@ body{
     background-color: #000;
     margin:0;
     height: 100%;
-    @media screen and (min-device-width: 1200px),(max-device-width: 1600px),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi)and (min-device-width: 1200px),
-    (max-device-width: 1600px),
-    (-webkit-min-device-pixel-ratio: 1) {
-        .pattern_background{
+    overflow: hidden;
+    .pattern_background{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        top:0;
+        left: 0;
+        background: url("../img/pattern.jpeg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        .menu_container {
+            position: absolute;
+            display: inline-block;
+            height: 50px;
+            top: 44px;
+            left: 44px;
+            right: 18px;
+            z-index:10;
+            .menu_left{
+                padding-left: 0;
+                cursor: default;
+                font-family: Georgia, serif;
+                #menu_wrapper{
+                    display: inline-block;
+                    float: left;
+                    padding-left: 0;
+                    .bar1, .bar2, .bar3 {
+                        display: block;
+                        width: 28px;
+                        height: 4px;
+                        background-color: #fff;
+                        margin: 6px 0;
+                        transition: 0.4s;
+                        border-radius: 5px;
+                    }
+                }
+                #menu_text{
+                    position: relative;
+                    display: block;
+                    float: left;
+                    color: #fff;
+                    margin: 10px 20px;
+                    /* Portrait and Landscape */
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2) {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+        .menu_chapters_icon{
+            color: #fff;
+            font-family: "Georgia", serif;
+            display: block;
+            z-index: 7;
+            cursor: default;
+            top: 6%;
+            right: 7%;
+            position: absolute;
+            p{
+                right: 30px;
+                top: 5%;
+            }
+            @media only screen
+            and (min-device-width: 320px)
+            and (max-device-width: 568px)
+            and (-webkit-min-device-pixel-ratio: 2){
+                top: 9%;
+                right: 10%;
+            }
+        }
+        .change {
+            .bar1 {
+                -webkit-transform: rotate(45deg) translate(8px, 8px);
+                transform: rotate(45deg) translate(8px, 8px);
+            }
+            .bar2 {
+                opacity: 0;
+            }
+            .bar3 {
+                -webkit-transform: rotate(-45deg) translate(6px, -6px) ;
+                transform: rotate(-45deg) translate(6px, -6px) ;
+            }
+        }
+
+        #menu_background{
+            color: #fff;
+            font-family: Georgia, serif;
+            font-size: 1em;
+            width: 320px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-color: #000;
+            z-index:9;
+            display: none;
+            ol {
+                margin-top: 50%;
+                list-style-type: decimal-leading-zero;
+                padding-left: 19%;
+                li{
+                    margin: 15% auto 15% 10px;
+                    /* Portrait and Landscape */
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2) {
+                        margin: 5% auto 5% 10px;
+                    }
+                    span{
+                    font-weight: 700;
+                    }
+                }
+                li::before {
+                    content: "";
+                    width: 20px;
+                    display: inline-block;
+                }
+            }
+            #menu_connect{
+                margin-top: 80%;
+                padding-left: 18%;
+                @media only screen
+                and (min-device-width: 320px)
+                and (max-device-width: 568px)
+                and (-webkit-min-device-pixel-ratio: 2){
+                    margin-top: 25%;
+                }
+                img{
+                    padding: 0;
+                    margin-right: 3px;
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        width: 20%;
+                    }
+                }
+            }
+            #menu_other_hand{
+                color: #818181;
+                font-size: 15px;
+                margin-top: 20%;
+                padding-left: 15%;
+                padding-right: 15%;
+                line-height: 21px;
+                font-stretch: expanded;
+                @media only screen
+                and (min-device-width: 320px)
+                and (max-device-width: 568px)
+                and (-webkit-min-device-pixel-ratio: 2){
+                    margin-top: 10%;
+                }
+            }
+        }
+        #heading{
+            color: #fff;
             position: fixed;
+            top: 50%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index:5;
+            h1 {
+                font-family: "superclarendon", serif;
+                font-weight: 700;
+                font-size: 127px;
+                margin-bottom: 2%;
+                @media only screen
+                and (min-device-width: 320px)
+                and (max-device-width: 568px)
+                and (-webkit-min-device-pixel-ratio: 2){
+                    font-size: 30px;
+                    margin-bottom: 10%;
+                }
+                @media only screen
+                and (min-device-width: 768px)
+                and (max-device-width: 1024px)
+                and (-webkit-min-device-pixel-ratio: 2){
+                    font-size: 65px;
+                    margin-bottom: 5%;
+                }
+            }
+            p {
+                font-family: Georgia, serif;
+                font-size: 19px;
+                @media only screen
+                and (min-device-width: 320px)
+                and (max-device-width: 568px)
+                and (-webkit-min-device-pixel-ratio: 2){
+                    font-size: 12px;
+                }
+                @media only screen
+                and (min-device-width: 768px)
+                and (max-device-width: 1024px)
+                and (-webkit-min-device-pixel-ratio: 2){
+                    font-size: 15px;
+                }
+                > span
+                {
+                    font-weight: 700;
+                    font-style: italic;
+                }
+            }
+        }
+        #copyright_text_homepage{
+            position: absolute;
+            color: #bfbfbf;
+            transform: rotate(-90deg);
+            transform-origin: 454px 400px 0;
+            left: 0;
+            text-align: left;
+            float: left;
+            padding-left: 0;
+            @media only screen
+            and (min-device-width: 320px)
+            and (max-device-width: 568px)
+            and (-webkit-min-device-pixel-ratio: 2){
+                transform-origin: 90% 1040% 0;
+                font-size: 8px;
+            }
+        }
+    }
+    .black_overlay{
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        z-index:8;
+        background: rgba(28,28,28, 0.5);
+    }
+    .chapters_background{
+        background-color: #000;
+        position: absolute;
+        margin: 6% 15%;
+        width: 70%;
+        height: 76%;
+        z-index:8;
+        color: #fff;
+        font-family: Georgia, serif;
+        display: none;
+        float: right;
+        @media only screen
+        and (min-device-width: 320px)
+        and (max-device-width: 568px)
+        and (-webkit-min-device-pixel-ratio: 2){
+            margin: 0;
             width: 100%;
             height: 100%;
-            margin: 0;
-            top:0;
             left: 0;
-            background: url("../img/pattern.jpeg") no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            .menu_container {
-                position: absolute;
-                display: inline-block;
-                height: 50px;
-                top: 44px;
-                left: 44px;
-                right: 18px;
-                z-index:10;
-                .menu_left{
-                    padding-left: 0;
-                    cursor: default;
-                    font-family: Georgia, serif;
-                    #menu_wrapper{
-                        display: inline-block;
-                        float: left;
-                        padding-left: 0;
-                        .bar1, .bar2, .bar3 {
-                            display: block;
-                            width: 28px;
-                            height: 4px;
-                            background-color: #fff;
-                            margin: 6px 0;
-                            transition: 0.4s;
-                            border-radius: 5px;
-                        }
-                    }
-                    #menu_text{
-                        position: relative;
-                        display: block;
-                        float: left;
-                        color: #fff;
-                        margin: 10px 20px;
-                    }
-                }
-
+        }
+        #chapter_x{
+            float: right;
+            padding: 25px 15px 0 0;
+            cursor: default;
+        }
+        #chapter_jump_to{
+            font-style: italic;
+            -ms-text-align-last: right;
+            text-align: center;
+            margin: 6% 25%;
+            @media only screen
+            and (min-device-width: 320px)
+            and (max-device-width: 568px)
+            and (-webkit-min-device-pixel-ratio: 2){
+                margin: 6% 4%;
             }
-            #menu_chapters_icon{
-                 display: block;
-                 z-index: 7;
-                cursor: default;
-                 top: 6%;
-                 right: 7%;
-                 position: absolute;
+            @media only screen
+            and (min-device-width: 768px)
+            and (max-device-width: 1024px)
+            and (-webkit-min-device-pixel-ratio: 2){
+                margin: 6% 4%;
             }
-            .change {
-                .bar1 {
-                    -webkit-transform: rotate(45deg) translate(8px, 8px);
-                    transform: rotate(45deg) translate(8px, 8px);
+        }
+        .chapters_wrapper{
+            margin: 0 25%;
+            @media only screen
+            and (min-device-width: 320px)
+            and (max-device-width: 568px)
+            and (-webkit-min-device-pixel-ratio: 2){
+                margin: 0 2%;
+            }
+            @media only screen
+            and (min-device-width: 768px)
+            and (max-device-width: 1024px)
+            and (-webkit-min-device-pixel-ratio: 2){
+                margin: 4%;
+            }
+            .chapter{
+                text-align: center;
+                padding-top: 20px;
+                &:hover{
+                    background-color: #121212;
                 }
-                .bar2 {
-                    opacity: 0;
+                .chapter_number{
+                    font-family: "Clarendon Book", serif;
+                    font-size: 19px;
                 }
-                .bar3 {
-                    -webkit-transform: rotate(-45deg) translate(6px, -6px) ;
-                    transform: rotate(-45deg) translate(6px, -6px) ;
+                hr{
+                    width: 15px;
                 }
             }
 
-            #menu_background{
-                color: #fff;
-                font-family: Georgia, serif;
-                font-size: 1em;
-                width: 320px;
-                height: 100%;
-                top: 0;
-                left: 0;
-                position: absolute;
+        }
+    }
+    .explore_more{
+        color: #fff;
+        text-align: center;
+        position: absolute;
+        float: none;
+        bottom: 10%;
+        margin: 0 45%;
+        font-family: Georgia, serif;
+        font-style: italic;
+        z-index:2;
+        height: 30px;
+        @media only screen
+        and (min-device-width: 320px)
+        and (max-device-width: 568px)
+        and (-webkit-min-device-pixel-ratio: 2){
+            margin: 0 30%;
+        }
+        @media only screen
+        and (min-device-width: 768px)
+        and (max-device-width: 1024px)
+        and (-webkit-min-device-pixel-ratio: 2){
+            margin: 0 32%;
+        }
+        #exp_more_p{
+            color: #fff;
+            text-decoration: none;
+            cursor: default;
+            margin: 10px 1px;
+        }
+    }
+    .share{
+        float: none;
+        position: absolute;
+        bottom: 9%;
+        right: 7%;
+        .share_button{
+            position: absolute;
+            float: right;
+            bottom: 10%;
+            right: 4%;
+            z-index:5;
+            -webkit-transition: -webkit-transform .8s ease-in-out;
+            transition: all 0.3s ease-in-out 0s;
+            /*&:active{
+                transform: rotate(180deg);
+                transition: all 0.3s ease-in-out 0s;
+            }*/
+        }
+        .share_icons{
+            float: right;
+            width: 40%;
+            background-color: transparent;
+            @media only screen
+            and (min-device-width: 768px)
+            and (max-device-width: 1024px)
+            and (-webkit-min-device-pixel-ratio: 2){
+                width: auto;
+                margin-right: 5%;
+            }
+            img{
+                margin: 0 4px;
+                @media only screen
+                and (min-device-width: 320px)
+                and (max-device-width: 568px)
+                and (-webkit-min-device-pixel-ratio: 2){
+                    margin: 0 8px;
+                }
+            }
+        }
+    }
+    .white_background{
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        margin: 0;
+        bottom: 0;
+        left: 0;
+        background: rgb(255,255,255) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        .white_background_beginning{
+            position: relative;
+            opacity: 0;
+            height: 0;
+            width: 100%;
+            background: #000;
+            &:after{
+                width: 100%;
+                height: 15%;
                 background-color: #000;
-                z-index:9;
-                display: none;
-                ol {
-                    margin-top: 50%;
-                    list-style-type: decimal-leading-zero;
-                    padding-left: 19%;
-                    li{
-                        margin: 15% auto 15% 10px;
-                        span{
-                        font-weight: 700;
-                        }
-                    }
-                    li::before {
-                        content: "";
-                        width: 20px;
-                        display: inline-block;
+            }
+        }
+    }
+
+    /* HERE STARTS CSS FOR SECTION 2 OF HOMEPAGE */
+
+    .second_section_white_background{
+        display: inline-block;
+        position: fixed;
+        visibility: hidden;
+        width: 100%;
+        height: 0;
+        margin: 0;
+        bottom: 0;
+        left: 0;
+        background: #fff no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        @media only screen
+        and (min-device-width: 320px)
+        and (max-device-width: 568px)
+        and (-webkit-min-device-pixel-ratio: 2){
+            padding: auto 0;
+        }
+        .text_wrapper{
+            display: block;
+            float: left;
+            margin: 10% 0 0 5%;
+            @media only screen
+            and (min-device-width: 320px)
+            and (max-device-width: 568px)
+            and (-webkit-min-device-pixel-ratio: 2){
+                margin: 0;
+                padding: 0;
+            }
+            .chapter_heading{
+                font-family: "Georgia", serif;
+                margin-bottom: 5%;
+                opacity: 0;
+                @media only screen
+                and (min-device-width: 320px)
+                and (max-device-width: 568px)
+                and (-webkit-min-device-pixel-ratio: 2){
+                    margin-bottom: 0;
+                    p{
+                        font-size: 12px;
                     }
                 }
-                #menu_connect{
-                    margin-top: 80%;
-                    padding-left: 18%;
-                    img{
-                        padding: 0;
-                        margin-right: 3px;
+                @media only screen
+                and (min-device-width: 768px)
+                and (max-device-width: 1024px)
+                and (-webkit-min-device-pixel-ratio: 2){
+                    margin-bottom: 1%;
+                }
+                .text_02{
+                    font-family: "Clarendon LT Std", serif;
+                    font-size: 22px;
+                    margin-right: 20px;
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        font-size: 15px;
+                        margin-right: 10px;
                     }
                 }
-                #menu_other_hand{
-                    color: #818181;
-                    font-size: 15px;
-                    margin-top: 20%;
-                    padding-left: 15%;
-                    padding-right: 15%;
-                    line-height: 21px;
-                    font-stretch: expanded;
+                hr{
+                    display: block;
+                    height: 1px;
+                    border: 0;
+                    border-top: 2px solid #252525;
+                    margin: 1em 0;
+                    padding: 0;
+                    width: 30%;
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        width: 65%;
+                    }
                 }
             }
-            #heading{
-                color: #fff;
+            .chapter_text_heading{
+                font-family: "Georgia", serif;
+                margin-bottom: 10%;
+                @media only screen
+                and (min-device-width: 320px)
+                and (max-device-width: 568px)
+                and (-webkit-min-device-pixel-ratio: 2){
+                    margin-bottom: 1%;
+                }
+                @media only screen
+                and (min-device-width: 768px)
+                and (max-device-width: 1024px)
+                and (-webkit-min-device-pixel-ratio: 2){
+                    margin-bottom: 5%;
+                }
+                .text_one_morning {
+                    font-family: "Georgia", serif;
+                    font-style: italic;
+                    font-size: 53px;
+                    opacity: 0;
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        font-size: 24px;
+                    }
+                }
+                .text_one_morning_longer{
+                    line-height: 30px;
+                    opacity: 0;
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        line-height: 25px;
+                    }
+                }
+            }
+            .chapter_button_wrapper{
+                opacity: 0;
+                .chapter_button_about_author{
+                    padding: 2% 5%;
+                    background-color: #fff;
+                    border: 1px solid #000;
+                    font-family: "Georgia", serif;
+                    font-weight: 700;
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                    .chapter_button_arrow_right{
+                        margin: auto 0 3px 10px;
+                    }
+                    &:hover{
+                        background-color: #111111;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .tree_img_wrapper{
+            vertical-align: bottom;
+            position: relative;
+            top: 100%;
+            transform: translateY(-100%);
+            @media only screen
+            and (min-device-width: 320px)
+            and (max-device-width: 568px)
+            and (-webkit-min-device-pixel-ratio: 2){
+                position: absolute;
+            }
+            @media only screen
+            and (min-device-width: 768px)
+            and (max-device-width: 1024px)
+            and (-webkit-min-device-pixel-ratio: 2){
+                position: absolute;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                padding: 0;
+            }
+        }
+
+        .grey_overlay{
+            @extend .black_overlay;
+            left: 0;
+        }
+        .about_the_autor_wrapper{
+            background-color: #000;
+            position: absolute;
+            margin: 5% 0 7% 10%;
+            padding: 0;
+            right: 0;
+            width: 90%;
+            height: 76%;
+            z-index:10;
+            color: #fff;
+            font-family: Georgia, serif;
+            display: none;
+            float: right;
+            @media only screen
+            and (min-device-width: 320px)
+            and (max-device-width: 568px)
+            and (-webkit-min-device-pixel-ratio: 2){
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .row{
+                background-color: #000;
+                height: 100%;
+                margin: 0;
+                .about_the_author_exp_bio{
+                    position: relative;
+                    width: 90%;
+                    height: 100%;
+                    color: #fff;
+                    font-family: Georgia, serif;
+                    float: left;
+                    overflow: hidden;
+                    padding-left: 0;
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        padding-right: 0;
+                    }
+                    #about_x{
+                        float: left;
+                        padding: 25px 0 0 10px;
+                    }
+                    .about_the_author_exp_header{
+                        margin: 7% 0 0 7%;
+                        @media only screen
+                        and (min-device-width: 320px)
+                        and (max-device-width: 568px)
+                        and (-webkit-min-device-pixel-ratio: 2){
+                            margin: 5% 0 0 5%;
+                        }
+                        .about_bio_header{
+                            font-family: "Georgia", serif;
+                            font-style: italic;
+                            font-size: 36px;
+                            margin-bottom: 3px;
+                            @media only screen
+                            and (min-device-width: 320px)
+                            and (max-device-width: 568px)
+                            and (-webkit-min-device-pixel-ratio: 2){
+                                font-size: 24px;
+                            }
+                        }
+                        .by_franz{
+                            color: #b5b5b5;
+                            font-size: 13px;
+                            @media only screen
+                            and (min-device-width: 320px)
+                            and (max-device-width: 568px)
+                            and (-webkit-min-device-pixel-ratio: 2){
+                                font-size: 9px;
+                            }
+                            span{
+                                font-style: italic;
+                            }
+                        }
+                    }
+                    .about_the_author_exp_text{
+                        margin: 5% 0 0 11%;
+                        display: inline-block;
+                        @media only screen
+                        and (min-device-width: 320px)
+                        and (max-device-width: 568px)
+                        and (-webkit-min-device-pixel-ratio: 2){
+                            margin: 5% 0 0 5%;
+                            padding: 0;
+                        }
+                        .div_for_franz_img{
+                            display: block;
+                            position: relative;
+                            padding: 0;
+                            width: 10%;
+                            @media only screen
+                            and (min-device-width: 320px)
+                            and (max-device-width: 568px)
+                            and (-webkit-min-device-pixel-ratio: 2){
+                                display: none;
+                            }
+                            @media only screen
+                            and (min-device-width: 768px)
+                            and (max-device-width: 1024px)
+                            and (-webkit-min-device-pixel-ratio: 2){
+                                width: 20%;
+                            }
+                            .about_the_author_img{
+                                height: auto;
+                                width: 100%;
+                                padding: 0 20% 20% 0;
+                            }
+                        }
+                        .div_for_bio_text{
+                            display: block;
+                            position: relative;
+                            padding-left: 0;
+                            margin-right: 15px;
+                            @media only screen
+                            and (min-device-width: 320px)
+                            and (max-device-width: 568px)
+                            and (-webkit-min-device-pixel-ratio: 2){
+                                margin-right: 0;
+                            }
+                            @media only screen
+                            and (min-device-width: 768px)
+                            and (max-device-width: 1024px)
+                            and (-webkit-min-device-pixel-ratio: 2){
+                                padding-right: 0;
+                            }
+                            .letter_K{
+                                font-size: 14px;
+                                line-height: 25px;
+                                padding-left: 1px;
+                                margin-bottom: 0;
+                                &:first-letter{
+                                    line-height: 52px;
+                                    font-size: 50px;
+                                    float: left;
+                                    margin-right: 5px;
+                                }
+                            }
+                            .rest_of_the_text{
+                                padding-left: 0;
+                                font-size: 14px;
+                                line-height: 25px;
+                                float: none;
+                            }
+                        }
+                        .div_for_bio_text_second{
+                            @extend .div_for_bio_text;
+                            visibility: hidden;
+                        }
+                    }
+
+                }
+                .next_pointer{
+                    position: relative;
+                    float: right;
+                    height: 100%;
+                    text-align: center;
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        position: absolute;
+                        bottom: 5px;
+                        height: 8%;
+                    }
+                    @media only screen
+                    and (min-device-width: 768px)
+                    and (max-device-width: 1024px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        position: absolute;
+                        right: 0;
+                    }
+                    &:hover{
+                        background-color: #101010;
+                    }
+                    img{
+                        position:absolute;
+                        top:0;
+                        bottom:0;
+                        left: 0;
+                        right: 0;
+                        margin:auto;
+                        vertical-align: middle;
+                        @media only screen
+                        and (min-device-width: 320px)
+                        and (max-device-width: 568px)
+                        and (-webkit-min-device-pixel-ratio: 2){
+                            top: auto;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    /* HERE STARTS CSS FOR SECTION 3*/
+    .white_background2{
+        @extend .white_background;
+        .white_background_beginning2{
+            @extend .white_background_beginning;
+        }
+        .section_three_white_background{
+            height: 100%;
+            @extend .second_section_white_background;
+            overflow: hidden;
+            .section_three_previous_chapter_wrapper{
+                display: inline-block;
+                position: relative;
+                float: left;
+                top: 90%;
+                @media only screen
+                and (min-device-width: 320px)
+                and (max-device-width: 568px)
+                and (-webkit-min-device-pixel-ratio: 2){
+                    padding: 0;
+                }
+                .left_arrow{
+                    width: 10%;
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        padding: 0;
+                    }
+                    img{
+                        margin-top: 4px;
+                    }
+                }
+                .previous_button_text{
+                    text-align: left;
+                    padding-left: 0;
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        display: none;
+                    }
+                    @media only screen
+                    and (min-device-width: 768px)
+                    and (max-device-width: 1024px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        display: none;
+                    }
+                    .previous_button_chapter_number{
+                        font: 700 19px "Clarendon LT Std", serif;
+                        margin-bottom: 0;
+                    }
+                    .previous_button_chapter_text_chapter{
+                        font: 400 12px "Georgia", serif, italic;
+                    }
+                }
+            }
+
+            .section_three_chapter_number_and_text_wrapper{
+                margin-top: 5%;
                 position: fixed;
                 top: 50%;
                 left: 50%;
                 /* bring your own prefixes */
                 transform: translate(-50%, -50%);
-                text-align: center;
-                z-index:5;
-                h1 {
-                    font-family: "superclarendon", serif;
-                    font-weight: 700;
-                    font-size: 127px;
-                    margin-bottom: 2%;
+                ::-webkit-scrollbar {
+                    width: 5px;
+                    background-color: transparent;
                 }
-                p {
-                    font-family: Georgia, serif;
-                    font-size: 19px;
-                    > span
-                    {
-                        font-weight: 700;
-                        font-style: italic;
-                    }
+
+                ::-webkit-scrollbar-track {
+                    background-color: transparent;
+                    -webkit-box-shadow: inset 1px 1px 0 #fff;
+                    border-radius: 10px;
                 }
-            }
-            #copyright_text_homepage{
-                position: absolute;
-                color: #bfbfbf;
-                transform: rotate(-90deg);
-                transform-origin: 454px 400px 0;
-                left: 0;
-                text-align: left;
-                float: left;
-                padding-left: 0;
-            }
-        }
-        .black_overlay{
-            position: absolute;
-            width: 100%;
-            min-height: 100%;
-            z-index:8;
-            background: rgba(28,28,28, 0.5);
-        }
-        .chapters_background{
-            background-color: #000;
-            position: absolute;
-            margin: 6% 15%;
-            width: 70%;
-            height: 76%;
-            z-index:8;
-            color: #fff;
-            font-family: Georgia, serif;
-            display: none;
-            float: right;
-            #chapter_x{
-                float: right;
-                padding: 25px 15px 0 0;
-                cursor: default;
-            }
-            #chapter_jump_to{
-                font-style: italic;
-                -ms-text-align-last: right;
-                text-align: center;
-                margin: 6% 25%;
-            }
-            .chapters_wrapper{
-                margin: 0 25%;
-                .chapter{
+
+                ::-webkit-scrollbar-thumb {
+                    width: 1px;
+                    border-radius: 10px;
+                    background-color: #969696;
+                }
+                @media only screen
+                and (min-device-width: 320px)
+                and (max-device-width: 568px)
+                and (-webkit-min-device-pixel-ratio: 2){
+                    margin-top: 0;
+                    top: 45%;
+                }
+                .section_three_chaper_number_heading{
                     text-align: center;
-                    padding-top: 20px;
-                    &:hover{
-                        background-color: #121212;
-                    }
-                    .chapter_number{
-                        font-family: "Clarendon Book", serif;
-                        font-size: 19px;
-                    }
-                    hr{
-                        width: 15px;
-                    }
-                }
-
-            }
-        }
-        .explore_more{
-            color: #fff;
-            text-align: center;
-            position: absolute;
-            float: none;
-            bottom: 10%;
-            margin: 0 45%;
-            font-family: Georgia, serif;
-            font-style: italic;
-            z-index:2;
-            height: 30px;
-            #exp_more_p{
-                color: #fff;
-                text-decoration: none;
-                cursor: default;
-                margin: 10px 1px;
-            }
-        }
-        .share{
-            float: none;
-            position: absolute;
-            bottom: 9%;
-            right: 7%;
-            .share_button{
-                position: absolute;
-                float: right;
-                bottom: 10%;
-                right: 4%;
-                z-index:5;
-                -webkit-transition: -webkit-transform .8s ease-in-out;
-                transition: all 0.3s ease-in-out 0s;
-                /*&:active{
-                    transform: rotate(180deg);
-                    transition: all 0.3s ease-in-out 0s;
-                }*/
-            }
-            .share_icons{
-                float: right;
-                width: 40%;
-                background-color: transparent;
-                img{
-                    margin: 0 4px;
-                }
-            }
-        }
-        .white_background{
-            position: absolute;
-            visibility: hidden;
-            width: 100%;
-            margin: 0;
-            bottom: 0;
-            left: 0;
-            background: rgb(255,255,255) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            .white_background_beginning{
-                position: relative;
-                opacity: 0;
-                height: 0;
-                width: 100%;
-                background: #000;
-                &:after{
-                    width: 100%;
-                    height: 15%;
-                    background-color: #000;
-                }
-            }
-        }
-
-        /* HERE STARTS CSS FOR SECTION 2 OF HOMEPAGE */
-
-        .second_section_white_background{
-            display: inline-block;
-            position: fixed;
-            visibility: hidden;
-            width: 100%;
-            height: 0;
-            margin: 0;
-            bottom: 0;
-            left: 0;
-            background: #fff no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            .text_wrapper{
-                display: block;
-                float: left;
-                margin: 10% 0 0 5%;
-                .chapter_heading{
-                    font-family: "Georgia", serif;
-                    margin-bottom: 5%;
-                    opacity: 0;
-                    .text_02{
-                        font-family: "Clarendon LT Std", serif;
-                        font-size: 22px;
-                        margin-right: 20px;
-                    }
-                    hr{
-                        display: block;
-                        height: 1px;
-                        border: 0;
-                        border-top: 2px solid #252525;
-                        margin: 1em 0;
-                        padding: 0;
-                        width: 30%;
-                    }
-                }
-                .chapter_text_heading{
-                    font-family: "Georgia", serif;
-                    margin-bottom: 10%;
-
-                    .text_one_morning {
-                        font-family: "Georgia", serif;
-                        font-style: italic;
-                        font-size: 53px;
-                        opacity: 0;
-                    }
-                    .text_one_morning_longer{
-                        line-height: 30px;
-                        opacity: 0;
-                    }
-                }
-                .chapter_button_wrapper{
-                    opacity: 0;
-                    .chapter_button_about_author{
-                        padding: 2% 5%;
-                        background-color: #fff;
-                        border: 1px solid #000;
-                        font-family: "Georgia", serif;
-                        font-weight: 700;
-                        &:focus {
-                            outline: none;
+                    .big_chapter_number{
+                        font: 700 33px "Clarendon LT Std", serif;
+                        margin-bottom: 0;
+                        border-top: 3px solid #dddddd;
+                        border-left: 3px solid #dddddd;
+                        border-right: 3px solid #dddddd;
+                        @media only screen
+                        and (min-device-width: 320px)
+                        and (max-device-width: 568px)
+                        and (-webkit-min-device-pixel-ratio: 2){
+                            font-size: 18px;
                         }
-                        .chapter_button_arrow_right{
-                            margin: auto 0 3px 10px;
-                        }
-                        &:hover{
-                            background-color: #111111;
-                            color: #fff;
+                    }
+                    .big_chapter_text{
+                        font: 400 12px "Georgia", serif, italic;
+                        border-bottom: 3px solid #dddddd;
+                        border-left: 3px solid #dddddd;
+                        border-right: 3px solid #dddddd;
+                        padding-bottom: 10px;
+                        @media only screen
+                        and (min-device-width: 320px)
+                        and (max-device-width: 568px)
+                        and (-webkit-min-device-pixel-ratio: 2){
+                            font-size: 9px;
                         }
                     }
                 }
-            }
-            .tree_img_wrapper{
-                vertical-align: bottom;
-                position: relative;
-                top: 100%;
-                transform: translateY(-100%);
-                img{
-                    width: 100%;
-                    height: 100%;
-                    padding: 0;
-                }
-            }
-
-            .grey_overlay{
-                @extend .black_overlay;
-                left: 0;
-            }
-            .about_the_autor_wrapper{
-                background-color: #000;
-                position: absolute;
-                margin: 5% 0 7% 10%;
-                padding: 0;
-                right: 0;
-                width: 90%;
-                height: 76%;
-                z-index:10;
-                color: #fff;
-                font-family: Georgia, serif;
-                display: none;
-                float: right;
-                .row{
-                    background-color: #000;
-                    height: 100%;
-                    margin: 0;
-                    .about_the_author_exp_bio{
-                        position: relative;
-                        width: 90%;
-                        height: 100%;
-                        color: #fff;
-                        font-family: Georgia, serif;
-                        float: left;
-                        overflow: hidden;
-                        padding-left: 0;
-                        #about_x{
-                            float: left;
-                            padding: 25px 0 0 10px;
-                        }
-                        .about_the_author_exp_header{
-                            margin: 7% 0 0 7%;
-                            .about_bio_header{
-                                font-family: "Georgia", serif;
-                                font-style: italic;
-                                font-size: 36px;
-                                margin-bottom: 3px;
-                            }
-                            .by_franz{
-                                color: #b5b5b5;
-                                font-size: 13px;
-                                span{
-                                    font-style: italic;
-                                }
-                            }
-                        }
-                        .about_the_author_exp_text{
-                            margin: 5% 0 0 11%;
-                            display: inline-block;
-
-                            .div_for_franz_img{
-                                display: block;
-                                position: relative;
-                                padding: 0;
-                                width: 10%;
-                                .about_the_author_img{
-                                    height: auto;
-                                    width: 100%;
-                                    padding: 0 20% 20% 0;
-                                }
-                            }
-                            .div_for_bio_text{
-                                display: block;
-                                position: relative;
-                                padding-left: 0;
-                                margin-right: 15px;
-                                .letter_K{
-                                    font-size: 14px;
-                                    line-height: 25px;
-                                    padding-left: 1px;
-                                    margin-bottom: 0;
-                                    &:first-letter{
-                                        line-height: 52px;
-                                        font-size: 50px;
-                                        float: left;
-                                        margin-right: 5px;
-                                    }
-                                }
-                                .rest_of_the_text{
-                                    padding-left: 0;
-                                    font-size: 14px;
-                                    line-height: 25px;
-                                    float: none;
-
-                                }
-                            }
-                            .div_for_bio_text_second{
-                                @extend .div_for_bio_text;
-                                visibility: hidden;
-                            }
-                        }
-
+                .section_three_text_wrapper{
+                    margin-top: 15px;
+                    overflow: scroll;
+                    overflow-x: hidden;
+                    height: 600px;
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        margin-top: 0;
+                        height: 400px;
                     }
-                    .next_pointer{
-                        position: relative;
-                        float: right;
-                        height: 100%;
-                        text-align: center;
-                        &:hover{
-                            background-color: #101010;
+                    .section_three_chapter_text{
+                        h2{
+                            font: 700 53px "Clarendon LT Std", serif;
                         }
-                        img{
-                            position:absolute;
-                            top:0;
-                            bottom:0;
-                            left: 0;
-                            right: 0;
-                            margin:auto;
-                            vertical-align: middle;
+                        h3{
+                            color: #6a6a6a;
+                            font: 400 19px "Georgia", serif;
+                            font-style: italic;
+                            margin-bottom: 10%;
+                            line-height: 37px;
                         }
-                    }
-                }
-
-            }
-        }
-        /* HERE STARTS CSS FOR SECTION 3*/
-        .white_background2{
-            @extend .white_background;
-            .white_background_beginning2{
-                @extend .white_background_beginning;
-            }
-            .section_three_white_background{
-                height: 100%;
-                @extend .second_section_white_background;
-                overflow: hidden;
-                .section_three_previous_chapter_wrapper{
-                    display: inline-block;
-                    position: relative;
-                    float: left;
-                    top: 90%;
-                    .left_arrow{
-                        width: 10%;
-                        img{
-                            margin-top: 4px;
+                        p{
+                            font: 400 15px "Georgia Regular", serif;
+                            line-height: 32px;
+                            text-indent: 30px;
                         }
-                    }
-                    .previous_button_text{
-                        text-align: left;
-                        padding-left: 0;
-                        .previous_button_chapter_number{
-                            font: 700 19px "Clarendon LT Std", serif;
-                            margin-bottom: 0;
-                        }
-                        .previous_button_chapter_text_chapter{
-                            font: 400 12px "Georgia", serif, italic;
-                        }
-                    }
-                }
-
-                .section_three_chapter_number_and_text_wrapper{
-                    margin-top: 5%;
-                    position: fixed;
-                    top: 50%;
-                    left: 50%;
-                    /* bring your own prefixes */
-                    transform: translate(-50%, -50%);
-                    ::-webkit-scrollbar {
-                        width: 5px;
-                        background-color: transparent;
-                    }
-
-                    ::-webkit-scrollbar-track {
-                        background-color: transparent;
-                        -webkit-box-shadow: inset 1px 1px 0 #fff;
-                        border-radius: 10px;
-                    }
-
-                    ::-webkit-scrollbar-thumb {
-                        width: 1px;
-                        border-radius: 10px;
-                        background-color: #969696;
-                    }
-
-                    .section_three_chaper_number_heading{
-                        text-align: center;
-                        .big_chapter_number{
-                            font: 700 33px "Clarendon LT Std", serif;
-                            margin-bottom: 0;
-                            border-top: 3px solid #dddddd;
-                            border-left: 3px solid #dddddd;
-                            border-right: 3px solid #dddddd;
-                        }
-                        .big_chapter_text{
-                            font: 400 12px "Georgia", serif, italic;
-                            border-bottom: 3px solid #dddddd;
-                            border-left: 3px solid #dddddd;
-                            border-right: 3px solid #dddddd;
-                            padding-bottom: 10px;
-                        }
-                    }
-                    .section_three_text_wrapper{
-                        margin-top: 15px;
-                        overflow: scroll;
-                        overflow-x: hidden;
-                        height: 600px;
-                        .section_three_chapter_text{
+                        @media only screen
+                        and (min-device-width: 320px)
+                        and (max-device-width: 568px)
+                        and (-webkit-min-device-pixel-ratio: 2){
                             h2{
-                                font: 700 53px "Clarendon LT Std", serif;
+                                font-size: 20px;
                             }
                             h3{
-                                color: #6a6a6a;
-                                font: 400 19px "Georgia", serif;
-                                font-style: italic;
-                                margin-bottom: 10%;
-                                line-height: 37px;
+                                font-size: 15px;
+                                line-height: 25px;
                             }
                             p{
-                                font: 400 15px "Georgia Regular", serif;
-                                line-height: 32px;
-                                text-indent: 30px;
+                                font-size: 12px;
+                                line-height: 21px;
                             }
                         }
                     }
-                    .white_transparent_overlay{
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        height: 100px;
-                        width: 100%;
-                        background: #fff; /* For browsers that do not support gradients */
-                        background: -webkit-linear-gradient(transparent, #fff); /* For Safari 5.1 to 6.0 */
-                        background: -o-linear-gradient(transparent, #fff); /* For Opera 11.1 to 12.0 */
-                        background: -moz-linear-gradient(transparent, #fff); /* For Firefox 3.6 to 15 */
-                        background: linear-gradient(transparent, #fff); /* Standard syntax */
-                    }
                 }
+                .white_transparent_overlay{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 150px;
+                    width: 100%;
+                    background: #fff; /* For browsers that do not support gradients */
+                    background: -webkit-linear-gradient(transparent, #fff); /* For Safari 5.1 to 6.0 */
+                    background: -o-linear-gradient(transparent, #fff); /* For Opera 11.1 to 12.0 */
+                    background: -moz-linear-gradient(transparent, #fff); /* For Firefox 3.6 to 15 */
+                    background: linear-gradient(transparent, #fff); /* Standard syntax */
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        display: none;
+                    }
 
-                .section_three_next_chapter_wrapper{
-                    @extend .section_three_previous_chapter_wrapper;
+                }
+            }
+
+            .section_three_next_chapter_wrapper{
+                @extend .section_three_previous_chapter_wrapper;
+                float: right;
+                .right_arrow{
                     float: right;
-                    .right_arrow{
-                        float: right;
-                        width: 10%;
-                        img{
-                            float: right;
-                            margin-top: 4px;
-                        }
+                    width: 10%;
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        padding: 0;
                     }
-                    .next_button_text{
-                        padding-right: 0;
+                    img{
                         float: right;
-                        text-align: right;
-                        .next_button_chapter_number{
-                            font: 700 19px "Clarendon LT Std", serif;
-                            margin-bottom: 0;
-                        }
-                        .next_button_chapter_text_chapter{
-                            font: 400 12px "Georgia", serif, italic bold;
-                        }
+                        margin-top: 4px;
+                    }
+                }
+                .next_button_text{
+                    padding-right: 0;
+                    float: right;
+                    text-align: right;
+                    @media only screen
+                    and (min-device-width: 320px)
+                    and (max-device-width: 568px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        display: none;
+                    }
+                    @media only screen
+                    and (min-device-width: 768px)
+                    and (max-device-width: 1024px)
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        display: none;
+                    }
+                    .next_button_chapter_number{
+                        font: 700 19px "Clarendon LT Std", serif;
+                        margin-bottom: 0;
+                    }
+                    .next_button_chapter_text_chapter{
+                        font: 400 12px "Georgia", serif, italic bold;
                     }
                 }
             }
         }
-        footer{
-            background-color: #fff;
-            font: 700 16px "Clarendon LT Std", serif;
-            height: 0;
-            width: 100%;
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            display: none;
-            p{
-                margin: 5% auto;
-                .footer_for{
-                    font: 400 16px"Georgia", serif;
-                    font-style: italic;
-                }
-            }
-        }
-
     }
+    footer{
+        background-color: #fff;
+        font: 700 16px "Clarendon LT Std", serif;
+        height: 0;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: none;
+        p{
+            margin: 5% auto;
+            .footer_for{
+                font: 400 16px"Georgia", serif;
+                font-style: italic;
+            }
+        }
+        @media only screen
+        and (min-device-width: 320px)
+        and (max-device-width: 568px)
+        and (-webkit-min-device-pixel-ratio: 2){
+            font-size: 12px;
+            .footer_for{
+                font-size: 12px;
+            }
+        }
+    }
+
+
     .disable_other_links {
         pointer-events: none;
         z-index: 3 !important;
@@ -650,6 +1046,6 @@ body{
     .zIndex100{
         z-index: 100;
     }
-
-
 }
+
+

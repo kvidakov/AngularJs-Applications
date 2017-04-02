@@ -1,513 +1,725 @@
 body {
   background-color: #000;
   margin: 0;
-  height: 100%; }
-  @media screen and (min-device-width: 1200px), (max-device-width: 1600px), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-device-width: 1200px), (max-device-width: 1600px), (-webkit-min-device-pixel-ratio: 1) {
-    body {
-      /* HERE STARTS CSS FOR SECTION 2 OF HOMEPAGE */
-      /* HERE STARTS CSS FOR SECTION 3*/ }
-      body .pattern_background {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        top: 0;
-        left: 0;
-        background: url("../img/pattern.jpeg") no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover; }
-        body .pattern_background .menu_container {
-          position: absolute;
+  height: 100%;
+  overflow: hidden;
+  /* HERE STARTS CSS FOR SECTION 2 OF HOMEPAGE */
+  /* HERE STARTS CSS FOR SECTION 3*/ }
+  body .pattern_background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background: url("../img/pattern.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    body .pattern_background .menu_container {
+      position: absolute;
+      display: inline-block;
+      height: 50px;
+      top: 44px;
+      left: 44px;
+      right: 18px;
+      z-index: 10; }
+      body .pattern_background .menu_container .menu_left {
+        padding-left: 0;
+        cursor: default;
+        font-family: Georgia, serif; }
+        body .pattern_background .menu_container .menu_left #menu_wrapper {
           display: inline-block;
-          height: 50px;
-          top: 44px;
-          left: 44px;
-          right: 18px;
-          z-index: 10; }
-          body .pattern_background .menu_container .menu_left {
-            padding-left: 0;
-            cursor: default;
-            font-family: Georgia, serif; }
-            body .pattern_background .menu_container .menu_left #menu_wrapper {
-              display: inline-block;
-              float: left;
-              padding-left: 0; }
-              body .pattern_background .menu_container .menu_left #menu_wrapper .bar1, body .pattern_background .menu_container .menu_left #menu_wrapper .bar2, body .pattern_background .menu_container .menu_left #menu_wrapper .bar3 {
-                display: block;
-                width: 28px;
-                height: 4px;
-                background-color: #fff;
-                margin: 6px 0;
-                transition: 0.4s;
-                border-radius: 5px; }
-            body .pattern_background .menu_container .menu_left #menu_text {
-              position: relative;
-              display: block;
-              float: left;
-              color: #fff;
-              margin: 10px 20px; }
-        body .pattern_background #menu_chapters_icon {
-          display: block;
-          z-index: 7;
-          cursor: default;
-          top: 6%;
-          right: 7%;
-          position: absolute; }
-        body .pattern_background .change .bar1 {
-          -webkit-transform: rotate(45deg) translate(8px, 8px);
-          transform: rotate(45deg) translate(8px, 8px); }
-        body .pattern_background .change .bar2 {
-          opacity: 0; }
-        body .pattern_background .change .bar3 {
-          -webkit-transform: rotate(-45deg) translate(6px, -6px);
-          transform: rotate(-45deg) translate(6px, -6px); }
-        body .pattern_background #menu_background {
-          color: #fff;
-          font-family: Georgia, serif;
-          font-size: 1em;
-          width: 320px;
-          height: 100%;
-          top: 0;
-          left: 0;
-          position: absolute;
-          background-color: #000;
-          z-index: 9;
-          display: none; }
-          body .pattern_background #menu_background ol {
-            margin-top: 50%;
-            list-style-type: decimal-leading-zero;
-            padding-left: 19%; }
-            body .pattern_background #menu_background ol li {
-              margin: 15% auto 15% 10px; }
-              body .pattern_background #menu_background ol li span {
-                font-weight: 700; }
-            body .pattern_background #menu_background ol li::before {
-              content: "";
-              width: 20px;
-              display: inline-block; }
-          body .pattern_background #menu_background #menu_connect {
-            margin-top: 80%;
-            padding-left: 18%; }
-            body .pattern_background #menu_background #menu_connect img {
-              padding: 0;
-              margin-right: 3px; }
-          body .pattern_background #menu_background #menu_other_hand {
-            color: #818181;
-            font-size: 15px;
-            margin-top: 20%;
-            padding-left: 15%;
-            padding-right: 15%;
-            line-height: 21px;
-            font-stretch: expanded; }
-        body .pattern_background #heading {
-          color: #fff;
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          /* bring your own prefixes */
-          transform: translate(-50%, -50%);
-          text-align: center;
-          z-index: 5; }
-          body .pattern_background #heading h1 {
-            font-family: "superclarendon", serif;
-            font-weight: 700;
-            font-size: 127px;
-            margin-bottom: 2%; }
-          body .pattern_background #heading p {
-            font-family: Georgia, serif;
-            font-size: 19px; }
-            body .pattern_background #heading p > span {
-              font-weight: 700;
-              font-style: italic; }
-        body .pattern_background #copyright_text_homepage {
-          position: absolute;
-          color: #bfbfbf;
-          transform: rotate(-90deg);
-          transform-origin: 454px 400px 0;
-          left: 0;
-          text-align: left;
           float: left;
           padding-left: 0; }
-      body .black_overlay, body .second_section_white_background .grey_overlay, body .white_background2 .section_three_white_background .grey_overlay {
-        position: absolute;
-        width: 100%;
-        min-height: 100%;
-        z-index: 8;
-        background: rgba(28, 28, 28, 0.5); }
-      body .chapters_background {
-        background-color: #000;
-        position: absolute;
-        margin: 6% 15%;
-        width: 70%;
-        height: 76%;
-        z-index: 8;
-        color: #fff;
-        font-family: Georgia, serif;
-        display: none;
-        float: right; }
-        body .chapters_background #chapter_x {
-          float: right;
-          padding: 25px 15px 0 0;
-          cursor: default; }
-        body .chapters_background #chapter_jump_to {
-          font-style: italic;
-          -ms-text-align-last: right;
-          text-align: center;
-          margin: 6% 25%; }
-        body .chapters_background .chapters_wrapper {
-          margin: 0 25%; }
-          body .chapters_background .chapters_wrapper .chapter {
-            text-align: center;
-            padding-top: 20px; }
-            body .chapters_background .chapters_wrapper .chapter:hover {
-              background-color: #121212; }
-            body .chapters_background .chapters_wrapper .chapter .chapter_number {
-              font-family: "Clarendon Book", serif;
-              font-size: 19px; }
-            body .chapters_background .chapters_wrapper .chapter hr {
-              width: 15px; }
-      body .explore_more {
-        color: #fff;
-        text-align: center;
-        position: absolute;
-        float: none;
-        bottom: 10%;
-        margin: 0 45%;
-        font-family: Georgia, serif;
-        font-style: italic;
-        z-index: 2;
-        height: 30px; }
-        body .explore_more #exp_more_p {
-          color: #fff;
-          text-decoration: none;
-          cursor: default;
-          margin: 10px 1px; }
-      body .share {
-        float: none;
-        position: absolute;
-        bottom: 9%;
-        right: 7%; }
-        body .share .share_button {
-          position: absolute;
-          float: right;
-          bottom: 10%;
-          right: 4%;
-          z-index: 5;
-          -webkit-transition: -webkit-transform .8s ease-in-out;
-          transition: all 0.3s ease-in-out 0s;
-          /*&:active{
-              transform: rotate(180deg);
-              transition: all 0.3s ease-in-out 0s;
-          }*/ }
-        body .share .share_icons {
-          float: right;
-          width: 40%;
-          background-color: transparent; }
-          body .share .share_icons img {
-            margin: 0 4px; }
-      body .white_background, body .white_background2 {
-        position: absolute;
-        visibility: hidden;
-        width: 100%;
-        margin: 0;
-        bottom: 0;
-        left: 0;
-        background: white no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover; }
-        body .white_background .white_background_beginning, body .white_background2 .white_background_beginning, body .white_background2 .white_background_beginning2 {
+          body .pattern_background .menu_container .menu_left #menu_wrapper .bar1, body .pattern_background .menu_container .menu_left #menu_wrapper .bar2, body .pattern_background .menu_container .menu_left #menu_wrapper .bar3 {
+            display: block;
+            width: 28px;
+            height: 4px;
+            background-color: #fff;
+            margin: 6px 0;
+            transition: 0.4s;
+            border-radius: 5px; }
+        body .pattern_background .menu_container .menu_left #menu_text {
           position: relative;
-          opacity: 0;
-          height: 0;
-          width: 100%;
-          background: #000; }
-          body .white_background .white_background_beginning:after, body .white_background2 .white_background_beginning:after, body .white_background2 .white_background_beginning2:after {
-            width: 100%;
-            height: 15%;
-            background-color: #000; }
-      body .second_section_white_background, body .white_background2 .section_three_white_background {
-        display: inline-block;
-        position: fixed;
-        visibility: hidden;
-        width: 100%;
-        height: 0;
-        margin: 0;
-        bottom: 0;
-        left: 0;
-        background: #fff no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover; }
-        body .second_section_white_background .text_wrapper, body .white_background2 .section_three_white_background .text_wrapper {
           display: block;
           float: left;
-          margin: 10% 0 0 5%; }
-          body .second_section_white_background .text_wrapper .chapter_heading, body .white_background2 .section_three_white_background .text_wrapper .chapter_heading {
-            font-family: "Georgia", serif;
-            margin-bottom: 5%;
-            opacity: 0; }
-            body .second_section_white_background .text_wrapper .chapter_heading .text_02, body .white_background2 .section_three_white_background .text_wrapper .chapter_heading .text_02 {
-              font-family: "Clarendon LT Std", serif;
-              font-size: 22px;
-              margin-right: 20px; }
-            body .second_section_white_background .text_wrapper .chapter_heading hr, body .white_background2 .section_three_white_background .text_wrapper .chapter_heading hr {
-              display: block;
-              height: 1px;
-              border: 0;
-              border-top: 2px solid #252525;
-              margin: 1em 0;
-              padding: 0;
-              width: 30%; }
-          body .second_section_white_background .text_wrapper .chapter_text_heading, body .white_background2 .section_three_white_background .text_wrapper .chapter_text_heading {
-            font-family: "Georgia", serif;
-            margin-bottom: 10%; }
-            body .second_section_white_background .text_wrapper .chapter_text_heading .text_one_morning, body .white_background2 .section_three_white_background .text_wrapper .chapter_text_heading .text_one_morning {
-              font-family: "Georgia", serif;
-              font-style: italic;
-              font-size: 53px;
-              opacity: 0; }
-            body .second_section_white_background .text_wrapper .chapter_text_heading .text_one_morning_longer, body .white_background2 .section_three_white_background .text_wrapper .chapter_text_heading .text_one_morning_longer {
-              line-height: 30px;
-              opacity: 0; }
-          body .second_section_white_background .text_wrapper .chapter_button_wrapper, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper {
-            opacity: 0; }
-            body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author {
-              padding: 2% 5%;
-              background-color: #fff;
-              border: 1px solid #000;
-              font-family: "Georgia", serif;
-              font-weight: 700; }
-              body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:focus, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:focus {
-                outline: none; }
-              body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author .chapter_button_arrow_right, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author .chapter_button_arrow_right {
-                margin: auto 0 3px 10px; }
-              body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:hover, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:hover {
-                background-color: #111111;
-                color: #fff; }
-        body .second_section_white_background .tree_img_wrapper, body .white_background2 .section_three_white_background .tree_img_wrapper {
-          vertical-align: bottom;
-          position: relative;
-          top: 100%;
-          transform: translateY(-100%); }
-          body .second_section_white_background .tree_img_wrapper img, body .white_background2 .section_three_white_background .tree_img_wrapper img {
-            width: 100%;
-            height: 100%;
-            padding: 0; }
-        body .second_section_white_background .grey_overlay, body .white_background2 .section_three_white_background .grey_overlay {
-          left: 0; }
-        body .second_section_white_background .about_the_autor_wrapper, body .white_background2 .section_three_white_background .about_the_autor_wrapper {
-          background-color: #000;
-          position: absolute;
-          margin: 5% 0 7% 10%;
+          color: #fff;
+          margin: 10px 20px;
+          /* Portrait and Landscape */ }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+            body .pattern_background .menu_container .menu_left #menu_text {
+              display: none; } }
+    body .pattern_background .menu_chapters_icon {
+      color: #fff;
+      font-family: "Georgia", serif;
+      display: block;
+      z-index: 7;
+      cursor: default;
+      top: 6%;
+      right: 7%;
+      position: absolute; }
+      body .pattern_background .menu_chapters_icon p {
+        right: 30px;
+        top: 5%; }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        body .pattern_background .menu_chapters_icon {
+          top: 9%;
+          right: 10%; } }
+    body .pattern_background .change .bar1 {
+      -webkit-transform: rotate(45deg) translate(8px, 8px);
+      transform: rotate(45deg) translate(8px, 8px); }
+    body .pattern_background .change .bar2 {
+      opacity: 0; }
+    body .pattern_background .change .bar3 {
+      -webkit-transform: rotate(-45deg) translate(6px, -6px);
+      transform: rotate(-45deg) translate(6px, -6px); }
+    body .pattern_background #menu_background {
+      color: #fff;
+      font-family: Georgia, serif;
+      font-size: 1em;
+      width: 320px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-color: #000;
+      z-index: 9;
+      display: none; }
+      body .pattern_background #menu_background ol {
+        margin-top: 50%;
+        list-style-type: decimal-leading-zero;
+        padding-left: 19%; }
+        body .pattern_background #menu_background ol li {
+          margin: 15% auto 15% 10px;
+          /* Portrait and Landscape */ }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+            body .pattern_background #menu_background ol li {
+              margin: 5% auto 5% 10px; } }
+          body .pattern_background #menu_background ol li span {
+            font-weight: 700; }
+        body .pattern_background #menu_background ol li::before {
+          content: "";
+          width: 20px;
+          display: inline-block; }
+      body .pattern_background #menu_background #menu_connect {
+        margin-top: 80%;
+        padding-left: 18%; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .pattern_background #menu_background #menu_connect {
+            margin-top: 25%; } }
+        body .pattern_background #menu_background #menu_connect img {
           padding: 0;
-          right: 0;
+          margin-right: 3px; }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+            body .pattern_background #menu_background #menu_connect img {
+              width: 20%; } }
+      body .pattern_background #menu_background #menu_other_hand {
+        color: #818181;
+        font-size: 15px;
+        margin-top: 20%;
+        padding-left: 15%;
+        padding-right: 15%;
+        line-height: 21px;
+        font-stretch: expanded; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .pattern_background #menu_background #menu_other_hand {
+            margin-top: 10%; } }
+    body .pattern_background #heading {
+      color: #fff;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 5; }
+      body .pattern_background #heading h1 {
+        font-family: "superclarendon", serif;
+        font-weight: 700;
+        font-size: 127px;
+        margin-bottom: 2%; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .pattern_background #heading h1 {
+            font-size: 30px;
+            margin-bottom: 10%; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .pattern_background #heading h1 {
+            font-size: 65px;
+            margin-bottom: 5%; } }
+      body .pattern_background #heading p {
+        font-family: Georgia, serif;
+        font-size: 19px; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .pattern_background #heading p {
+            font-size: 12px; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .pattern_background #heading p {
+            font-size: 15px; } }
+        body .pattern_background #heading p > span {
+          font-weight: 700;
+          font-style: italic; }
+    body .pattern_background #copyright_text_homepage {
+      position: absolute;
+      color: #bfbfbf;
+      transform: rotate(-90deg);
+      transform-origin: 454px 400px 0;
+      left: 0;
+      text-align: left;
+      float: left;
+      padding-left: 0; }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        body .pattern_background #copyright_text_homepage {
+          transform-origin: 90% 1040% 0;
+          font-size: 8px; } }
+  body .black_overlay, body .second_section_white_background .grey_overlay, body .white_background2 .section_three_white_background .grey_overlay {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    z-index: 8;
+    background: rgba(28, 28, 28, 0.5); }
+  body .chapters_background {
+    background-color: #000;
+    position: absolute;
+    margin: 6% 15%;
+    width: 70%;
+    height: 76%;
+    z-index: 8;
+    color: #fff;
+    font-family: Georgia, serif;
+    display: none;
+    float: right; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+      body .chapters_background {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        left: 0; } }
+    body .chapters_background #chapter_x {
+      float: right;
+      padding: 25px 15px 0 0;
+      cursor: default; }
+    body .chapters_background #chapter_jump_to {
+      font-style: italic;
+      -ms-text-align-last: right;
+      text-align: center;
+      margin: 6% 25%; }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        body .chapters_background #chapter_jump_to {
+          margin: 6% 4%; } }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+        body .chapters_background #chapter_jump_to {
+          margin: 6% 4%; } }
+    body .chapters_background .chapters_wrapper {
+      margin: 0 25%; }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        body .chapters_background .chapters_wrapper {
+          margin: 0 2%; } }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+        body .chapters_background .chapters_wrapper {
+          margin: 4%; } }
+      body .chapters_background .chapters_wrapper .chapter {
+        text-align: center;
+        padding-top: 20px; }
+        body .chapters_background .chapters_wrapper .chapter:hover {
+          background-color: #121212; }
+        body .chapters_background .chapters_wrapper .chapter .chapter_number {
+          font-family: "Clarendon Book", serif;
+          font-size: 19px; }
+        body .chapters_background .chapters_wrapper .chapter hr {
+          width: 15px; }
+  body .explore_more {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    float: none;
+    bottom: 10%;
+    margin: 0 45%;
+    font-family: Georgia, serif;
+    font-style: italic;
+    z-index: 2;
+    height: 30px; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+      body .explore_more {
+        margin: 0 30%; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+      body .explore_more {
+        margin: 0 32%; } }
+    body .explore_more #exp_more_p {
+      color: #fff;
+      text-decoration: none;
+      cursor: default;
+      margin: 10px 1px; }
+  body .share {
+    float: none;
+    position: absolute;
+    bottom: 9%;
+    right: 7%; }
+    body .share .share_button {
+      position: absolute;
+      float: right;
+      bottom: 10%;
+      right: 4%;
+      z-index: 5;
+      -webkit-transition: -webkit-transform .8s ease-in-out;
+      transition: all 0.3s ease-in-out 0s;
+      /*&:active{
+          transform: rotate(180deg);
+          transition: all 0.3s ease-in-out 0s;
+      }*/ }
+    body .share .share_icons {
+      float: right;
+      width: 40%;
+      background-color: transparent; }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+        body .share .share_icons {
+          width: auto;
+          margin-right: 5%; } }
+      body .share .share_icons img {
+        margin: 0 4px; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .share .share_icons img {
+            margin: 0 8px; } }
+  body .white_background, body .white_background2 {
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    background: white no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    body .white_background .white_background_beginning, body .white_background2 .white_background_beginning, body .white_background2 .white_background_beginning2 {
+      position: relative;
+      opacity: 0;
+      height: 0;
+      width: 100%;
+      background: #000; }
+      body .white_background .white_background_beginning:after, body .white_background2 .white_background_beginning:after, body .white_background2 .white_background_beginning2:after {
+        width: 100%;
+        height: 15%;
+        background-color: #000; }
+  body .second_section_white_background, body .white_background2 .section_three_white_background {
+    display: inline-block;
+    position: fixed;
+    visibility: hidden;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+      body .second_section_white_background, body .white_background2 .section_three_white_background {
+        padding: auto 0; } }
+    body .second_section_white_background .text_wrapper, body .white_background2 .section_three_white_background .text_wrapper {
+      display: block;
+      float: left;
+      margin: 10% 0 0 5%; }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        body .second_section_white_background .text_wrapper, body .white_background2 .section_three_white_background .text_wrapper {
+          margin: 0;
+          padding: 0; } }
+      body .second_section_white_background .text_wrapper .chapter_heading, body .white_background2 .section_three_white_background .text_wrapper .chapter_heading {
+        font-family: "Georgia", serif;
+        margin-bottom: 5%;
+        opacity: 0; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .second_section_white_background .text_wrapper .chapter_heading, body .white_background2 .section_three_white_background .text_wrapper .chapter_heading {
+            margin-bottom: 0; }
+            body .second_section_white_background .text_wrapper .chapter_heading p, body .white_background2 .section_three_white_background .text_wrapper .chapter_heading p {
+              font-size: 12px; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .second_section_white_background .text_wrapper .chapter_heading, body .white_background2 .section_three_white_background .text_wrapper .chapter_heading {
+            margin-bottom: 1%; } }
+        body .second_section_white_background .text_wrapper .chapter_heading .text_02, body .white_background2 .section_three_white_background .text_wrapper .chapter_heading .text_02 {
+          font-family: "Clarendon LT Std", serif;
+          font-size: 22px;
+          margin-right: 20px; }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+            body .second_section_white_background .text_wrapper .chapter_heading .text_02, body .white_background2 .section_three_white_background .text_wrapper .chapter_heading .text_02 {
+              font-size: 15px;
+              margin-right: 10px; } }
+        body .second_section_white_background .text_wrapper .chapter_heading hr, body .white_background2 .section_three_white_background .text_wrapper .chapter_heading hr {
+          display: block;
+          height: 1px;
+          border: 0;
+          border-top: 2px solid #252525;
+          margin: 1em 0;
+          padding: 0;
+          width: 30%; }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+            body .second_section_white_background .text_wrapper .chapter_heading hr, body .white_background2 .section_three_white_background .text_wrapper .chapter_heading hr {
+              width: 65%; } }
+      body .second_section_white_background .text_wrapper .chapter_text_heading, body .white_background2 .section_three_white_background .text_wrapper .chapter_text_heading {
+        font-family: "Georgia", serif;
+        margin-bottom: 10%; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .second_section_white_background .text_wrapper .chapter_text_heading, body .white_background2 .section_three_white_background .text_wrapper .chapter_text_heading {
+            margin-bottom: 1%; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .second_section_white_background .text_wrapper .chapter_text_heading, body .white_background2 .section_three_white_background .text_wrapper .chapter_text_heading {
+            margin-bottom: 5%; } }
+        body .second_section_white_background .text_wrapper .chapter_text_heading .text_one_morning, body .white_background2 .section_three_white_background .text_wrapper .chapter_text_heading .text_one_morning {
+          font-family: "Georgia", serif;
+          font-style: italic;
+          font-size: 53px;
+          opacity: 0; }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+            body .second_section_white_background .text_wrapper .chapter_text_heading .text_one_morning, body .white_background2 .section_three_white_background .text_wrapper .chapter_text_heading .text_one_morning {
+              font-size: 24px; } }
+        body .second_section_white_background .text_wrapper .chapter_text_heading .text_one_morning_longer, body .white_background2 .section_three_white_background .text_wrapper .chapter_text_heading .text_one_morning_longer {
+          line-height: 30px;
+          opacity: 0; }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+            body .second_section_white_background .text_wrapper .chapter_text_heading .text_one_morning_longer, body .white_background2 .section_three_white_background .text_wrapper .chapter_text_heading .text_one_morning_longer {
+              line-height: 25px; } }
+      body .second_section_white_background .text_wrapper .chapter_button_wrapper, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper {
+        opacity: 0; }
+        body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author {
+          padding: 2% 5%;
+          background-color: #fff;
+          border: 1px solid #000;
+          font-family: "Georgia", serif;
+          font-weight: 700; }
+          body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:focus, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:focus {
+            outline: none; }
+          body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author .chapter_button_arrow_right, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author .chapter_button_arrow_right {
+            margin: auto 0 3px 10px; }
+          body .second_section_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:hover, body .white_background2 .section_three_white_background .text_wrapper .chapter_button_wrapper .chapter_button_about_author:hover {
+            background-color: #111111;
+            color: #fff; }
+    body .second_section_white_background .tree_img_wrapper, body .white_background2 .section_three_white_background .tree_img_wrapper {
+      vertical-align: bottom;
+      position: relative;
+      top: 100%;
+      transform: translateY(-100%); }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        body .second_section_white_background .tree_img_wrapper, body .white_background2 .section_three_white_background .tree_img_wrapper {
+          position: absolute; } }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+        body .second_section_white_background .tree_img_wrapper, body .white_background2 .section_three_white_background .tree_img_wrapper {
+          position: absolute; } }
+      body .second_section_white_background .tree_img_wrapper img, body .white_background2 .section_three_white_background .tree_img_wrapper img {
+        width: 100%;
+        height: 100%;
+        padding: 0; }
+    body .second_section_white_background .grey_overlay, body .white_background2 .section_three_white_background .grey_overlay {
+      left: 0; }
+    body .second_section_white_background .about_the_autor_wrapper, body .white_background2 .section_three_white_background .about_the_autor_wrapper {
+      background-color: #000;
+      position: absolute;
+      margin: 5% 0 7% 10%;
+      padding: 0;
+      right: 0;
+      width: 90%;
+      height: 76%;
+      z-index: 10;
+      color: #fff;
+      font-family: Georgia, serif;
+      display: none;
+      float: right; }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        body .second_section_white_background .about_the_autor_wrapper, body .white_background2 .section_three_white_background .about_the_autor_wrapper {
+          margin: 0;
+          width: 100%;
+          height: 100%; } }
+      body .second_section_white_background .about_the_autor_wrapper .row, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row {
+        background-color: #000;
+        height: 100%;
+        margin: 0; }
+        body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio {
+          position: relative;
           width: 90%;
-          height: 76%;
-          z-index: 10;
+          height: 100%;
           color: #fff;
           font-family: Georgia, serif;
-          display: none;
-          float: right; }
-          body .second_section_white_background .about_the_autor_wrapper .row, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row {
-            background-color: #000;
-            height: 100%;
-            margin: 0; }
-            body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio {
-              position: relative;
-              width: 90%;
-              height: 100%;
-              color: #fff;
-              font-family: Georgia, serif;
-              float: left;
-              overflow: hidden;
-              padding-left: 0; }
-              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio #about_x, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio #about_x {
-                float: left;
-                padding: 25px 0 0 10px; }
-              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header {
-                margin: 7% 0 0 7%; }
-                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .about_bio_header, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .about_bio_header {
-                  font-family: "Georgia", serif;
-                  font-style: italic;
-                  font-size: 36px;
-                  margin-bottom: 3px; }
-                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz {
-                  color: #b5b5b5;
-                  font-size: 13px; }
-                  body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz span, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz span {
-                    font-style: italic; }
-              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text {
-                margin: 5% 0 0 11%;
-                display: inline-block; }
-                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img {
-                  display: block;
-                  position: relative;
-                  padding: 0;
-                  width: 10%; }
-                  body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img .about_the_author_img, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img .about_the_author_img {
-                    height: auto;
-                    width: 100%;
-                    padding: 0 20% 20% 0; }
-                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second {
-                  display: block;
-                  position: relative;
-                  padding-left: 0;
-                  margin-right: 15px; }
-                  body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K {
-                    font-size: 14px;
-                    line-height: 25px;
-                    padding-left: 1px;
-                    margin-bottom: 0; }
-                    body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K:first-letter, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K:first-letter, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K:first-letter, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K:first-letter {
-                      line-height: 52px;
-                      font-size: 50px;
-                      float: left;
-                      margin-right: 5px; }
-                  body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .rest_of_the_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .rest_of_the_text, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .rest_of_the_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .rest_of_the_text {
-                    padding-left: 0;
-                    font-size: 14px;
-                    line-height: 25px;
-                    float: none; }
-                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second {
-                  visibility: hidden; }
-            body .second_section_white_background .about_the_autor_wrapper .row .next_pointer, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer {
-              position: relative;
-              float: right;
-              height: 100%;
-              text-align: center; }
-              body .second_section_white_background .about_the_autor_wrapper .row .next_pointer:hover, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer:hover {
-                background-color: #101010; }
-              body .second_section_white_background .about_the_autor_wrapper .row .next_pointer img, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer img {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
-                vertical-align: middle; }
-      body .white_background2 .section_three_white_background {
-        height: 100%;
-        overflow: hidden; }
-        body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper {
-          display: inline-block;
-          position: relative;
           float: left;
-          top: 90%; }
-          body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .left_arrow, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .left_arrow {
-            width: 10%; }
-            body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .left_arrow img, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .left_arrow img {
-              margin-top: 4px; }
-          body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .previous_button_text, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .previous_button_text {
-            text-align: left;
-            padding-left: 0; }
-            body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .previous_button_text .previous_button_chapter_number, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .previous_button_text .previous_button_chapter_number {
-              font: 700 19px "Clarendon LT Std", serif;
-              margin-bottom: 0; }
-            body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .previous_button_text .previous_button_chapter_text_chapter, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .previous_button_text .previous_button_chapter_text_chapter {
-              font: 400 12px "Georgia", serif, italic; }
-        body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper {
-          margin-top: 5%;
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          /* bring your own prefixes */
-          transform: translate(-50%, -50%); }
-          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper ::-webkit-scrollbar {
-            width: 5px;
-            background-color: transparent; }
-          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper ::-webkit-scrollbar-track {
-            background-color: transparent;
-            -webkit-box-shadow: inset 1px 1px 0 #fff;
-            border-radius: 10px; }
-          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper ::-webkit-scrollbar-thumb {
-            width: 1px;
-            border-radius: 10px;
-            background-color: #969696; }
-          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_chaper_number_heading {
-            text-align: center; }
-            body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_chaper_number_heading .big_chapter_number {
-              font: 700 33px "Clarendon LT Std", serif;
-              margin-bottom: 0;
-              border-top: 3px solid #dddddd;
-              border-left: 3px solid #dddddd;
-              border-right: 3px solid #dddddd; }
-            body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_chaper_number_heading .big_chapter_text {
-              font: 400 12px "Georgia", serif, italic;
-              border-bottom: 3px solid #dddddd;
-              border-left: 3px solid #dddddd;
-              border-right: 3px solid #dddddd;
-              padding-bottom: 10px; }
-          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper {
-            margin-top: 15px;
-            overflow: scroll;
-            overflow-x: hidden;
-            height: 600px; }
-            body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper .section_three_chapter_text h2 {
-              font: 700 53px "Clarendon LT Std", serif; }
-            body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper .section_three_chapter_text h3 {
-              color: #6a6a6a;
-              font: 400 19px "Georgia", serif;
+          overflow: hidden;
+          padding-left: 0; }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+            body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio {
+              padding-right: 0; } }
+          body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio #about_x, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio #about_x {
+            float: left;
+            padding: 25px 0 0 10px; }
+          body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header {
+            margin: 7% 0 0 7%; }
+            @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header {
+                margin: 5% 0 0 5%; } }
+            body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .about_bio_header, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .about_bio_header {
+              font-family: "Georgia", serif;
               font-style: italic;
-              margin-bottom: 10%;
-              line-height: 37px; }
-            body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper .section_three_chapter_text p {
-              font: 400 15px "Georgia Regular", serif;
-              line-height: 32px;
-              text-indent: 30px; }
-          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .white_transparent_overlay {
+              font-size: 36px;
+              margin-bottom: 3px; }
+              @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .about_bio_header, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .about_bio_header {
+                  font-size: 24px; } }
+            body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz {
+              color: #b5b5b5;
+              font-size: 13px; }
+              @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz {
+                  font-size: 9px; } }
+              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz span, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_header .by_franz span {
+                font-style: italic; }
+          body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text {
+            margin: 5% 0 0 11%;
+            display: inline-block; }
+            @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text {
+                margin: 5% 0 0 5%;
+                padding: 0; } }
+            body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img {
+              display: block;
+              position: relative;
+              padding: 0;
+              width: 10%; }
+              @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img {
+                  display: none; } }
+              @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img {
+                  width: 20%; } }
+              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img .about_the_author_img, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_franz_img .about_the_author_img {
+                height: auto;
+                width: 100%;
+                padding: 0 20% 20% 0; }
+            body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second {
+              display: block;
+              position: relative;
+              padding-left: 0;
+              margin-right: 15px; }
+              @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second {
+                  margin-right: 0; } }
+              @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second {
+                  padding-right: 0; } }
+              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K {
+                font-size: 14px;
+                line-height: 25px;
+                padding-left: 1px;
+                margin-bottom: 0; }
+                body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K:first-letter, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .letter_K:first-letter, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K:first-letter, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .letter_K:first-letter {
+                  line-height: 52px;
+                  font-size: 50px;
+                  float: left;
+                  margin-right: 5px; }
+              body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .rest_of_the_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text .rest_of_the_text, body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .rest_of_the_text, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second .rest_of_the_text {
+                padding-left: 0;
+                font-size: 14px;
+                line-height: 25px;
+                float: none; }
+            body .second_section_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .about_the_author_exp_bio .about_the_author_exp_text .div_for_bio_text_second {
+              visibility: hidden; }
+        body .second_section_white_background .about_the_autor_wrapper .row .next_pointer, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer {
+          position: relative;
+          float: right;
+          height: 100%;
+          text-align: center; }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+            body .second_section_white_background .about_the_autor_wrapper .row .next_pointer, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer {
+              position: absolute;
+              bottom: 5px;
+              height: 8%; } }
+          @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+            body .second_section_white_background .about_the_autor_wrapper .row .next_pointer, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer {
+              position: absolute;
+              right: 0; } }
+          body .second_section_white_background .about_the_autor_wrapper .row .next_pointer:hover, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer:hover {
+            background-color: #101010; }
+          body .second_section_white_background .about_the_autor_wrapper .row .next_pointer img, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer img {
             position: absolute;
+            top: 0;
             bottom: 0;
             left: 0;
             right: 0;
-            height: 100px;
-            width: 100%;
-            background: #fff;
-            /* For browsers that do not support gradients */
-            background: -webkit-linear-gradient(transparent, #fff);
-            /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(transparent, #fff);
-            /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(transparent, #fff);
-            /* For Firefox 3.6 to 15 */
-            background: linear-gradient(transparent, #fff);
-            /* Standard syntax */ }
-        body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper {
-          float: right; }
-          body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .right_arrow {
-            float: right;
-            width: 10%; }
-            body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .right_arrow img {
-              float: right;
-              margin-top: 4px; }
-          body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .next_button_text {
-            padding-right: 0;
-            float: right;
-            text-align: right; }
-            body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .next_button_text .next_button_chapter_number {
-              font: 700 19px "Clarendon LT Std", serif;
-              margin-bottom: 0; }
-            body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .next_button_text .next_button_chapter_text_chapter {
-              font: 400 12px "Georgia", serif, italic bold; }
-      body footer {
-        background-color: #fff;
-        font: 700 16px "Clarendon LT Std", serif;
-        height: 0;
-        width: 100%;
-        text-align: center;
+            margin: auto;
+            vertical-align: middle; }
+            @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+              body .second_section_white_background .about_the_autor_wrapper .row .next_pointer img, body .white_background2 .section_three_white_background .about_the_autor_wrapper .row .next_pointer img {
+                top: auto;
+                height: 100%; } }
+  body .white_background2 .section_three_white_background {
+    height: 100%;
+    overflow: hidden; }
+    body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper {
+      display: inline-block;
+      position: relative;
+      float: left;
+      top: 90%; }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper {
+          padding: 0; } }
+      body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .left_arrow, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .left_arrow {
+        width: 10%; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .left_arrow, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .left_arrow {
+            padding: 0; } }
+        body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .left_arrow img, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .left_arrow img {
+          margin-top: 4px; }
+      body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .previous_button_text, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .previous_button_text {
+        text-align: left;
+        padding-left: 0; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .previous_button_text, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .previous_button_text {
+            display: none; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .previous_button_text, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .previous_button_text {
+            display: none; } }
+        body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .previous_button_text .previous_button_chapter_number, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .previous_button_text .previous_button_chapter_number {
+          font: 700 19px "Clarendon LT Std", serif;
+          margin-bottom: 0; }
+        body .white_background2 .section_three_white_background .section_three_previous_chapter_wrapper .previous_button_text .previous_button_chapter_text_chapter, body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .previous_button_text .previous_button_chapter_text_chapter {
+          font: 400 12px "Georgia", serif, italic; }
+    body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper {
+      margin-top: 5%;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%); }
+      body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper ::-webkit-scrollbar {
+        width: 5px;
+        background-color: transparent; }
+      body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper ::-webkit-scrollbar-track {
+        background-color: transparent;
+        -webkit-box-shadow: inset 1px 1px 0 #fff;
+        border-radius: 10px; }
+      body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper ::-webkit-scrollbar-thumb {
+        width: 1px;
+        border-radius: 10px;
+        background-color: #969696; }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper {
+          margin-top: 0;
+          top: 45%; } }
+      body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_chaper_number_heading {
+        text-align: center; }
+        body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_chaper_number_heading .big_chapter_number {
+          font: 700 33px "Clarendon LT Std", serif;
+          margin-bottom: 0;
+          border-top: 3px solid #dddddd;
+          border-left: 3px solid #dddddd;
+          border-right: 3px solid #dddddd; }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+            body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_chaper_number_heading .big_chapter_number {
+              font-size: 18px; } }
+        body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_chaper_number_heading .big_chapter_text {
+          font: 400 12px "Georgia", serif, italic;
+          border-bottom: 3px solid #dddddd;
+          border-left: 3px solid #dddddd;
+          border-right: 3px solid #dddddd;
+          padding-bottom: 10px; }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+            body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_chaper_number_heading .big_chapter_text {
+              font-size: 9px; } }
+      body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper {
+        margin-top: 15px;
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 600px; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper {
+            margin-top: 0;
+            height: 400px; } }
+        body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper .section_three_chapter_text h2 {
+          font: 700 53px "Clarendon LT Std", serif; }
+        body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper .section_three_chapter_text h3 {
+          color: #6a6a6a;
+          font: 400 19px "Georgia", serif;
+          font-style: italic;
+          margin-bottom: 10%;
+          line-height: 37px; }
+        body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper .section_three_chapter_text p {
+          font: 400 15px "Georgia Regular", serif;
+          line-height: 32px;
+          text-indent: 30px; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper .section_three_chapter_text h2 {
+            font-size: 20px; }
+          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper .section_three_chapter_text h3 {
+            font-size: 15px;
+            line-height: 25px; }
+          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .section_three_text_wrapper .section_three_chapter_text p {
+            font-size: 12px;
+            line-height: 21px; } }
+      body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .white_transparent_overlay {
         position: absolute;
         bottom: 0;
         left: 0;
-        display: none; }
-        body footer p {
-          margin: 5% auto; }
-          body footer p .footer_for {
-            font: 400 16px "Georgia", serif;
-            font-style: italic; } }
+        right: 0;
+        height: 150px;
+        width: 100%;
+        background: #fff;
+        /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(transparent, #fff);
+        /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(transparent, #fff);
+        /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(transparent, #fff);
+        /* For Firefox 3.6 to 15 */
+        background: linear-gradient(transparent, #fff);
+        /* Standard syntax */ }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .white_background2 .section_three_white_background .section_three_chapter_number_and_text_wrapper .white_transparent_overlay {
+            display: none; } }
+    body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper {
+      float: right; }
+      body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .right_arrow {
+        float: right;
+        width: 10%; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .right_arrow {
+            padding: 0; } }
+        body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .right_arrow img {
+          float: right;
+          margin-top: 4px; }
+      body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .next_button_text {
+        padding-right: 0;
+        float: right;
+        text-align: right; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .next_button_text {
+            display: none; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+          body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .next_button_text {
+            display: none; } }
+        body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .next_button_text .next_button_chapter_number {
+          font: 700 19px "Clarendon LT Std", serif;
+          margin-bottom: 0; }
+        body .white_background2 .section_three_white_background .section_three_next_chapter_wrapper .next_button_text .next_button_chapter_text_chapter {
+          font: 400 12px "Georgia", serif, italic bold; }
+  body footer {
+    background-color: #fff;
+    font: 700 16px "Clarendon LT Std", serif;
+    height: 0;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none; }
+    body footer p {
+      margin: 5% auto; }
+      body footer p .footer_for {
+        font: 400 16px "Georgia", serif;
+        font-style: italic; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+      body footer {
+        font-size: 12px; }
+        body footer .footer_for {
+          font-size: 12px; } }
   body .disable_other_links {
     pointer-events: none;
     z-index: 3 !important; }
